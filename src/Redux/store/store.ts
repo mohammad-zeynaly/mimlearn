@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 import globalStatesSlice from "../reducers/globalStates";
+import coursesStateSlice from "../reducers/coursesStateSlice";
 
 const store = configureStore({
   reducer: {
     globalStates: globalStatesSlice,
+    courses: coursesStateSlice,
   },
 });
 
