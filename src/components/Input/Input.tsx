@@ -1,9 +1,26 @@
-const Input = ({ id, type }: { id: string; type: string }): JSX.Element => {
+interface InputProps {
+  id: string;
+  type: string;
+  className: string;
+  placeholder?: string;
+}
+
+const Input = ({
+  id,
+  type,
+  className,
+  placeholder,
+}: InputProps): JSX.Element => {
   return (
     <input
       id={id}
-      className="p-2 focus:outline-none border border-solid border-[#dcdcdc] rounded-[4px]"
+      className={
+        className
+          ? className
+          : "p-2 focus:outline-none border border-solid border-[#dcdcdc] rounded-[4px]"
+      }
       type={type}
+      placeholder={placeholder}
     />
   );
 };

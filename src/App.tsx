@@ -5,7 +5,7 @@ import { isShowOverlayHandler } from "./Redux/reducers/globalStates";
 import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
-const App = () => {
+const App = (): JSX.Element => {
   const overlayStatus = useAppSelector(
     (state) => state.globalStates.isShowOverlay
   );
