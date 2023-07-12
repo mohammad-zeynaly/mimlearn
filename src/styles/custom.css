@@ -11,3 +11,37 @@
   transform: translateZ(0);
   transition: all 250ms;
 }
+.swiper-wrapper {
+  padding-bottom: 2.5rem;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.53);
+  background-color: white;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 100%;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in;
+}
+.swiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+.swiper:hover .swiper-button-next {
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ec406a !important;
+  padding: 0 0.6rem;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-wrapper {
+    padding-bottom: 0;
+  }
+}
