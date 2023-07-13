@@ -11,6 +11,7 @@
   transform: translateZ(0);
   transition: all 250ms;
 }
+
 .swiper-wrapper {
   padding-bottom: 2.5rem;
 }

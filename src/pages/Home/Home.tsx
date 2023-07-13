@@ -1,11 +1,13 @@
 import Header from "../../components/Header/Header";
-import CoursesTemplate from "../../components/CoursesTemplate/CoursesTemplate";
+import GraphicDesignCourses from "../../components/GraphicDesignCourses/GraphicDesignCourses";
+import ProgrammingCourses from "../../components/ProgrammingCourses/ProgrammingCourses";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <CoursesTemplate />
+      <GraphicDesignCourses />
+      <ProgrammingCourses />
     </>
   );
 };

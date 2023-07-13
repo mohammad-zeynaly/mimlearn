@@ -1,10 +1,13 @@
 export interface Courses {
-  id: string;
-  name: string;
+  id: number;
+  title: string;
   img: string;
+  stars: number;
+  teacher: string;
   price: number;
-  count: number;
+  count?: number;
   students?: number;
+  type: string;
 }
 
 export interface BasketProducts {
