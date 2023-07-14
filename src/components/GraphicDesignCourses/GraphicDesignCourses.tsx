@@ -3,9 +3,10 @@ import CoursesTemplate from "../CoursesTemplate/CoursesTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
+import { CoursesType } from "../../types/coursesInterface";
 
 const GraphicDesignCourses = (): JSX.Element => {
-  const graphicCourses = useFilteredData("graphicCourse");
+  const graphicCourses: CoursesType[] = useFilteredData("graphicCourse");
   return (
     <CoursesTemplate
       title="دوره‌ های آموزش طراحی گرافیک"

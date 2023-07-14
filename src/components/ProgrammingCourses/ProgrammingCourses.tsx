@@ -3,9 +3,10 @@ import CoursesTemplate from "../CoursesTemplate/CoursesTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
+import { CoursesType } from "../../types/coursesInterface";
 
 const ProgrammingCourses = (): JSX.Element => {
-  const programmerCourse = useFilteredData("programmingCourses");
+  const programmerCourse: CoursesType[] = useFilteredData("programmingCourses");
 
   return (
     <CoursesTemplate

@@ -1,8 +1,12 @@
-const allData = [
+import { CoursesType, radioItemsType } from "../types/coursesInterface";
+
+type AllDataItem = CoursesType | radioItemsType;
+
+const allData: AllDataItem[] = [
   {
     id: 1,
     title: "آموزش فتوشاپ ",
-    img: "./assets/images/product-1.png",
+    img: "./assets/images/products/product-1.png",
     stars: 5,
     teacher: "مصطفی میر هادی",
     students: 257,
@@ -12,7 +16,7 @@ const allData = [
   {
     id: 2,
     title: "آموزش ایلوستریتور ",
-    img: "./assets/images/product-2.png",
+    img: "./assets/images/products/product-2.png",
     stars: 5,
     teacher: "مصطفی میر هادی",
     students: 357,
@@ -22,7 +26,7 @@ const allData = [
   {
     id: 3,
     title: "آموزش پریمیر ",
-    img: "./assets/images/product-3.png",
+    img: "./assets/images/products/product-3.png",
     stars: 5,
     teacher: "حسین رحیمی",
     students: 435,
@@ -32,7 +36,7 @@ const allData = [
   {
     id: 4,
     title: "آموزش  افتر افکت",
-    img: "./assets/images/product-4.png",
+    img: "./assets/images/products/product-4.png",
     stars: 5,
     teacher: "حسین رحیمی",
     students: 600,
@@ -42,7 +46,7 @@ const allData = [
   {
     id: 5,
     title: "  ادوبی ایکس دی ",
-    img: "./assets/images/product-5.png",
+    img: "./assets/images/products/product-5.png",
     stars: 5,
     teacher: "مصطفی میر هادی",
     students: 150,
@@ -52,7 +56,7 @@ const allData = [
   {
     id: 6,
     title: "آموزش این دیزاین ",
-    img: "./assets/images/product-6.png",
+    img: "./assets/images/products/product-6.png",
     stars: 5,
     teacher: "مصطفی میر هادی",
     students: 45,
@@ -63,7 +67,7 @@ const allData = [
   {
     id: 7,
     title: "آموزش Html ",
-    img: "./assets/images/product-1.png",
+    img: "./assets/images/products/product-1.png",
     stars: 5,
     teacher: " صاحب محمدی",
     students: 990,
@@ -73,7 +77,7 @@ const allData = [
   {
     id: 8,
     title: "آموزش Css ",
-    img: "./assets/images/product-2.png",
+    img: "./assets/images/products/product-2.png",
     stars: 5,
     teacher: " صاحب محمدی",
     students: 889,
@@ -83,7 +87,7 @@ const allData = [
   {
     id: 9,
     title: "آموزش جاوااسکریپت ",
-    img: "./assets/images/product-3.png",
+    img: "./assets/images/products/product-3.png",
     stars: 5,
     teacher: " محمد امین سعیدی",
     students: 1200,
@@ -93,7 +97,7 @@ const allData = [
   {
     id: 10,
     title: "آموزش React.js",
-    img: "./assets/images/product-4.png",
+    img: "./assets/images/products/product-4.png",
     stars: 5,
     teacher: " صاحب محمدی",
     students: 600,
@@ -103,7 +107,7 @@ const allData = [
   {
     id: 11,
     title: " آموزش Next.js ",
-    img: "./assets/images/product-5.png",
+    img: "./assets/images/products/product-5.png",
     stars: 5,
     teacher: "میلاد اعظمی",
     students: 900,
@@ -113,12 +117,43 @@ const allData = [
   {
     id: 12,
     title: "آموزش تایپ اسکریپت ",
-    img: "./assets/images/product-6.png",
+    img: "./assets/images/products/product-6.png",
     stars: 5,
     teacher: "  محمد امین سعیدی",
     students: 45,
     price: 260_000,
     type: "programmingCourses",
+  },
+
+  {
+    id: 13,
+    time: "3 اکتبر 2023",
+    img: "./assets/images/radio/radio-1.jpg",
+    title: "۱۰ راز مهم برای موفقیت در کسب‌و‌کار اینترنتی",
+    caption:
+      " موفقیت در کسب‌و‌کار اینترنتی نیازمند انجام کارهایی است که شاید برخلاف تصور سایرین باشد. سال..",
+    audio: "./assets/music/music-1.mp3",
+    type: "radio",
+  },
+  {
+    id: 14,
+    time: "3 جولای 2023",
+    img: "./assets/images/radio/radio-2.jpg",
+    title: "سئو کلاه سیاه و کلاه سفید چه تفاوتی دارند",
+    caption:
+      "  احتمالاً اگر کسب‌وکار اینترنتی داشته‌اید و با سئو سرکار داشته باشید لفظ سئو کلاه‌ سیاه..",
+    audio: "./assets/music/music-2.mp3",
+    type: "radio",
+  },
+  {
+    id: 15,
+    time: "3 می 2023",
+    img: "./assets/images/radio/radio-3.jpg",
+    title: "فقط روی یک کسب‌و‌کار متمرکز شوید",
+    caption:
+      " موفقیت در کسب‌و‌کار اینترنتی نیازمند انجام کارهایی است که شاید برخلاف تصور سایرین باشد. سال..",
+    audio: "./assets/music/music-3.mp3",
+    type: "radio",
   },
 ];
 

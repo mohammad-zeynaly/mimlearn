@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
-import { Courses } from "../../types/coursesInterface";
+import { CoursesType } from "../../types/coursesInterface";
 
-const ProductBox = (props: Courses): JSX.Element => {
-  let { img, title, teacher, students, price } = props;
+const ProductBox = ({
+  img,
+  title,
+  teacher,
+  students,
+  price,
+}: CoursesType): JSX.Element => {
   return (
     <div className="rounded-xl bg-white mt-8 w-full mb-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(168,172,185,0.3)]">
       <div className="">

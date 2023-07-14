@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Courses } from "../../types/coursesInterface";
+import { CoursesType } from "../../types/coursesInterface";
 
-const CartProductItem = ({ name, img, price, count }: Courses) => {
+const CartProductItem = ({ title, img, price, count }: CoursesType) => {
   return (
     <li className="flex items-center justify-center h-24 border-b ">
       <span className="bg-[rgba(0,0,0,.08)] text-[#9ca4ac] font-vazirBold h-full w-5 flex items-center justify-center hover:bg-red-500 hover:text-white">
@@ -11,7 +11,7 @@ const CartProductItem = ({ name, img, price, count }: Courses) => {
         <img className="w-16 object-cover ml-2" src={img} alt="عکس محصول" />
         <h6 className="mr-1">
           <Link to="product-details/1" className="text-[#464749]">
-            {name}
+            {title}
           </Link>
           <span className="block text-secondary mt-2 text-[13px]">
             {count} × {price} تومان
