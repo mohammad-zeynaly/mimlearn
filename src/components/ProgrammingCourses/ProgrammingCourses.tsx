@@ -16,7 +16,7 @@ const ProgrammingCourses = (): JSX.Element => {
     >
       <SwiperTemplate>
         {programmerCourse.map((courses) => (
-          <SwiperSlide>
+          <SwiperSlide key={courses.id}>
             <ProductBox {...courses} />
           </SwiperSlide>
         ))}

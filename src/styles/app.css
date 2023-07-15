@@ -66,17 +66,45 @@
   border-radius: 10px;
 }
 
+.radio-swiper-pagination {
+  position: absolute;
+  top: 41% !important;
+}
+
 @media screen and (min-width: 640px) {
   .swiper-wrapper {
     padding-bottom: 0;
   }
+
+  .radio-swiper-pagination {
+    top: 48% !important;
+  }
 }
 
-/* .swiper-slide {
-  height: 300px !important;
-} */
+@media screen and (min-width: 1024px) {
+  .radio-swiper-pagination {
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50% !important;
+    left: 1% !important;
+  }
 
-/* ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com */
+  .radio-swiper-pagination-bullet {
+    margin-bottom: 0.4rem !important;
+    padding: 0.3rem;
+  }
+
+  .swiper-pagination-bullet.radio-swiper-pagination-bullet.swiper-pagination-bullet-active {
+    padding: 0.6rem 0.3rem !important;
+  }
+}
+
+/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -728,8 +756,8 @@ video {
   margin-right: 1rem !important;
 }
 
-.-mt-24 {
-  margin-top: -6rem;
+.-mt-20 {
+  margin-top: -5rem;
 }
 
 .mb-2 {
@@ -876,10 +904,6 @@ video {
   height: 600px;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .h-full {
   height: 100%;
 }
@@ -960,12 +984,8 @@ video {
   max-width: 400px;
 }
 
-.max-w-\[775px\] {
-  max-width: 775px;
-}
-
-.max-w-\[900px\] {
-  max-width: 900px;
+.max-w-\[770px\] {
+  max-width: 770px;
 }
 
 .max-w-full {
@@ -1043,6 +1063,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 .rounded-2xl {
@@ -1209,6 +1233,10 @@ video {
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pr-1 {
@@ -1524,6 +1552,10 @@ video {
     height: 550px;
   }
 
+  .sm\:h-auto {
+    height: auto;
+  }
+
   .sm\:w-1\/3 {
     width: 33.333333%;
   }
@@ -1567,10 +1599,6 @@ video {
     display: block;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:hidden {
     display: none;
   }
@@ -1601,16 +1629,8 @@ video {
     flex-direction: row;
   }
 
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
   .lg\:justify-normal {
     justify-content: normal;
-  }
-
-  .lg\:pr-4 {
-    padding-right: 1rem;
   }
 
   .lg\:text-right {

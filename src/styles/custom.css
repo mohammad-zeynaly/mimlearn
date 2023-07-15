@@ -40,11 +40,33 @@
   padding: 0 0.6rem;
   border-radius: 10px;
 }
-
-
+.radio-swiper-pagination {
+  position: absolute;
+  top: 41% !important;
+}
 @media screen and (min-width: 640px) {
   .swiper-wrapper {
     padding-bottom: 0;
   }
+  .radio-swiper-pagination {
+    top: 48% !important;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  .radio-swiper-pagination {
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50% !important;
+    left: 1% !important;
+  }
+  .radio-swiper-pagination-bullet {
+    margin-bottom: 0.4rem !important;
+    padding: 0.3rem;
+  }
+  .swiper-pagination-bullet.radio-swiper-pagination-bullet.swiper-pagination-bullet-active {
+    padding: 0.6rem 0.3rem !important;
+  }
+}

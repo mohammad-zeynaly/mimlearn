@@ -1,6 +1,6 @@
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectFade } from "swiper/modules";
+import { Pagination, EffectFade, Scrollbar } from "swiper/modules";
 import RadioSliderItem from "./RadioSliderItem";
 import useFilteredData from "../../hooks/useFilteredData";
 import { radioItemsType } from "../../types/coursesInterface";
@@ -19,17 +19,29 @@ const RadioSite = () => {
           <FaMicrophoneAlt className="text-third w-7 h-7 mx-3" />
         </h3>
 
-        <div className="w-full max-w-[900px] h-[300px] mx-auto">
+        <div className="mt-44 lg:mt-10 w-full max-w-[770px] h-[300px] mx-auto bg-white shadow-[0px_14px_80px_rgba(34,35,58,0.2)] rounded-xl relative">
           <Swiper
+            onSwiper={(swiper) => {
+              const paginationContainer = swiper.pagination.el! as HTMLElement;
+
+              paginationContainer.classList.add("radio-swiper-pagination");
+            }}
             effect="fade"
             slidesPerView={1}
             loop={true}
             loopedSlides={1}
-            modules={[Pagination, EffectFade]}
-            pagination={{ clickable: true }}
+            modules={[Pagination, EffectFade, Scrollbar]}
+            scrollbar={{ draggable: true }}
+            pagination={{
+              clickable: true,
+              renderBullet: () => {
+                return '<span class="swiper-pagination-bullet radio-swiper-pagination-bullet"></span>';
+              },
+            }}
+            className="overflow-visible"
           >
             {radioSliderItemsData.map((radioItem) => (
-              <SwiperSlide>
+              <SwiperSlide key={radioItem.id}>
                 <RadioSliderItem {...radioItem} />
               </SwiperSlide>
             ))}
