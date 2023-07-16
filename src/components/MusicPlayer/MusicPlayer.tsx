@@ -58,7 +58,7 @@ const MusicPlayer = ({
   };
 
   return (
-    <div className="w-full h-10 flex flex-row-reverse items-center justify-center text-third  absolute left-0 right-0 -bottom-8 pb-5 sm:pb-16 lg:pb-0 lg:right-[14%] lg:bottom-[17%]">
+    <div className="w-full h-10 flex flex-row-reverse items-center justify-center text-third  absolute left-0 right-0 -bottom-8 pb-10 sm:pb-16 lg:pb-0 lg:right-[14%] lg:bottom-[17%]">
       <audio
         src={audioSrc}
         ref={audioSrcRef}

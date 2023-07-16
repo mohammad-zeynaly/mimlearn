@@ -34,6 +34,13 @@ export interface radioItemsType {
   audio?: string;
   type: string;
 }
+export interface ArticlesItemType {
+  id: number;
+  title: string;
+  img: string;
+  caption?: string;
+  type: string;
+}
 
 export interface BasketProducts {
   basketProduct: CoursesType[];

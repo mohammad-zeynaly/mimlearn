@@ -12,7 +12,7 @@ const ProgrammingCourses = (): JSX.Element => {
     <SectionTemplate
       title="دوره‌ های آموزشی برنامه نویسی"
       caption="اینجا شروع آینده موفق شغلی شماست!"
-      classNameParent="mt-16"
+      classNameParent="mt-20"
     >
       <SwiperTemplate>
         {programmerCourse.map((courses) => (

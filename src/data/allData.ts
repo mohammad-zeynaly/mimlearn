@@ -1,6 +1,10 @@
-import { CoursesType, radioItemsType } from "../types/coursesInterface";
+import {
+  CoursesType,
+  radioItemsType,
+  ArticlesItemType,
+} from "../types/coursesInterface";
 
-type AllDataItem = CoursesType | radioItemsType;
+type AllDataItem = CoursesType | radioItemsType | ArticlesItemType;
 
 const allData: AllDataItem[] = [
   {
@@ -154,6 +158,47 @@ const allData: AllDataItem[] = [
       " موفقیت در کسب‌و‌کار اینترنتی نیازمند انجام کارهایی است که شاید برخلاف تصور سایرین باشد. سال..",
     audio: "./assets/music/music-3.mp3",
     type: "radio",
+  },
+
+  {
+    id: 16,
+    title: "افزودن دکمه تماس در سایت وردپرسی",
+    img: "./assets/images/articles/article-1.jpg",
+    caption:
+      "امروز در خدمتتان هستیم با آموزش افزودن دکمه تماس در سایت وردپرسی . در این.",
+    type: "articles",
+  },
+  {
+    id: 17,
+    title: "معرفی بهترین نرم افزارهای مدیریتی برای دورکاری",
+    img: "./assets/images/articles/article-2.jpg",
+    caption:
+      "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
+    type: "articles",
+  },
+  {
+    id: 18,
+    title: "چگونه به یک مدیر کسب و کار تبدیل شویم؟",
+    img: "./assets/images/articles/article-3.jpg",
+    caption:
+      "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها..",
+    type: "articles",
+  },
+  {
+    id: 19,
+    title: "استراتژی اقیانوس آبی چیست؟",
+    img: "./assets/images/articles/article-4.jpg",
+    caption:
+      "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
+    type: "articles",
+  },
+  {
+    id: 20,
+    title: "۹ ویژگی پنهان در کتابخانه چند رسانه ای وردپرس",
+    img: "./assets/images/articles/article-5.jpg",
+    caption:
+      "	امروز بیایید با ۹ ویژگی کتابخانه چندرسانه ای در وردپرس آشنا شوید تا بتوانید رسانه‌های را بهتر.",
+    type: "articles",
   },
 ];
 

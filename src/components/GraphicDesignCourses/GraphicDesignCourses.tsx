@@ -11,7 +11,7 @@ const GraphicDesignCourses = (): JSX.Element => {
     <SectionTemplate
       title="دوره‌ های آموزش طراحی گرافیک"
       caption="اینجا شروع آینده موفق شغلی شماست!"
-      classNameParent="mt-40 sm:mt-56"
+      classNameParent="mt-44 sm:mt-56"
     >
       {/*----  swiper Installation ----*/}
       <SwiperTemplate>
