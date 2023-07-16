@@ -38,7 +38,7 @@ const SwiperTemplate = ({ children }: swiperTemplateProps): JSX.Element => {
       }
       className="overflow-hidden"
       onSwiper={(swiper) => setMySwiper(swiper)}
-      modules={[Scrollbar, Autoplay,Pagination]}
+      modules={[Scrollbar, Autoplay, Pagination]}
       spaceBetween={25}
       slidesPerGroup={1}
       scrollbar={{ draggable: true }}

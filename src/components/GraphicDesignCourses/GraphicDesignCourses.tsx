@@ -1,5 +1,5 @@
 import { SwiperSlide } from "swiper/react";
-import CoursesTemplate from "../CoursesTemplate/CoursesTemplate";
+import SectionTemplate from "../SectionTemplate/SectionTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
@@ -8,10 +8,10 @@ import { CoursesType } from "../../types/coursesInterface";
 const GraphicDesignCourses = (): JSX.Element => {
   const graphicCourses: CoursesType[] = useFilteredData("graphicCourse");
   return (
-    <CoursesTemplate
+    <SectionTemplate
       title="دوره‌ های آموزش طراحی گرافیک"
       caption="اینجا شروع آینده موفق شغلی شماست!"
-      classNameParent="mt-56"
+      classNameParent="mt-40 sm:mt-56"
     >
       {/*----  swiper Installation ----*/}
       <SwiperTemplate>
@@ -21,7 +21,7 @@ const GraphicDesignCourses = (): JSX.Element => {
           </SwiperSlide>
         ))}
       </SwiperTemplate>
-    </CoursesTemplate>
+    </SectionTemplate>
   );
 };
 

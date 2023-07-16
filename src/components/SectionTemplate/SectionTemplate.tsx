@@ -1,18 +1,18 @@
 import { ReactNode } from "react";
 
-interface CoursesTemplatePropType {
+interface SectionTemplatePropType {
   title: string;
   caption: string;
   children: ReactNode;
   classNameParent: string;
 }
 
-const CoursesTemplate = ({
+const SectionTemplate = ({
   title,
   caption,
   children,
   classNameParent,
-}: CoursesTemplatePropType): JSX.Element => {
+}: SectionTemplatePropType): JSX.Element => {
   return (
     <section className={classNameParent}>
       <div className="container">
@@ -26,4 +26,4 @@ const CoursesTemplate = ({
   );
 };
 
-export default CoursesTemplate;
+export default SectionTemplate;

@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,8 +23,6 @@
     "swiper": "^10.0.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@vitejs/plugin-react": "^4.0.1",

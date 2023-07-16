@@ -1,5 +1,5 @@
 import { SwiperSlide } from "swiper/react";
-import CoursesTemplate from "../CoursesTemplate/CoursesTemplate";
+import SectionTemplate from "../SectionTemplate/SectionTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
@@ -9,7 +9,7 @@ const ProgrammingCourses = (): JSX.Element => {
   const programmerCourse: CoursesType[] = useFilteredData("programmingCourses");
 
   return (
-    <CoursesTemplate
+    <SectionTemplate
       title="دوره‌ های آموزشی برنامه نویسی"
       caption="اینجا شروع آینده موفق شغلی شماست!"
       classNameParent="mt-16"
@@ -21,7 +21,7 @@ const ProgrammingCourses = (): JSX.Element => {
           </SwiperSlide>
         ))}
       </SwiperTemplate>
-    </CoursesTemplate>
+    </SectionTemplate>
   );
 };
 

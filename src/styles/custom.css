@@ -42,14 +42,14 @@
 }
 .radio-swiper-pagination {
   position: absolute;
-  top: 41% !important;
+  bottom: 38% !important;
 }
 @media screen and (min-width: 640px) {
   .swiper-wrapper {
     padding-bottom: 0;
   }
   .radio-swiper-pagination {
-    top: 48% !important;
+    top: 65% !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -68,5 +68,17 @@
   }
   .swiper-pagination-bullet.radio-swiper-pagination-bullet.swiper-pagination-bullet-active {
     padding: 0.6rem 0.3rem !important;
+  }
+  .radio-swiper-pagination {
+    width: auto !important;
+  }
+}
+@media screen and (max-width: 389px) {
+  .radio-slider-img {
+    height: 100% !important;
+  }
+
+  .radio-swiper-pagination {
+    bottom: 41% !important;
   }
 }
