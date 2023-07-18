@@ -54,7 +54,7 @@ const allData: AllDataItem[] = [
   },
   {
     id: 5,
-    title: "  ادوبی ایکس دی ",
+    title: " آموزش ادوبی ایکس دی ",
     img: "./assets/images/products/product-5.png",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -95,7 +95,7 @@ const allData: AllDataItem[] = [
   },
   {
     id: 9,
-    title: "آموزش جاوااسکریپت ",
+    title: "آموزش جاوا اسکریپت ",
     img: "./assets/images/products/product-3.png",
     stars: 5,
     teacher: " محمد امین سعیدی",
