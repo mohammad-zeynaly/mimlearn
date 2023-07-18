@@ -5,6 +5,7 @@ import { closeAllShows } from "./Redux/reducers/globalStates";
 import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
+import Footer from "./components/Footer/Footer";
 
 const App = (): JSX.Element => {
   const overlayStatus = useAppSelector(
@@ -25,6 +26,7 @@ const App = (): JSX.Element => {
       <NavbarMobile />
       <LoginModal />
       {routers}
+      <Footer />
     </>
   );
 };
