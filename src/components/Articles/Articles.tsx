@@ -14,9 +14,25 @@ const Articles = (): JSX.Element => {
       caption="مقالات ما را برای رسیدن به موفقیت دنبال کنید"
       classNameParent="mt-20"
     >
-      <SwiperTemplate>
+      <SwiperTemplate
+        between={24}
+        breakPoint={{
+          1250: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        }}
+      >
         {articlesItems.map((article) => (
-          <SwiperSlide>
+          <SwiperSlide key={article.id}>
             <ArticlesItem {...article} />
           </SwiperSlide>
         ))}

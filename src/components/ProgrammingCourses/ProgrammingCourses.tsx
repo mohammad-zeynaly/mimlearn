@@ -14,7 +14,23 @@ const ProgrammingCourses = (): JSX.Element => {
       caption="اینجا شروع آینده موفق شغلی شماست!"
       classNameParent="mt-20"
     >
-      <SwiperTemplate>
+      <SwiperTemplate
+        between={24}
+        breakPoint={{
+          1250: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        }}
+      >
         {programmerCourse.map((courses) => (
           <SwiperSlide key={courses.id}>
             <ProductBox {...courses} />

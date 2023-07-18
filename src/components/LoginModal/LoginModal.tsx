@@ -12,8 +12,6 @@ const LoginModal = () => {
     (state) => state.globalStates.isShowLoginForm
   );
 
-  console.log(loginModalStatus);
-
   return createPortal(
     <>
       {loginModalStatus && (

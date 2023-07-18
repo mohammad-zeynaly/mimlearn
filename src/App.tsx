@@ -1,14 +1,16 @@
 import { useRoutes } from "react-router-dom";
 import routes from "./routes/routes";
 import { useAppDispatch, useAppSelector } from "./Redux/store/store";
-import { isShowOverlayHandler } from "./Redux/reducers/globalStates";
+import { closeAllShows } from "./Redux/reducers/globalStates";
 import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
+
 const App = (): JSX.Element => {
   const overlayStatus = useAppSelector(
     (state) => state.globalStates.isShowOverlay
   );
+
   const dispatch = useAppDispatch();
 
   const routers = useRoutes(routes);
@@ -17,7 +19,7 @@ const App = (): JSX.Element => {
     <>
       <div
         className={overlayStatus ? "overlay" : ""}
-        onClick={() => dispatch(isShowOverlayHandler())}
+        onClick={() => dispatch(closeAllShows())}
       ></div>
       <NavbarDesktop />
       <NavbarMobile />

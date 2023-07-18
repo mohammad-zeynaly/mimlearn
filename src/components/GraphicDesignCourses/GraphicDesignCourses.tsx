@@ -14,7 +14,23 @@ const GraphicDesignCourses = (): JSX.Element => {
       classNameParent="mt-44 sm:mt-56"
     >
       {/*----  swiper Installation ----*/}
-      <SwiperTemplate>
+      <SwiperTemplate
+      between={24}
+        breakPoint={{
+          1250: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        }}
+      >
         {graphicCourses.map((course) => (
           <SwiperSlide key={course.id} style={{ direction: "rtl" }}>
             <ProductBox {...course} />

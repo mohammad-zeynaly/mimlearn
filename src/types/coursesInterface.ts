@@ -15,8 +15,8 @@ export interface allDataType {
 
 export interface CoursesType {
   id: number;
-  title: string;
-  img: string;
+  title?: string;
+  img?: string;
   stars?: number;
   teacher?: string;
   students?: number;
@@ -39,6 +39,14 @@ export interface ArticlesItemType {
   title: string;
   img: string;
   caption?: string;
+  type: string;
+}
+
+export interface CommentsType {
+  id: number;
+  caption?: string;
+  author?: string;
+  role?: string;
   type: string;
 }
 

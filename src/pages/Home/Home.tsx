@@ -3,6 +3,7 @@ import GraphicDesignCourses from "../../components/GraphicDesignCourses/GraphicD
 import ProgrammingCourses from "../../components/ProgrammingCourses/ProgrammingCourses";
 import RadioSite from "../../components/RadioSite/RadioSite";
 import Articles from "../../components/Articles/Articles";
+import CustomersComments from "../../components/CustomersComments/CustomersComments";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <ProgrammingCourses />
       <RadioSite />
       <Articles />
+      <CustomersComments />
     </>
   );
 };

@@ -4,12 +4,22 @@ import { useState, ReactNode, CSSProperties } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { SwiperOptions } from "swiper/types";
 
 interface swiperTemplateProps {
   children?: ReactNode;
+  breakPoint: {
+    [width: number]: SwiperOptions;
+    [ratio: string]: SwiperOptions;
+  };
+  between: number;
 }
 
-const SwiperTemplate = ({ children }: swiperTemplateProps): JSX.Element => {
+const SwiperTemplate = ({
+  breakPoint,
+  children,
+  between,
+}: swiperTemplateProps): JSX.Element => {
   const [mySwiper, setMySwiper] = useState<typeof Swiper | object | any>(null);
   const [swiperDesktopPaginationStatus, setSwiperDesktopPaginationStatus] =
     useState<boolean>(false);
@@ -39,37 +49,25 @@ const SwiperTemplate = ({ children }: swiperTemplateProps): JSX.Element => {
       className="overflow-hidden"
       onSwiper={(swiper) => setMySwiper(swiper)}
       modules={[Scrollbar, Autoplay, Pagination]}
-      spaceBetween={25}
+      spaceBetween={between}
       slidesPerGroup={1}
-      scrollbar={{ draggable: true }}
-      freeMode={true}
-      loopedSlides={1}
+      slidesPerView={1}
+      loopedSlides={2}
+      loop={true}
+      grabCursor={true}
       pagination={{
         clickable: true,
         renderBullet: (index, className) => {
           return `<span class="${className} sm:hidden"></span>`;
         },
       }}
-      loop={true}
-      grabCursor={true}
       autoplay={{
-        delay: 5000,
+        delay: 50000,
         disableOnInteraction: false,
       }}
-      breakpoints={{
-        1250: {
-          slidesPerView: 4,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-        576: {
-          slidesPerView: 2,
-        },
-        500: {
-          slidesPerView: 1,
-        },
-      }}
+      breakpoints={breakPoint}
+      threshold={10}
+      touchRatio={0.5}
     >
       {/* swiper slide */}
       {children}

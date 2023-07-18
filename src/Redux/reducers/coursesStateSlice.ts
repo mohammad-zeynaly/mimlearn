@@ -18,7 +18,9 @@ const coursesStateSlice = createSlice({
   initialState,
 
   reducers: {},
-  extraReducers: {},
+  extraReducers: (builder) => {
+    builder.addCase("fetch/get-courses", (state, action) => {});
+  },
 });
 
 export default coursesStateSlice.reducer;
