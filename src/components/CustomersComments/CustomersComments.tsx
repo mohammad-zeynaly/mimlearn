@@ -23,7 +23,7 @@ const CustomersComments = (): JSX.Element => {
         }}
       >
         {customersCommentItems.map((commentData) => (
-          <SwiperSlide>
+          <SwiperSlide key={commentData.id}>
             <CustomersCommentsItem {...commentData} />
           </SwiperSlide>
         ))}

@@ -25,4 +25,3 @@ const coursesStateSlice = createSlice({
 
 export default coursesStateSlice.reducer;
 
-// export {} coursesStateSlice.actions;

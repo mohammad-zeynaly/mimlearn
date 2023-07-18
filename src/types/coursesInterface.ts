@@ -28,16 +28,16 @@ export interface CoursesType {
 export interface radioItemsType {
   id: number;
   time?: string;
-  img: string;
-  title: string;
+  img?: string;
+  title?: string;
   caption?: string;
   audio?: string;
   type: string;
 }
 export interface ArticlesItemType {
   id: number;
-  title: string;
-  img: string;
+  title?: string;
+  img?: string;
   caption?: string;
   type: string;
 }

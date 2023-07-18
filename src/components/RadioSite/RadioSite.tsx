@@ -20,7 +20,6 @@ const RadioSite = () => {
         </h3>
 
         <div className="mt-16 lg:mt-10 w-full max-w-[770px] h-auto mx-auto bg-white shadow-[0px_14px_80px_rgba(34,35,58,0.2)] rounded-xl relative">
-          {/* 0px 14px 80px rgba(34, 35, 58, 0.2) */}
           <Swiper
             onSwiper={(swiper) => {
               const paginationContainer = swiper.pagination.el! as HTMLElement;

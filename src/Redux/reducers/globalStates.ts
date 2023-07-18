@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface globalState {
   isShowShoppingCart: boolean;
@@ -43,7 +43,7 @@ const globalStatesSlice = createSlice({
       toggleOverlay(state);
     },
     isShowMobileMenuHandler: (state) => {
-      state.isShowOverlay = !state.isShowOverlay;
+      state.isShowMobileMenu = !state.isShowMobileMenu;
       toggleOverlay(state);
     },
     isShowVideoPlayerHandler: (state, action) => {

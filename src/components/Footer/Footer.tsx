@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TfiLocationPin } from "react-icons/tfi";
 import { BsPhone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
@@ -15,7 +14,7 @@ interface FooterItemsType {
 }
 
 const Footer = (): JSX.Element => {
-  const [footerAboutItems, setFooterAboutItems] = useState<FooterItemsType[]>([
+  const footerAboutItems: FooterItemsType[] = [
     {
       id: crypto.randomUUID(),
       caption: "تهران، یوسف آباد، خ چهلم ، پلاک 17",
@@ -31,22 +30,20 @@ const Footer = (): JSX.Element => {
       caption: "info@mimlearn.ir",
       icon: <HiOutlineMail className="w-6 h-6" />,
     },
-  ]);
+  ];
 
-  const [footerCustomListItems, setFooterCustomListItems] = useState<
-    FooterItemsType[]
-  >([
+  const footerCustomListItems: FooterItemsType[] = [
     { id: crypto.randomUUID(), title: "صفحه اصلی", link: "/" },
     { id: crypto.randomUUID(), title: " تماس با ما", link: "/contact-us" },
     { id: crypto.randomUUID(), title: "درباره ما", link: "/about-us" },
     { id: crypto.randomUUID(), title: "فروشگاه", link: "/store" },
-  ]);
+  ];
 
-  const [footerLists, setFooterLists] = useState<FooterItemsType[]>([
+  const footerLists: FooterItemsType[] = [
     { id: crypto.randomUUID(), title: "بلاگ", link: "/blog" },
     { id: crypto.randomUUID(), title: "حساب کاربری من", link: "/login" },
     { id: crypto.randomUUID(), title: "بلاگ", link: "/shopping-cart" },
-  ]);
+  ];
 
   return (
     <footer className="mt-20 bg-[#353338] text-white w-full">
