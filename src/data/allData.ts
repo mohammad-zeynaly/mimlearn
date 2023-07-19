@@ -1,17 +1,6 @@
-import {
-  CoursesType,
-  radioItemsType,
-  ArticlesItemType,
-  CommentsType,
-} from "../types/coursesInterface";
+import { allDataType } from "../types/coursesInterface";
 
-type AllDataItem =
-  | CoursesType
-  | radioItemsType
-  | ArticlesItemType
-  | CommentsType;
-
-const allData: AllDataItem[] = [
+const allData: allDataType[] = [
   {
     id: 1,
     title: "آموزش فتوشاپ ",

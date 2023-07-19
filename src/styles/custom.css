@@ -44,6 +44,20 @@
   position: absolute;
   bottom: 38% !important;
 }
+.video-react .video-react-poster {
+  background-size: cover !important;
+}
+.video-react-control-bar {
+  display: flex !important;
+  direction: ltr;
+  background-color: #222 !important;
+}
+.video-react .video-react-big-play-button {
+  width: 4rem !important;
+  height: 4rem !important;
+  line-height: 4rem !important;
+  border-radius: 100%;
+}
 @media screen and (min-width: 640px) {
   .swiper-wrapper {
     padding-bottom: 0;

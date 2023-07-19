@@ -19,7 +19,7 @@ const ProductBox = ({
       </div>
       <div className=" border border-[#e5e5e5] rounded-xl rounded-tr-none rounded-tl-none">
         <Link
-          to={`/courseDetails/${title}`}
+          to={`/courseDetails/${title?.trim()}`}
           className="block hover:text-primary text-sm font-vazirMedium p-3 mt-1"
         >
           {title}
