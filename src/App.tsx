@@ -1,4 +1,4 @@
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useLocation } from "react-router-dom";
 import routes from "./routes/routes";
 import { useAppDispatch, useAppSelector } from "./Redux/store/store";
 import { closeAllShows } from "./Redux/reducers/globalStates";
@@ -12,9 +12,13 @@ const App = (): JSX.Element => {
     (state) => state.globalStates.isShowOverlay
   );
 
+  const { pathname } = useLocation();
+
   const dispatch = useAppDispatch();
 
   const routers = useRoutes(routes);
+
+  console.log(pathname.includes("courseDetails"));
 
   return (
     <>
@@ -25,7 +29,13 @@ const App = (): JSX.Element => {
       <NavbarDesktop />
       <NavbarMobile />
       <LoginModal />
-      {routers}
+      <main
+        className={`${
+          pathname.includes("courseDetails") ? "bg-[#f8f9fa] " : ""
+        }pb-24`}
+      >
+        {routers}
+      </main>
       <Footer />
     </>
   );

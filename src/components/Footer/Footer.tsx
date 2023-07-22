@@ -46,7 +46,7 @@ const Footer = (): JSX.Element => {
   ];
 
   return (
-    <footer className="mt-20 bg-[#353338] text-white w-full">
+    <footer className="bg-[#353338] text-white w-full">
       <div className="hidden lg:-translate-y-8 xl:-translate-y-12 lg:w-full lg:block 2xl:-translate-y-14 min-[2000px]:hidden">
         <svg
           className="overflow-hidden absolute -right-[5px] 2xl:-right-2 w-[101%]"

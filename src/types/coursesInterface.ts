@@ -13,6 +13,7 @@ export interface allDataType {
   caption?: string;
   author?: string;
   role?: string;
+  prerequisite?: string;
 }
 
 export interface CoursesType {
@@ -24,6 +25,8 @@ export interface CoursesType {
   students?: number;
   count?: number;
   price?: number;
+  prerequisite?: string;
+  time?: string;
   type: string;
 }
 
