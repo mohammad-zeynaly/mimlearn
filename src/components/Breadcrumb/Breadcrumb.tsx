@@ -6,7 +6,7 @@ const Breadcrumb = (): JSX.Element => {
   const { courseName } = useParams();
 
   return (
-    <div className="bg-[#353338] mt-6 text-white ">
+    <div className="bg-[#353338] mt-28 text-white ">
       <div className="container py-8">
         <h2 className="text-2xl"> {courseName} </h2>
         <ul className="flex items-center mt-4 text-sm">

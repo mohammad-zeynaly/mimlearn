@@ -13,7 +13,7 @@ const ShoppingCart = (): JSX.Element => {
   return (
     <>
       {isInShowShoppingCart && (
-        <aside className="bg-white w-72 sm:w-80 fixed top-0 bottom-0 right-0 flex items-start justify-center h-[110%] z-40 text-sm">
+        <aside id="shopping-cart" className="bg-white w-72 sm:w-80 fixed top-0 bottom-0 right-0 flex items-start justify-center h-[110%] z-40 text-sm">
           {/* empty shoppingCart */}
           {shoppingCartProduct.length < 1 ? (
             <div className="flex items-center mt-16 p-4">

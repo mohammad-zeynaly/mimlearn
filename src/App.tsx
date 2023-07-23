@@ -32,7 +32,7 @@ const App = (): JSX.Element => {
       <main
         className={`${
           pathname.includes("courseDetails") ? "bg-[#f8f9fa] " : ""
-        }pb-24`}
+        }pb-24 mt-24`}
       >
         {routers}
       </main>

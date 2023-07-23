@@ -41,7 +41,7 @@ const CourseDetails = (): JSX.Element => {
             className={`${
               isFullWidthContent
                 ? "hidden"
-                : "hidden lg:block lg:w-[29%] mr-5 h-screen mt-14"
+                : "hidden lg:block lg:w-[29%] mr-5 h-screen lg:mt-32 xl:mt-10 2xl:mt-0"
             } `}
           >
             <CourseDetailsSidebar mainCourse={mainCourse} />

@@ -4,7 +4,7 @@ import Input from "../Input/Input";
 
 const Header = (): JSX.Element => {
   return (
-    <header id="header" className="mt-5 relative ">
+    <header id="header" className="mt-5">
       <div className="w-full h-[600px] sm:h-[550px] bg-[url('./assets/images/header-bg.jpg')] -z-10 bg-cover absolute top-0 "></div>
       <div className="bg-video w-full h-full absolute top-0 -z-10">
         <video
