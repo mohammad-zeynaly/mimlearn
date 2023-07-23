@@ -7,12 +7,19 @@ import { MdLanguage } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { CoursesType } from "../../types/coursesInterface";
 
+interface CourseDetailsSidebarType {
+  id: string;
+  icon: JSX.Element;
+  description?: string | undefined;
+  info: string | undefined;
+}
+
 const CourseDetailsSidebar = ({
   mainCourse,
 }: {
   mainCourse: CoursesType;
 }): JSX.Element => {
-  const courseInformation = [
+  const courseInformation: CourseDetailsSidebarType[] = [
     {
       id: crypto.randomUUID(),
       icon: <TfiLocationPin className="w-5 h-5 ml-3" />,
@@ -50,10 +57,10 @@ const CourseDetailsSidebar = ({
   ];
 
   return (
-    <>
-      <div className="bg-white rounded-lg border border-[#e5e5e5] p-4">
+    <div className="w-full absolute bottom-0 left-0">
+      <div className="bg-white rounded-lg border border-fourth p-4 ">
         <div className="mt-2 bg-[#f9f9f9] relative rounded-lg border border-dashed border-[#ddd] flex justify-between items-center after:w-4 after:h-4 after:bg-white after:border-l after:border-dashed after:rounded-full after:absolute after:-right-2 before:w-4 before:h-4 before:border-r before:border-dashed before:bg-white before:rounded-full before:absolute before:-left-2">
-          <h5 className="text-[#777] border-l border-[#e5e5e5] border-dashed p-4 pl-8">
+          <h5 className="text-[#777] border-l border-fourth border-dashed p-4 pl-8">
             قیمت:
           </h5>
           <h6 className="p-4">{mainCourse.price} تومان</h6>
@@ -73,7 +80,7 @@ const CourseDetailsSidebar = ({
           </div>
         </div>
       </div>
-      <div className="bg-white mt-4 p-4 border border-[#e5e5e5]">
+      <div className="bg-white mt-4 p-4 border border-fourth">
         <div className="mt-2 rounded-lg border border-dashed border-[#ddd] flex justify-center items-center p-4 text-[#555]">
           <PiStudentFill className="w-7 h-7 ml-2" />
           <div className="flex items-center">
@@ -97,7 +104,7 @@ const CourseDetailsSidebar = ({
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

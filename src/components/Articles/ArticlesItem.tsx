@@ -8,7 +8,7 @@ const ArticlesItem = ({
   caption,
 }: ArticlesItemType): JSX.Element => {
   return (
-    <div className="mb-3 mt-5 border border-solid border-[#e5e5e5] rounded-lg overflow-hidden transition-all duration-200 group hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(168,172,185,0.3)]">
+    <div className="mb-3 mt-5 border border-solid border-fourth rounded-lg overflow-hidden transition-all duration-200 group hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(168,172,185,0.3)]">
       <div className="">
         <img className="" src={img} alt="عکس مقاله" />
       </div>

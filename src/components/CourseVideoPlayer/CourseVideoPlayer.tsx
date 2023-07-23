@@ -5,7 +5,6 @@ const CourseVideoPlayer = ({
 }: {
   mainCourse: CoursesType;
 }): JSX.Element => {
-  console.log("mainCourse=> ", mainCourse);
   return (
     <section className="">
       <VideoPlayer {...mainCourse} />

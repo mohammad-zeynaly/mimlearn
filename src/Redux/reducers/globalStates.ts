@@ -6,6 +6,7 @@ export interface globalState {
   isShowLoginForm: boolean;
   isShowMobileMenu: boolean;
   isShowVideoPlayer: boolean;
+  isFullWidthContent: boolean;
 }
 
 const initialState: globalState = {
@@ -14,6 +15,7 @@ const initialState: globalState = {
   isShowLoginForm: false,
   isShowMobileMenu: false,
   isShowVideoPlayer: false,
+  isFullWidthContent: false,
 };
 
 const toggleOverlay = (state: globalState) => {
@@ -50,6 +52,9 @@ const globalStatesSlice = createSlice({
       state.isShowVideoPlayer = action.payload;
       toggleOverlay(state);
     },
+    isFullWidthContentHandler: (state) => {
+      state.isFullWidthContent = !state.isFullWidthContent;
+    },
   },
 });
 
@@ -61,4 +66,5 @@ export const {
   isShowMobileMenuHandler,
   closeAllShows,
   isShowVideoPlayerHandler,
+  isFullWidthContentHandler,
 } = globalStatesSlice.actions;

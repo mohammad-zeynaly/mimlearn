@@ -17,7 +17,7 @@ const ProductBox = ({
           src={img}
         />
       </div>
-      <div className=" border border-[#e5e5e5] rounded-xl rounded-tr-none rounded-tl-none">
+      <div className=" border border-fourth rounded-xl rounded-tr-none rounded-tl-none">
         <Link
           to={`/courseDetails/${title?.trim()}`}
           className="block hover:text-primary text-sm font-vazirMedium p-3 mt-1"
@@ -37,7 +37,7 @@ const ProductBox = ({
             <span className="pr-1 text-sm">{teacher}</span>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-3 pt-4 border-t border-[#e5e5e5] text-[#6c757d] p-3">
+        <div className="flex justify-between items-center mt-3 pt-4 border-t border-fourth text-[#6c757d] p-3">
           <div className="flex items-center">
             <FaUsers className="w-6 h-6" />
             <span className="pr-2">{students}</span>

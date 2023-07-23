@@ -1,11 +1,12 @@
+import { useParams } from "react-router-dom";
+import { CoursesType } from "../../types/coursesInterface";
+import allData from "../../data/allData";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CourseVideoPlayer from "../../components/CourseVideoPlayer/CourseVideoPlayer";
 import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDetailsSidebar";
-import { useParams } from "react-router-dom";
-
-import allData from "../../data/allData";
-
-import { CoursesType } from "../../types/coursesInterface";
+import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDetailsContent";
+import { useAppSelector } from "../../Redux/store/store";
+import { useStickyBox } from "react-sticky-box";
 
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
@@ -14,15 +15,35 @@ const CourseDetails = (): JSX.Element => {
     (course) => course?.title?.trim() === courseName
   ) as CoursesType;
 
+  const isFullWidthContent = useAppSelector(
+    (state) => state.globalStates.isFullWidthContent
+  );
+
+  const courseDetailSidebarRef = useStickyBox({
+    offsetTop: 20,
+    offsetBottom: 20,
+  });
+
   return (
     <>
       <Breadcrumb />
-      <div className="container pt-12">
-        <div className="flex items-center justify-between">
-          <div className="w-[69%]">
+      <div className="container pt-12 ">
+        <div className="flex items-start justify-between">
+          <div
+            className={`${isFullWidthContent ? "w-full" : "w-full lg:w-[69%]"}`}
+          >
             <CourseVideoPlayer mainCourse={mainCourse} />
+            <CourseDetailsContent />
           </div>
-          <aside className="w-[29%] mr-5">
+
+          <aside
+            ref={courseDetailSidebarRef}
+            className={`${
+              isFullWidthContent
+                ? "hidden"
+                : "hidden lg:block lg:w-[29%] mr-5 h-screen mt-14"
+            } `}
+          >
             <CourseDetailsSidebar mainCourse={mainCourse} />
           </aside>
         </div>

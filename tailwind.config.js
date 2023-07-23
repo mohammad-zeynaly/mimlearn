@@ -16,6 +16,7 @@ export default {
         primary: "#ec406a",
         secondary: "#adb5bd",
         third: "#BDC4CE",
+        fourth: "#e5e5e5",
       },
     },
   },
