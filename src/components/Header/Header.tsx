@@ -4,18 +4,18 @@ import Input from "../Input/Input";
 
 const Header = (): JSX.Element => {
   return (
-    <header id="header" className="mt-5">
-      <div className="w-full h-[600px] sm:h-[550px] bg-[url('./assets/images/header-bg.jpg')] -z-10 bg-cover absolute top-0 "></div>
-      <div className="bg-video w-full h-full absolute top-0 -z-10">
+    <header id="header" className="mt-[5.5rem] sm:mt-28">
+      <div className="w-full h-[650px] sm:h-[625px] bg-[url('./assets/images/header-bg.jpg')] -z-10 bg-cover absolute top-0 "></div>
+      <div className="bg-video w-full h-[650px] absolute top-0 -z-10">
         <video
           loop
           autoPlay
           muted
           src="./assets/videos/header-bg-video.mp4"
-          className="object-cover h-[600px] sm:h-[550px] w-full"
+          className="object-cover h-[650px] sm:h-[625px] w-full"
         ></video>
       </div>
-      <div className="bg-[rgba(31,10,62,0.7)] w-full h-[600px] sm:h-[550px] absolute top-0 -z-10"></div>
+      <div className="bg-[rgba(31,10,62,0.7)] w-full h-[650px] sm:h-[625px] absolute top-0 -z-10"></div>
       <div className="container">
         <div className="text-white pt-14 text-center ">
           <h1 className="text-2xl font-vazirMedium leading-8">
@@ -34,7 +34,7 @@ const Header = (): JSX.Element => {
                 <BiSearch className="w-8 h-8" />
               </Button>
             </div>
-            <div className="flex sm:flex-row-reverse flex-wrap justify-between items-center w-full mt-8">
+            <div className="flex sm:flex-row-reverse flex-wrap justify-between items-center w-full mt-8 mb-8">
               <div className="flex flex-col items-center w-[49%] sm:w-1/3 mb-6 sm:mb-0">
                 <img
                   className="w-12 sm:w-auto object-cover"
