@@ -53,10 +53,14 @@
   background-color: #222 !important;
 }
 .video-react .video-react-big-play-button {
-  width: 4rem !important;
-  height: 4rem !important;
-  line-height: 4rem !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  line-height: 3rem !important;
   border-radius: 100%;
+}
+.video-react .video-react-big-play-button.video-react-big-play-button-center {
+  top: 48% !important;
+  left: 56% !important;
 }
 @media screen and (min-width: 640px) {
   .swiper-wrapper {
@@ -64,6 +68,14 @@
   }
   .radio-swiper-pagination {
     top: 65% !important;
+  }
+  .video-react .video-react-big-play-button {
+    width: 4rem !important;
+    height: 4rem !important;
+    line-height: 4rem !important;
+  }
+  .video-react .video-react-big-play-button.video-react-big-play-button-center {
+    left: 52% !important;
   }
 }
 @media screen and (min-width: 1024px) {

@@ -23,7 +23,7 @@ const FreeSessionsBox = ({
           <span className="text-[#adb5bd] hidden sm:block">{caption}</span>
         </p>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center mr-1">
         <a
           href="https://i-wordpress.ir/demo/studiare/wp-content/uploads/2018/11/motion-graphic-6.mp4"
           className="bg-[#ff6060] text-white rounded-full sm:rounded-3xl flex items-center p-2 sm:py-1 sm:px-2"

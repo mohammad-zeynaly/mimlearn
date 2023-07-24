@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
+import { useStickyBox } from "react-sticky-box";
+import { useAppSelector } from "../../Redux/store/store";
 import { CoursesType } from "../../types/coursesInterface";
 import allData from "../../data/allData";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CourseVideoPlayer from "../../components/CourseVideoPlayer/CourseVideoPlayer";
 import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDetailsSidebar";
 import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDetailsContent";
-import { useAppSelector } from "../../Redux/store/store";
-import { useStickyBox } from "react-sticky-box";
+import CourseComments from "../../components/CourseComments/CourseComments";
 
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
@@ -47,6 +48,7 @@ const CourseDetails = (): JSX.Element => {
             <CourseDetailsSidebar mainCourse={mainCourse} />
           </aside>
         </div>
+        <CourseComments />
       </div>
     </>
   );
