@@ -6,7 +6,6 @@ import {
   isShowMobileMenuHandler,
 } from "../../Redux/reducers/globalStates";
 import Button from "../Button/Button";
-import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import { BsInstagram, BsTelegram, BsFacebook, BsTwitter } from "react-icons/bs";
 import { SiAparat } from "react-icons/si";
 import { HiOutlineShoppingBag } from "react-icons/hi";

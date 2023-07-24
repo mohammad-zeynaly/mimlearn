@@ -8,6 +8,7 @@ import CourseVideoPlayer from "../../components/CourseVideoPlayer/CourseVideoPla
 import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDetailsSidebar";
 import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDetailsContent";
 import CourseComments from "../../components/CourseComments/CourseComments";
+import Button from "../../components/Button/Button";
 
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
@@ -50,6 +51,9 @@ const CourseDetails = (): JSX.Element => {
         </div>
         <CourseComments />
       </div>
+      <Button className="w-full bg-[#1fbd50] text-white py-3 fixed bottom-0 z-30 lg:hidden">
+        ثبت نام دوره
+      </Button>
     </>
   );
 };
