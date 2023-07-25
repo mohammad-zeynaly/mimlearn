@@ -17,7 +17,7 @@ const LoginModal = () => {
       <div className="flex justify-center" id="login-page-modal">
         <div
           className={`transition-all duration-200 ${
-            loginModalStatus ? "opacity-100" : "opacity-0"
+            loginModalStatus ? "opacity-100 visible" : "opacity-0 invisible"
           } z-50 bg-white fixed  mt-12 overflow-hidden rounded-lg max-w-[400px] w-[96%]`}
         >
           <span className="p-4 bg-[#f6f6f6] flex justify-between items-center">

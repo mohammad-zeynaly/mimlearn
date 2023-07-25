@@ -17,7 +17,7 @@ const Input = ({
       className={
         className
           ? className
-          : "p-2 focus:outline-none border border-solid border-[#dcdcdc] rounded-[4px]"
+          : "p-2 focus:outline-none border border-solid border-[#dcdcdc] rounded-[4px] text-sm"
       }
       type={type}
       placeholder={placeholder}

@@ -56,7 +56,7 @@ const NavbarMobile = (): JSX.Element => {
                 </svg>
               </Button>
               <Button
-                className="bg-[rgba(0,0,0,.08)] w-12 h-12 rounded-md ml-3 sm:ml-4 relative flex justify-center items-center transition-transform duration-250"
+                className="bg-[rgba(0,0,0,.08)] w-12 h-12 rounded-md  relative flex justify-center items-center transition-transform duration-250"
                 onClick={() => dispatch(isShowMobileMenuHandler())}
               >
                 {mobileMenuStatus ? (
