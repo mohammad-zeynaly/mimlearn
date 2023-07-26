@@ -26,6 +26,7 @@ export interface CoursesType {
   count?: number;
   price?: number;
   prerequisite?: string;
+  caption?: string;
   time?: string;
   type: string;
 }

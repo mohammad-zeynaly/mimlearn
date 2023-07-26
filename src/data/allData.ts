@@ -10,6 +10,8 @@ const allData: allDataType[] = [
     teacher: "مصطفی میر هادی",
     students: 257,
     price: 200_000,
+    caption:
+      "در پکیج آموزش فتوشاپ بعد از آموزش کامل تمام ابزارهای مورد نیاز برای طراحی انواع کاور و تامنیلو لوگو و.. ، در اختیار شما قرار گرفته است.",
     time: "9 ساعت و 20 دقیقه",
     type: "graphicCourse",
   },
@@ -22,6 +24,8 @@ const allData: allDataType[] = [
     teacher: "مصطفی میر هادی",
     students: 357,
     price: 320_000,
+    caption:
+      "در پکیج آموزش ایلوستریتور بعد از آموزش کامل تمام ابزارهای مورد نیاز برای طراحی  لوگو و.. ، در اختیار شما قرار گرفته است.",
     time: "12 ساعت و 51 دقیقه",
     type: "graphicCourse",
   },
@@ -34,6 +38,8 @@ const allData: allDataType[] = [
     teacher: "حسین رحیمی",
     students: 435,
     price: 380_000,
+    caption:
+      "در پکیج آموزش پریمیر بعد از آموزش کامل تمام ابزارهای مورد نیاز برای ادیت انواع ویدیو و.. ، در اختیار شما قرار گرفته است.",
     time: "14 ساعت و 5 دقیقه",
     type: "graphicCourse",
   },
@@ -46,6 +52,8 @@ const allData: allDataType[] = [
     teacher: "حسین رحیمی",
     students: 600,
     price: 550_000,
+    caption:
+      "در پکیج آموزش افتر افکت بعد از آموزش کامل تمام ابزارهای مورد نیاز برای ساخت انواع استوری موشن یا انمیشن و.. ، در اختیار شما قرار گرفته است.",
     time: "9 ساعت و 10 دقیقه",
     type: "graphicCourse",
   },
@@ -58,6 +66,8 @@ const allData: allDataType[] = [
     teacher: "مصطفی میر هادی",
     students: 150,
     price: 180_000,
+    caption:
+      "در پکیج آموزش ادوبی ایکس دی  بعد از آموزش کامل تمام ابزارهای مورد نیاز برای ساخت انواع رابط کاربری، در اختیار شما قرار گرفته است.",
     time: "11 ساعت و 30 دقیقه",
     type: "graphicCourse",
   },
@@ -70,6 +80,8 @@ const allData: allDataType[] = [
     teacher: "مصطفی میر هادی",
     students: 45,
     price: 260_000,
+    caption:
+      "در پکیج آموزش  این دیزاین بعد از آموزش کامل تمام ابزارهای مورد نیاز برای ساخت انواع جلد کتاب ، در اختیار شما قرار گرفته است.",
     time: "8 ساعت و 35 دقیقه",
     type: "graphicCourse",
   },
@@ -80,9 +92,11 @@ const allData: allDataType[] = [
     img: "./assets/images/products/product-1.png",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
-    teacher: " صاحب محمدی",
+    teacher: " محمد امین سعیدی",
     students: 990,
     price: 300_000,
+    caption:
+      "اولین قدم شروع طراحی وبسایت، آموزش HTML هست. HTML یه زبان نشانه گذاری هست که با کمک اون میتونی تگ هایی بنویسی تا سایت رو روی اون تگ ها پیاده کنی",
     time: "5 ساعت",
     type: "programmingCourses",
   },
@@ -92,9 +106,11 @@ const allData: allDataType[] = [
     img: "./assets/images/products/product-2.png",
     prerequisite: "Html",
     stars: 5,
-    teacher: " صاحب محمدی",
+    teacher: " محمد امین سعیدی",
     students: 889,
     price: 320_000,
+    caption: `تا اینجای کار با HTML آشنا شدی و میتونی اسکلت یه سایتو پیاده کنی دمت گرم. یه قدم بزرگ برداشتی.
+حالا وقتشه که با یادگیری CSS به اسکلتی که ساختی پوست و گوشت بدی تا تبدیل به یه موجود زیبا بشه. Css این کارو برات انجام میده.`,
     time: "10 ساعت و 36 دقیقه",
     type: "programmingCourses",
   },
@@ -107,6 +123,8 @@ const allData: allDataType[] = [
     teacher: " محمد امین سعیدی",
     students: 1200,
     price: 880_000,
+    caption:
+      "آموزش جاوا اسکریپت برای تمامی افرادی ک قصد ورود به زبان برنامه نویسی دارند مناسب می باشد . خصوصا برای علاقه مندان به حوزه فرانت همان طور که می دانید جاوا اسکریپت یکی از زبان های برنامه نویسی محبوب و پر طرفدار است که بازار کار فوق العاده ای دارد",
     time: "91 ساعت و 20 دقیقه",
     type: "programmingCourses",
   },
@@ -116,9 +134,11 @@ const allData: allDataType[] = [
     img: "./assets/images/products/product-4.png",
     prerequisite: "Html & Css & JavaScript",
     stars: 5,
-    teacher: " صاحب محمدی",
+    teacher: " محمد امین سعیدی",
     students: 600,
     price: 950_000,
+    caption:
+      "ری اکت گل سرسبد فرانت اند محسوب میشود،اگر دوره react را ببینید، بازار کار فرانت اند پیشنهادهای بسیار شگفت انگیزی برای شما خواهد داشت! در این دوره شما آموزش ری اکت رابر اساس تجربیات مدرس در دنیای واقعی و کار با شرکت های مختلف ایرانی یاد می گیرید",
     time: "45 ساعت و 30 دقیقه",
     type: "programmingCourses",
   },
@@ -128,9 +148,11 @@ const allData: allDataType[] = [
     img: "./assets/images/products/product-5.png",
     prerequisite: "React.js",
     stars: 5,
-    teacher: "میلاد اعظمی",
+    teacher: " محمد امین سعیدی",
     students: 900,
     price: 880_000,
+    caption:
+      "نکست یه فریمورک مبتنی بر ری‌اکت هست که امروزه تو بازار کار یکی از مهم‌ترین تکنولوژی‌ها برای توسعه دهنده های ری‌اکت به حساب میاد. نکست رو میشه مکمل ری‌اکت دونست. یعنی هر چی که ری‌اکت داره نکست هم داره،",
     time: "35 ساعت و 30 دقیقه",
     type: "programmingCourses",
   },
@@ -143,6 +165,8 @@ const allData: allDataType[] = [
     teacher: "  محمد امین سعیدی",
     students: 45,
     price: 260_000,
+    caption:
+      "تایپ اسکریپت یه زبون برنامه نویسیه که توسط مایکروسافت ارائه شده و یسری قابلیت و فیچر های جدید رو با هدف افزایش پرفورمنس و کاهش احتمال خطا به جاوا اسکریپت اضافه کرده.",
     time: "15 ساعت و 15 دقیقه",
     type: "programmingCourses",
   },

@@ -31,7 +31,9 @@ const App = (): JSX.Element => {
       <LoginModal />
       <main
         className={`${
-          pathname.includes("courseDetails") ? "bg-[#f8f9fa] " : ""
+          pathname.includes("courseDetails") || pathname.includes("courses")
+            ? "bg-[#f8f9fa] "
+            : ""
         }pb-24 sm:mt-24`}
       >
         {routers}
