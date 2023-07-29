@@ -31,10 +31,12 @@ const App = (): JSX.Element => {
       <LoginModal />
       <main
         className={`${
-          pathname.includes("courseDetails") || pathname.includes("courses")
+          pathname.includes("courseDetails") ||
+          pathname.includes("courses") ||
+          pathname.includes("shopping-cart")
             ? "bg-[#f8f9fa] "
             : ""
-        }pb-24 sm:mt-24`}
+        }pb-24 sm:mt-20`}
       >
         {routers}
       </main>
