@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
 import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
-import { CoursesType } from "../../types/coursesInterface";
+
+interface ProductBoxType {
+  id: number;
+  title?: string;
+  img?: string;
+  stars?: number;
+  teacher?: string;
+  students?: number;
+  count?: number;
+  price?: number;
+  prerequisite?: string;
+  caption?: string;
+  time?: string;
+  type: string;
+  displayMode?: string;
+}
 
 const ProductBox = ({
   img,
@@ -10,7 +25,7 @@ const ProductBox = ({
   price,
   caption,
   displayMode,
-}: CoursesType & { displayMode: string }): JSX.Element => {
+}: ProductBoxType): JSX.Element => {
   return (
     <div
       className={`flex ${

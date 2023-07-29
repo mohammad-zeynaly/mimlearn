@@ -28,21 +28,29 @@ const NavbarDesktop = (): JSX.Element => {
               </Link>
               <ul className="flex items-center font-vazirMedium">
                 <li className="lg:mr-5">
-                  <NavLink className="text-primary" to="/">
+                  <NavLink className="menu__link" to="/">
                     صفحه نخست
                   </NavLink>
                 </li>
                 <li className="mr-5">
-                  <NavLink to="/courses"> دوره ها </NavLink>
+                  <NavLink className="menu__link" to="/courses">
+                    دوره ها
+                  </NavLink>
                 </li>
                 <li className="mr-5">
-                  <NavLink to="/blog"> وبلاگ </NavLink>
+                  <NavLink className="menu__link" to="/blog">
+                    وبلاگ
+                  </NavLink>
                 </li>
                 <li className="mr-5">
-                  <NavLink to="/contact-us"> تماس با ما </NavLink>
+                  <NavLink className="menu__link" to="/contact-us">
+                    تماس با ما
+                  </NavLink>
                 </li>
                 <li className="mr-5">
-                  <NavLink to="/about-us"> درباره ما </NavLink>
+                  <NavLink className="menu__link" to="/about-us">
+                    درباره ما
+                  </NavLink>
                 </li>
               </ul>
             </div>
