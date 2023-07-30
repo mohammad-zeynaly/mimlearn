@@ -12,7 +12,7 @@ const AllCourses = ({ displayMode }: { displayMode: string }): JSX.Element => {
         }  gap-4`}
       >
         {filteredProduct.map((product) => (
-          <ProductBox displayMode={displayMode} {...product} />
+          <ProductBox key={product.id} displayMode={displayMode} {...product} />
         ))}
       </div>
     </section>

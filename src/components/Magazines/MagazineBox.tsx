@@ -14,7 +14,7 @@ const MagazineBox = ({
       </div>
       <div className="pt-5 px-4">
         <Link
-          className="hover:text-primary text-[#464749] text-sm font-vazirMedium whitespace-nowrap text-ellipsis overflow-hidden"
+          className="hover:text-primary block text-[#464749] text-sm font-vazirMedium whitespace-nowrap overflow-ellipsis overflow-hidden"
           to="articles/1"
         >
           {title}

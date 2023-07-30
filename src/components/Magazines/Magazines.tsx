@@ -6,7 +6,7 @@ import useFilteredData from "../../hooks/useFilteredData";
 import { MagazineBoxType } from "../../types/coursesInterface";
 
 const Magazines = (): JSX.Element => {
-  const articlesItems: MagazineBoxType[] = useFilteredData("articles");
+  const magazineItems: MagazineBoxType[] = useFilteredData("articles");
 
   return (
     <SectionTemplate
@@ -31,9 +31,9 @@ const Magazines = (): JSX.Element => {
           },
         }}
       >
-        {articlesItems.map((article) => (
-          <SwiperSlide key={article.id}>
-            <MagazineBox {...article} />
+        {magazineItems.map((magazine) => (
+          <SwiperSlide key={magazine.id}>
+            <MagazineBox {...magazine} />
           </SwiperSlide>
         ))}
       </SwiperTemplate>

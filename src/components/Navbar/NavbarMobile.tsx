@@ -89,7 +89,7 @@ const NavbarMobile = (): JSX.Element => {
             <Link to="/courses"> دوره ها </Link>
           </li>
           <li className="mb-4">
-            <Link to="/blog"> وبلاگ</Link>
+            <Link to="/articles"> مقالات </Link>
           </li>
           <li className="mb-4">
             <Link to="/contact-us"> تماس با ما</Link>
