@@ -19,7 +19,7 @@ const ShoppingCart = (): JSX.Element => {
         >
           {/* empty shoppingCart */}
           {shoppingCartProduct.length < 1 ? (
-            <div className="flex items-center mt-16 p-4">
+            <div className="flex items-center mt-16 ">
               <img
                 className="w-10 object-cover"
                 src="./assets/images/emptyBasket.png"
@@ -30,29 +30,31 @@ const ShoppingCart = (): JSX.Element => {
               </span>
             </div>
           ) : (
-            <ul className="flex flex-col mt-8">
+            <ul className="flex flex-col mt-8 w-full relative">
               {shoppingCartProduct.map((product) => (
                 <CartProductItem key={product.id} {...product} />
               ))}
-              <div className="pt-12">
-                <p className="flex justify-between items-center border-t pt-8 p-4">
-                  <strong className="text-base text-[#9ca4ac] "> جمع: </strong>
-                  <span className="text-secondary">2,179,000 تومان</span>
-                </p>
-              </div>
-              <div className="p-4">
-                <Link
-                  className="block bg-secondary p-3 text-base text-white rounded-lg text-center"
-                  to="/shopping-cart"
-                >
-                  مشاهده سبد خرید
-                </Link>
-                <Link
-                  className="block mt-4 bg-primary p-3 text-base text-white rounded-lg text-center"
-                  to="/checkout"
-                >
-                  تسویه حساب
-                </Link>
+              <div className="w-72 sm:w-80 fixed right-0 bottom-0">
+                <div className="pt-12">
+                  <p className="flex justify-between items-center border-t pt-8 p-4">
+                    <strong className="text-base text-[#9ca4ac] ">جمع:</strong>
+                    <span className="text-secondary">2,179,000 تومان</span>
+                  </p>
+                </div>
+                <div className="p-4">
+                  <Link
+                    className="block bg-secondary p-3 text-base text-white rounded-lg text-center"
+                    to="/shopping-cart"
+                  >
+                    مشاهده سبد خرید
+                  </Link>
+                  <Link
+                    className="block mt-4 bg-primary p-3 text-base text-white rounded-lg text-center"
+                    to="/checkout"
+                  >
+                    تسویه حساب
+                  </Link>
+                </div>
               </div>
             </ul>
           )}

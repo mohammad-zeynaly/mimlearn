@@ -7,6 +7,7 @@ import Button from "../../components/Button/Button";
 
 const CartPage = (): JSX.Element => {
   const [isEmptyCart, setIsEmptyCart] = useState<boolean>(false);
+  // setIsEmptyCart(false);
   return (
     <section className="">
       <div className="container text-sm sm:mb-12">
