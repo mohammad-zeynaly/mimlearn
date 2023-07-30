@@ -33,7 +33,8 @@ const App = (): JSX.Element => {
         className={`${
           pathname.includes("courseDetails") ||
           pathname.includes("courses") ||
-          pathname.includes("shopping-cart")
+          pathname.includes("shopping-cart") ||
+          pathname.includes("articles")
             ? "bg-[#f8f9fa] "
             : ""
         }pb-24 sm:mt-20`}

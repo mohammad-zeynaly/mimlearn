@@ -38,8 +38,8 @@ const NavbarDesktop = (): JSX.Element => {
                   </NavLink>
                 </li>
                 <li className="mr-5">
-                  <NavLink className="menu__link" to="/blog">
-                    وبلاگ
+                  <NavLink className="menu__link" to="/articles">
+                    مقالات
                   </NavLink>
                 </li>
                 <li className="mr-5">

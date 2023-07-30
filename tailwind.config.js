@@ -12,6 +12,10 @@ export default {
         vazirMedium: ["Vazir-Medium"],
         vazirBold: ["Vazir-Bold"],
       },
+      backgroundImage: {
+        articleGradient:
+          "linear-gradient(180deg,rgba(255,255,255,0) 60%,#fff 100%)",
+      },
       colors: {
         primary: "#ec406a",
         secondary: "#adb5bd",

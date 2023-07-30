@@ -40,7 +40,7 @@ export interface radioItemsType {
   audio?: string;
   type: string;
 }
-export interface ArticlesItemType {
+export interface MagazineBoxType {
   id: number;
   title?: string;
   img?: string;

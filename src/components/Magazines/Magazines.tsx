@@ -1,12 +1,12 @@
 import SectionTemplate from "../SectionTemplate/SectionTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import { SwiperSlide } from "swiper/react";
-import ArticlesItem from "./ArticlesItem";
+import MagazineBox from "./MagazineBox";
 import useFilteredData from "../../hooks/useFilteredData";
-import { ArticlesItemType } from "../../types/coursesInterface";
+import { MagazineBoxType } from "../../types/coursesInterface";
 
-const Articles = (): JSX.Element => {
-  const articlesItems: ArticlesItemType[] = useFilteredData("articles");
+const Magazines = (): JSX.Element => {
+  const articlesItems: MagazineBoxType[] = useFilteredData("articles");
 
   return (
     <SectionTemplate
@@ -33,7 +33,7 @@ const Articles = (): JSX.Element => {
       >
         {articlesItems.map((article) => (
           <SwiperSlide key={article.id}>
-            <ArticlesItem {...article} />
+            <MagazineBox {...article} />
           </SwiperSlide>
         ))}
       </SwiperTemplate>
@@ -41,4 +41,4 @@ const Articles = (): JSX.Element => {
   );
 };
 
-export default Articles;
+export default Magazines;

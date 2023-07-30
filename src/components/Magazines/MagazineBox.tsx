@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArticlesItemType } from "../../types/coursesInterface";
+import { MagazineBoxType } from "../../types/coursesInterface";
 
-const ArticlesItem = ({
+const MagazineBox = ({
   id,
   title,
   img,
   caption,
-}: ArticlesItemType): JSX.Element => {
+}: MagazineBoxType): JSX.Element => {
   return (
     <div className="mb-3 mt-5 border border-solid border-fourth rounded-lg overflow-hidden transition-all duration-200 group hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(168,172,185,0.3)]">
       <div className="">
@@ -31,4 +31,4 @@ const ArticlesItem = ({
   );
 };
 
-export default ArticlesItem;
+export default MagazineBox;
