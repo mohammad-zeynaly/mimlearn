@@ -15,7 +15,7 @@ const MagazineBox = ({
       <div className="pt-5 px-4">
         <Link
           className="hover:text-primary block text-[#464749] text-sm font-vazirMedium whitespace-nowrap overflow-ellipsis overflow-hidden"
-          to="articles/1"
+          to={`articlesDetails/${title}`}
         >
           {title}
         </Link>
@@ -23,7 +23,7 @@ const MagazineBox = ({
       </div>
       <Link
         className="transition-all duration-200 bg-[#ececec] w-full block p-2 text-center mt-5 text-[#373a33] text-sm group-hover:bg-primary group-hover:text-white"
-        to="articles/1"
+        to={`articlesDetails/${title}`}
       >
         بیشتر بخوانید
       </Link>

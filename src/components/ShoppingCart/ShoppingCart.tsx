@@ -22,7 +22,7 @@ const ShoppingCart = (): JSX.Element => {
             <div className="flex items-center mt-16 ">
               <img
                 className="w-10 object-cover"
-                src="./assets/images/emptyBasket.png"
+                src="../assets/images/emptyBasket.png"
                 alt="سبد خالی"
               />
               <span className="text-[#7c7d7e] ">

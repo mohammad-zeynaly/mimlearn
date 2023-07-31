@@ -8,7 +8,11 @@ const CartProductItem = ({ title, img, price, count }: CoursesType) => {
         x
       </span>
       <div className="flex items-center p-4 pr-2">
-        <img className="w-16 object-cover ml-2" src={img} alt="عکس محصول" />
+        <img
+          className="w-16 object-cover ml-2"
+          src={`.${img}`}
+          alt="عکس محصول"
+        />
         <h6 className="mr-1">
           <Link
             to="product-details/1"

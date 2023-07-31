@@ -205,7 +205,8 @@ const allData: allDataType[] = [
   {
     id: 16,
     title: "افزودن دکمه تماس در سایت وردپرسی",
-    img: "./assets/images/articles/article-1.jpg",
+    img: "./assets/images/articles/article-sm-1.jpg",
+    imgBig: "../assets/images/articles/article-lg-1.jpg",
     caption:
       "امروز در خدمتتان هستیم با آموزش افزودن دکمه تماس در سایت وردپرسی . در این.",
     type: "articles",
@@ -213,7 +214,8 @@ const allData: allDataType[] = [
   {
     id: 17,
     title: "معرفی بهترین نرم افزارهای مدیریتی برای دورکاری",
-    img: "./assets/images/articles/article-2.jpg",
+    img: "./assets/images/articles/article-sm-2.jpg",
+    imgBig: "../assets/images/articles/article-lg-2.jpg",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
     type: "articles",
@@ -221,7 +223,8 @@ const allData: allDataType[] = [
   {
     id: 18,
     title: "چگونه به یک مدیر کسب و کار تبدیل شویم؟",
-    img: "./assets/images/articles/article-3.jpg",
+    img: "./assets/images/articles/article-sm-3.jpg",
+    imgBig: "../assets/images/articles/article-lg-3.jpg",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها..",
     type: "articles",
@@ -229,7 +232,8 @@ const allData: allDataType[] = [
   {
     id: 19,
     title: "استراتژی اقیانوس آبی چیست؟",
-    img: "./assets/images/articles/article-4.jpg",
+    img: "./assets/images/articles/article-sm-4.jpg",
+    imgBig: "../assets/images/articles/article-lg-4.jpg",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
     type: "articles",
@@ -237,7 +241,8 @@ const allData: allDataType[] = [
   {
     id: 20,
     title: "۹ ویژگی پنهان در کتابخانه چند رسانه ای وردپرس",
-    img: "./assets/images/articles/article-5.jpg",
+    img: "./assets/images/articles/article-sm-5.jpg",
+    imgBig: "../assets/images/articles/article-lg-5.jpg",
     caption:
       "	امروز بیایید با ۹ ویژگی کتابخانه چندرسانه ای در وردپرس آشنا شوید تا بتوانید رسانه‌های را بهتر.",
     type: "articles",
@@ -245,7 +250,8 @@ const allData: allDataType[] = [
   {
     id: 21,
     title: "چگونه می توان رتبه الکسای سایت را بهبود داد؟",
-    img: "./assets/images/articles/article-6.jpg",
+    img: "./assets/images/articles/article-sm-6.jpg",
+    imgBig: "../assets/images/articles/article-lg-6.jpg",
     caption:
       "یکی از روشهای موثر برای افزایش بازدید کننده و بهبود سئو، ارتقای رتبه الکسا است. در این نوشته.",
     type: "articles",
@@ -253,7 +259,8 @@ const allData: allDataType[] = [
   {
     id: 22,
     title: "چگونه موفق شویم؟ | چگونه در زندگی به هر چه می‌خواهیم برسیم؟",
-    img: "./assets/images/articles/article-7.jpg",
+    img: "./assets/images/articles/article-sm-7.jpg",
+    imgBig: "../assets/images/articles/article-lg-7.jpg",
     caption:
       "موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها...",
     type: "articles",

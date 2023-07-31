@@ -28,7 +28,7 @@ const NavbarMobile = (): JSX.Element => {
             <Link to="/">
               <img
                 className="w-28 "
-                src="./assets/images/logo-default.png"
+                src="../assets/images/logo-default.png"
                 alt="لوگو سایت"
               />
             </Link>

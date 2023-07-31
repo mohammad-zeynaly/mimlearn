@@ -4,7 +4,7 @@ import { MagazineBoxType } from "../../types/coursesInterface";
 const ArticleBox = ({ title, caption, img }: MagazineBoxType): JSX.Element => {
   return (
     <div className="rounded-2xl shadow-[0_5px_30px_rgb(70,72,77,0.08)] overflow-hidden transition-all duration-200 hover:-translate-y-1">
-      <Link to={`/articles/${title}`}>
+      <Link to={`/articlesDetails/${title}`}>
         <div className="relative after:block after:absolute after:top-0 after:w-full after:h-full after:bg-articleGradient">
           <img
             src={img}
@@ -15,7 +15,7 @@ const ArticleBox = ({ title, caption, img }: MagazineBoxType): JSX.Element => {
       </Link>
       <div className="bg-white p-4">
         <Link
-          to={`/articles/${title}`}
+          to={`/articlesDetails/${title}`}
           className="text-[#464749] block mt-2 transition-all hover:text-primary leading-6"
         >
           {title}

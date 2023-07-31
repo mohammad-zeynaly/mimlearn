@@ -116,12 +116,12 @@ const Footer = (): JSX.Element => {
             <div className="flex items-center">
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="./assets/images/enamad.png"
+                src="../assets/images/enamad.png"
                 alt="enamad image"
               />
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="./assets/images/samandehi.png"
+                src="../assets/images/samandehi.png"
                 alt="enamad image"
               />
             </div>

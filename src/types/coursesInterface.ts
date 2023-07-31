@@ -2,6 +2,7 @@ export interface allDataType {
   id: number;
   title?: string;
   img?: string;
+  imgBig?: string;
   stars?: number;
   teacher?: string;
   price?: number;
@@ -44,6 +45,7 @@ export interface MagazineBoxType {
   id: number;
   title?: string;
   img?: string;
+  imgBig?: string;
   caption?: string;
   type: string;
 }
