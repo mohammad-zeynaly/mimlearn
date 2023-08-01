@@ -43,6 +43,11 @@ const NavbarDesktop = (): JSX.Element => {
                   </NavLink>
                 </li>
                 <li className="mr-5">
+                  <NavLink className="menu__link" to="/teachers">
+                    مدرسین
+                  </NavLink>
+                </li>
+                <li className="mr-5">
                   <NavLink className="menu__link" to="/contact-us">
                     تماس با ما
                   </NavLink>

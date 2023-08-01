@@ -15,6 +15,8 @@ export default {
       backgroundImage: {
         articleGradient:
           "linear-gradient(180deg,rgba(255,255,255,0) 60%,#fff 100%)",
+        teacherDetailGradient:
+          "linear-gradient(0deg, rgba(0,0,0,.8) 0, transparent 100%)",
       },
       colors: {
         primary: "#ec406a",

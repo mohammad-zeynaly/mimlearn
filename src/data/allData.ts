@@ -306,6 +306,28 @@ const allData: allDataType[] = [
     role: "مدیرعامل پیام‌رسان تلگرام",
     type: "comments",
   },
+
+  {
+    id: 28,
+    teacherName: "مصطفی میر هادی",
+    role: "متخصص میم لرن",
+    img: "../assets/images/teachers/teacher-1.jpg",
+    type: "teachers",
+  },
+  {
+    id: 29,
+    teacherName: "محمد زینالی",
+    role: "توسعه دهنده میم لرن",
+    img: "../assets/images/teachers/teacher-2.jpg",
+    type: "teachers",
+  },
+  {
+    id: 30,
+    teacherName: "علی رحیمی",
+    role: "مدیر آکادمی میم لرن",
+    img: "../assets/images/teachers/teacher-3.jpg",
+    type: "teachers",
+  },
 ];
 
 export default allData;

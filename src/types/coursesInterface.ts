@@ -5,6 +5,7 @@ export interface allDataType {
   imgBig?: string;
   stars?: number;
   teacher?: string;
+  teacherName?: string;
   price?: number;
   count?: number;
   students?: number;
@@ -56,6 +57,14 @@ export interface CommentsType {
   author?: string;
   role?: string;
   type: string;
+}
+
+export interface TeacherItemType {
+  id?: number;
+  teacherName?: string;
+  role?: string;
+  img?: string;
+  type?: string;
 }
 
 export interface BasketProducts {
