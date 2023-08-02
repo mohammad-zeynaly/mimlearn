@@ -14,7 +14,7 @@ const CommunicationWithTheTeacher = ({
   socialInfo,
 }: CommunicationWithTheTeacherType): JSX.Element => {
   return (
-    <div className="w-[48%] flex items-center">
+    <div className="w-full mb-4 sm:m-0 sm:w-[48%] flex items-center">
       {avatar}
       <span className="flex flex-col pr-2">
         <h6 className="text-[15px] font-vazirMedium"> {title} </h6>

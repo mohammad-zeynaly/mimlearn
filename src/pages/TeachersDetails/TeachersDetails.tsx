@@ -1,5 +1,6 @@
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import TeacherInformation from "../../components/TeacherInformation/TeacherInformation";
+import BiographyTeacher from "../../components/BiographyTeacher/BiographyTeacher";
 
 const TeachersDetails = (): JSX.Element => {
   return (
@@ -11,7 +12,8 @@ const TeachersDetails = (): JSX.Element => {
         previousPageLink="/teachers"
       />
       <div className="container">
-      <TeacherInformation />
+        <TeacherInformation />
+        <BiographyTeacher />
       </div>
     </section>
   );

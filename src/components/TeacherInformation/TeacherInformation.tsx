@@ -25,11 +25,11 @@ const TeacherInformation = (): JSX.Element => {
   ];
   console.log(mainRole);
   return (
-    <div className="flex items-start mt-8">
-      <div className=" w-[35%]">
+    <div className="flex flex-col lg:flex-row items-start mt-8">
+      <div className="w-full lg:w-[35%]">
         <img
           src={mainRole?.img}
-          className="border border-dashed rounded-lg"
+          className="w-full object-cover border border-dashed rounded-lg"
           alt="تصویر مدرس"
         />
         <span className="flex flex-col items-center mt-3">
@@ -37,8 +37,8 @@ const TeacherInformation = (): JSX.Element => {
           <small className="text-sm mt-2">{mainRole?.role}</small>
         </span>
       </div>
-      <div className="w-[63%] sm:mr-5">
-        <div className="">
+      <div className="w-full lg:w-[63%] sm:mr-5">
+        <div className="mt-6 lg:mt-0">
           <h6 className="font-vazirBold text-sm">درباره استاد:</h6>
           <p className="mt-4 text-sm leading-8">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
