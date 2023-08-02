@@ -1188,8 +1188,20 @@ video {
   width: 18px;
 }
 
+.w-\[35\%\] {
+  width: 35%;
+}
+
+.w-\[48\%\] {
+  width: 48%;
+}
+
 .w-\[49\%\] {
   width: 49%;
+}
+
+.w-\[63\%\] {
+  width: 63%;
 }
 
 .w-\[96\%\] {
@@ -1274,10 +1286,6 @@ video {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row-reverse {
@@ -1440,9 +1448,24 @@ video {
   border-style: dashed;
 }
 
+.border-\[\#00BCFF\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 188 255 / var(--tw-border-opacity));
+}
+
 .border-\[\#2c3237\] {
   --tw-border-opacity: 1;
   border-color: rgb(44 50 55 / var(--tw-border-opacity));
+}
+
+.border-\[\#69727d\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(105 114 125 / var(--tw-border-opacity));
+}
+
+.border-\[\#EA1267\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 18 103 / var(--tw-border-opacity));
 }
 
 .border-\[\#cacaca\] {
@@ -1724,8 +1747,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.pb-\[100\%\] {
-  padding-bottom: 100%;
+.pb-\[90\%\] {
+  padding-bottom: 90%;
 }
 
 .pl-2 {
@@ -1790,14 +1813,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-\[190\%\] {
-  padding-bottom: 190%;
-}
-
-.pb-\[90\%\] {
-  padding-bottom: 90%;
 }
 
 .text-left {
@@ -1886,6 +1901,11 @@ video {
   line-height: 2rem;
 }
 
+.text-\[\#00BCFF\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 188 255 / var(--tw-text-opacity));
+}
+
 .text-\[\#343a40\] {
   --tw-text-opacity: 1;
   color: rgb(52 58 64 / var(--tw-text-opacity));
@@ -1909,6 +1929,11 @@ video {
 .text-\[\#555\] {
   --tw-text-opacity: 1;
   color: rgb(85 85 85 / var(--tw-text-opacity));
+}
+
+.text-\[\#69727d\] {
+  --tw-text-opacity: 1;
+  color: rgb(105 114 125 / var(--tw-text-opacity));
 }
 
 .text-\[\#6c757d\] {
@@ -1949,6 +1974,11 @@ video {
 .text-\[\#9ca4ac\] {
   --tw-text-opacity: 1;
   color: rgb(156 164 172 / var(--tw-text-opacity));
+}
+
+.text-\[\#EA1267\] {
+  --tw-text-opacity: 1;
+  color: rgb(234 18 103 / var(--tw-text-opacity));
 }
 
 .text-\[\#adb5bd\] {

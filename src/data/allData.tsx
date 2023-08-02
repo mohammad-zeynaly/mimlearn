@@ -1,3 +1,12 @@
+import {
+  FaEnvelopeOpenText,
+  FaMobileAlt,
+  FaInstagram,
+  FaTelegramPlane,
+} from "react-icons/fa";
+
+import { MdLocationPin } from "react-icons/md";
+
 import { allDataType } from "../types/coursesInterface";
 
 const allData: allDataType[] = [
@@ -309,24 +318,95 @@ const allData: allDataType[] = [
 
   {
     id: 28,
-    teacherName: "مصطفی میر هادی",
+    name: "مصطفی میر هادی",
+    email: "mostafaHadi@gmail.com",
+    phone: "09111111111",
+    instagramAccount: "mostafaHadi1998",
+    telegramAccount: "mostafaHadi1998",
+    Location: "تهران، خیابان آزادی، خیابان بهبودی، ساختمان 110",
     role: "متخصص میم لرن",
     img: "../assets/images/teachers/teacher-1.jpg",
     type: "teachers",
   },
   {
     id: 29,
-    teacherName: "محمد زینالی",
+    name: "محمد زینالی",
+    email: "mhmdzynaly977@gmail.com",
+    phone: "09222222222",
+    instagramAccount: "zeynali2003",
+    telegramAccount: "zeynali2003",
+    Location: "تبریز ، منظریه",
     role: "توسعه دهنده میم لرن",
     img: "../assets/images/teachers/teacher-2.jpg",
     type: "teachers",
   },
   {
     id: 30,
-    teacherName: "علی رحیمی",
+    name: "علی رحیمی",
+    email: "alirahimi@gmail.com",
+    phone: "09333333333",
+    instagramAccount: "rahimi1995",
+    telegramAccount: "rahimi1995",
+    Location: "تهران ، شهریار",
     role: "مدیر آکادمی میم لرن",
     img: "../assets/images/teachers/teacher-3.jpg",
     type: "teachers",
+  },
+
+  {
+    id: 31,
+    title: "آدرس ایمیل",
+    caption: "info@haji-studiare.com",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <FaEnvelopeOpenText className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 32,
+    title: "شماره تماس",
+    caption: "09374812449",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <FaMobileAlt className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 33,
+    title: "صفحه اینستاگرام",
+    caption: "@zeynali2003",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#EA1267]">
+        <FaInstagram className="w-6 h-6 text-[#EA1267]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 34,
+    title: "تلگرام",
+    caption: "@zeynali2003",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#00BCFF]">
+        <FaTelegramPlane className="w-6 h-6 text-[#00BCFF]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 35,
+    title: "آدرس",
+    caption: "تهران، خیابان آزادی، خیابان بهبودی، ساختمان 110",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <MdLocationPin className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
   },
 ];
 

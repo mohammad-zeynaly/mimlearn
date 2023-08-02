@@ -5,15 +5,21 @@ export interface allDataType {
   imgBig?: string;
   stars?: number;
   teacher?: string;
-  teacherName?: string;
+  name?: string;
   price?: number;
   count?: number;
   students?: number;
   type: string;
   time?: string;
   audio?: string;
+  avatar?: React.JSX.Element;
   caption?: string;
   author?: string;
+  email?: string;
+  phone?: string;
+  instagramAccount?: string;
+  telegramAccount?: string;
+  Location?: string;
   role?: string;
   prerequisite?: string;
 }
@@ -61,10 +67,23 @@ export interface CommentsType {
 
 export interface TeacherItemType {
   id?: number;
-  teacherName?: string;
+  name?: string;
+  email?: string;
+  phone?: string;
+  instagramAccount?: string;
+  telegramAccount?: string;
+  Location?: string;
   role?: string;
   img?: string;
   type?: string;
+}
+
+export interface communicationWithTheTeacherItemsType {
+  id: number;
+  title?: string;
+  caption?: string;
+  avatar?: React.JSX.Element;
+  type: string;
 }
 
 export interface BasketProducts {
