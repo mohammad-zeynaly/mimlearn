@@ -50,7 +50,7 @@ const ShoppingCart = (): JSX.Element => {
                   </Link>
                   <Link
                     className="block mt-4 bg-primary p-3 text-base text-white rounded-lg text-center"
-                    to="/checkout"
+                    to="/shopping-cart"
                   >
                     تسویه حساب
                   </Link>

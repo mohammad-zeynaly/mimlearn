@@ -15,7 +15,7 @@ const CartProductItem = ({ title, img, price, count }: CoursesType) => {
         />
         <h6 className="mr-1">
           <Link
-            to="product-details/1"
+            to={`/courseDetails/${title?.trim()}`}
             className="text-[#464749] transition-all hover:text-primary"
           >
             {title}

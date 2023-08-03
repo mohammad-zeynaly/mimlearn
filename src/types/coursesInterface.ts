@@ -86,6 +86,11 @@ export interface communicationWithTheTeacherItemsType {
   type: string;
 }
 
+export interface AccordionMenuSItemType {
+  id: string;
+  title: string;
+}
+
 export interface BasketProducts {
   basketProduct: CoursesType[];
 }

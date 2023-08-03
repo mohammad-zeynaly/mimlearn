@@ -9,6 +9,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: inset -37px 0 72px -6px rgba(0, 0, 0, 0.1);
   transform: translateZ(0);
+  height: 110%;
   transition: all 250ms;
 }
 .menu__link.active {

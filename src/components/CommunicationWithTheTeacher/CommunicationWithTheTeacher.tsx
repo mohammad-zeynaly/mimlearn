@@ -1,4 +1,3 @@
-import { FaEnvelopeOpenText } from "react-icons/fa";
 import { communicationWithTheTeacherItemsType } from "../../types/coursesInterface";
 
 interface socialInfoType {
