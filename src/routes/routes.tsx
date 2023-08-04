@@ -7,6 +7,7 @@ import ArticlesDetails from "../pages/ArticlesDetails/ArticlesDetails";
 import Teachers from "../pages/Teachers/Teachers";
 import TeachersDetails from "../pages/TeachersDetails/TeachersDetails";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -19,5 +20,6 @@ const routes = [
   { path: "/teachers", element: <Teachers /> },
   { path: "/teachersDetails/:teachersName", element: <TeachersDetails /> },
   { path: "/about-us", element: <AboutUs /> },
+  { path: "/contact-us", element: <ContactUs /> },
 ];
 export default routes;

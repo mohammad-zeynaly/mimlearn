@@ -1013,6 +1013,10 @@ input:focus {
   margin-top: 6px;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1123,6 +1127,10 @@ input:focus {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-10 {
@@ -1406,6 +1414,11 @@ input:focus {
   border-radius: 0.75rem;
 }
 
+.rounded-s {
+  border-start-start-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
+}
+
 .rounded-bl-md {
   border-bottom-left-radius: 0.375rem;
 }
@@ -1618,6 +1631,30 @@ input:focus {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E31784\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 23 132 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#2ca5e0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 165 224 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#\#cd201f\] {
+  background-color: ##cd201f;
+}
+
+.bg-\[\#cd201f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 32 31 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#3b5998\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 89 152 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/assets\/images\/header-bg\.jpg\'\)\] {
@@ -1984,6 +2021,11 @@ input:focus {
 .text-\[\#898989\] {
   --tw-text-opacity: 1;
   color: rgb(137 137 137 / var(--tw-text-opacity));
+}
+
+.text-\[\#9AA6B1\] {
+  --tw-text-opacity: 1;
+  color: rgb(154 166 177 / var(--tw-text-opacity));
 }
 
 .text-\[\#9ca4ac\] {
@@ -2424,6 +2466,10 @@ input:focus {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
+
 .hover\:shadow-\[0_24px_50px_3px_rgba\(0\2c 0\2c 0\2c \.2\)\]:hover {
   --tw-shadow: 0 24px 50px 3px rgba(0,0,0,.2);
   --tw-shadow-colored: 0 24px 50px 3px var(--tw-shadow-color);
@@ -2551,6 +2597,10 @@ input:focus {
     margin-top: 14rem;
   }
 
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2657,6 +2707,10 @@ input:focus {
 
   .sm\:items-center {
     align-items: center;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
   }
 
   .sm\:gap-4 {
@@ -2798,12 +2852,20 @@ input:focus {
     margin-top: 8rem;
   }
 
+  .lg\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
   .lg\:block {
     display: block;
   }
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-8 {
+    height: 2rem;
   }
 
   .lg\:w-1\/2 {
@@ -2842,6 +2904,10 @@ input:focus {
     width: 100%;
   }
 
+  .lg\:w-8 {
+    width: 2rem;
+  }
+
   .lg\:max-w-\[15rem\] {
     max-width: 15rem;
   }
@@ -2866,6 +2932,10 @@ input:focus {
 
   .lg\:justify-normal {
     justify-content: normal;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:overflow-visible {
