@@ -73,7 +73,7 @@ const Header = (): JSX.Element => {
             </div>
             <div
               id="searchResult"
-              className={`bg-white absolute left-0 right-0 max-w-3xl w-full rounded-xl py-6 flex text-black shadow-[0_5px_10px_0_rgba(0,0,0,0.12)] min-h-[100px] max-h-80  overflow-y-auto ${
+              className={`bg-white absolute left-0 right-0 max-w-3xl w-full rounded-xl py-6 flex text-black shadow-[0_5px_10px_0_rgba(0,0,0,0.12)] min-h-[100px] max-h-72 sm:max-h-64 lg:max-h-80  overflow-y-auto ${
                 searchInputCharacter.length > 0 ? "block" : "hidden"
               }`}
             >
@@ -93,7 +93,7 @@ const Header = (): JSX.Element => {
                         <span className="">
                           <img
                             src={courseItem.img}
-                            className="w-32 h-32 rounded-lg object-cover"
+                            className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-lg object-cover"
                             alt="عکس دوره"
                           />
                         </span>
