@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
 interface ButtonType {
-  type?: "button" | "submit" | "reset" ;
+  type?: "button" | "submit" | "reset";
   className: string;
   children: string | ReactNode;
-  onClick?: () => {};
+  onClick?: () => {} | void;
 }
 
 const Button = ({ type, className, children, onClick }: ButtonType) => {
