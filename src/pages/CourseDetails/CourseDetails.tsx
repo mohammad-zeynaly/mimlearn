@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { useStickyBox } from "react-sticky-box";
 import { useAppSelector } from "../../Redux/store/store";
 import { CoursesType } from "../../types/coursesInterface";
 import allData from "../../data/allData";
@@ -21,11 +20,6 @@ const CourseDetails = (): JSX.Element => {
     (state) => state.globalStates.isFullWidthContent
   );
 
-  const courseDetailSidebarRef = useStickyBox({
-    offsetTop: 20,
-    offsetBottom: 20,
-  });
-
   return (
     <>
       <Breadcrumb />
@@ -39,13 +33,13 @@ const CourseDetails = (): JSX.Element => {
           </div>
 
           <aside
-            ref={courseDetailSidebarRef}
             className={`${
               isFullWidthContent
                 ? "hidden"
-                : "hidden lg:block lg:w-[29%] mr-5 h-screen lg:mt-32 xl:mt-10 2xl:mt-0"
+                : "hidden lg:block lg:w-[29%] mr-5 sticky top-0 max-h-[700px] overflow-y-hidden"
             } `}
           >
+            {/* h-screen lg:mt-32 xl:mt-10 2xl:mt-0*/}
             <CourseDetailsSidebar mainCourse={mainCourse} />
           </aside>
         </div>
