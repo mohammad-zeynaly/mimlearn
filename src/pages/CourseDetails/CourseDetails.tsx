@@ -30,7 +30,7 @@ const CourseDetails = (): JSX.Element => {
       (course) => course.title === mainCourse.title
     );
 
-    console.log("isInProduct.=> ", isInProduct);
+    console.log("isInProduct.=> ", itIsAProduct);
 
     if (!itIsAProduct) dispatch(addToCart(mainCourse));
   };
