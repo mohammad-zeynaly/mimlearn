@@ -17,6 +17,8 @@ const NavbarMobile = (): JSX.Element => {
     (state) => state.globalStates.isShowMobileMenu
   );
 
+  const allCartProduct = useAppSelector((state) => state.courses.basketProduct);
+
   return (
     <>
       <nav
@@ -40,7 +42,7 @@ const NavbarMobile = (): JSX.Element => {
                 <HiOutlineShoppingBag className="w-6 h-6 text-[#343a40]" />
 
                 <span className="bg-primary absolute bottom-2 right-1 text-white text-sm w-4 h-4 rounded-full">
-                  0
+                  {allCartProduct.length}
                 </span>
               </Button>
               <Button

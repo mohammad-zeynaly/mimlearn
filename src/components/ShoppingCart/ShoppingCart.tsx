@@ -30,13 +30,13 @@ const ShoppingCart = (): JSX.Element => {
               </span>
             </div>
           ) : (
-            <ul className="flex flex-col mt-8 w-full relative">
+            <ul className="flex flex-col w-full relative">
               {shoppingCartProduct.map((product) => (
                 <CartProductItem key={product.id} {...product} />
               ))}
               <div className="w-72 sm:w-80 fixed right-0 bottom-0">
                 <div className="pt-12">
-                  <p className="flex justify-between items-center border-t pt-8 p-4">
+                  <p className="flex justify-between items-center border-t pt-4 p-4">
                     <strong className="text-base text-[#9ca4ac] ">جمع:</strong>
                     <span className="text-secondary">2,179,000 تومان</span>
                   </p>

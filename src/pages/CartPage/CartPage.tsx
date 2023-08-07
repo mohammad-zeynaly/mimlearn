@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import CartProductItem from "../../components/CartProductItem/CartProductItem";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
+import { useAppSelector } from "../../Redux/store/store";
 
 const CartPage = (): JSX.Element => {
   const [isEmptyCart, setIsEmptyCart] = useState<boolean>(false);
+  const allCourses = useAppSelector((state) => state.courses.basketProduct);
   // setIsEmptyCart(false);
   return (
     <section className="">
@@ -40,8 +42,9 @@ const CartPage = (): JSX.Element => {
                     </tr>
                   </thead>
                   <tbody>
-                    <CartProductItem />
-                    <CartProductItem />
+                    {allCourses?.map((cartCourse) => (
+                      <CartProductItem {...cartCourse} />
+                    ))}
                   </tbody>
                 </table>
                 <div className="mt-8 flex flex-col sm:flex-row justify-between items-center ">

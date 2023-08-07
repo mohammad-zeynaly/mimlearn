@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useAppSelector } from "../../Redux/store/store";
+import { useAppSelector, useAppDispatch } from "../../Redux/store/store";
 import { CoursesType } from "../../types/coursesInterface";
 import allData from "../../data/allData";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
@@ -8,6 +8,7 @@ import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDe
 import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDetailsContent";
 import CourseComments from "../../components/CourseComments/CourseComments";
 import Button from "../../components/Button/Button";
+import { addToCart } from "../../Redux/reducers/coursesStateSlice";
 
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
@@ -19,6 +20,20 @@ const CourseDetails = (): JSX.Element => {
   const isFullWidthContent = useAppSelector(
     (state) => state.globalStates.isFullWidthContent
   );
+
+  const getAllCourses = useAppSelector((state) => state.courses.basketProduct);
+
+  const dispatch = useAppDispatch();
+
+  const addProductToCart = (): void => {
+    const itIsAProduct = getAllCourses?.some(
+      (course) => course.title === mainCourse.title
+    );
+
+    console.log("isInProduct.=> ", isInProduct);
+
+    if (!itIsAProduct) dispatch(addToCart(mainCourse));
+  };
 
   return (
     <>
@@ -40,12 +55,15 @@ const CourseDetails = (): JSX.Element => {
             } `}
           >
             {/* h-screen lg:mt-32 xl:mt-10 2xl:mt-0*/}
-            <CourseDetailsSidebar mainCourse={mainCourse} />
+            <CourseDetailsSidebar mainCourse={mainCourse} addProductToCart={addProductToCart} />
           </aside>
         </div>
         <CourseComments />
       </div>
-      <Button className="w-full bg-[#1fbd50] text-white py-3 fixed bottom-0 z-30 lg:hidden">
+      <Button
+        className="w-full bg-[#1fbd50] text-white py-3 fixed bottom-0 z-30 lg:hidden"
+        onClick={addProductToCart}
+      >
         ثبت نام دوره
       </Button>
     </>

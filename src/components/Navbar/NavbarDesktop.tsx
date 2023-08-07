@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useAppDispatch } from "../../Redux/store/store";
+import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
 import {
   isShowShoppingCartHandler,
   isShowLoginFormHandler,
@@ -10,6 +10,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 
 const NavbarDesktop = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const allCartProduct = useAppSelector((state) => state.courses.basketProduct);
   return (
     <>
       <nav
@@ -67,7 +68,7 @@ const NavbarDesktop = (): JSX.Element => {
                 <HiOutlineShoppingBag className="w-6 h-6 text-[#343a40]" />
 
                 <span className="bg-primary absolute bottom-2 right-1 text-white text-sm w-4 h-4 rounded-full">
-                  0
+                  {allCartProduct.length}
                 </span>
               </button>
               <Button

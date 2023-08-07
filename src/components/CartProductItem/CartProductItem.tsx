@@ -1,32 +1,36 @@
 import { Link } from "react-router-dom";
+import { CoursesType } from "../../types/coursesInterface";
 
-const CartProductItem = (): JSX.Element => {
+const CartProductItem = ({ title, img, price }: CoursesType): JSX.Element => {
   return (
     <tr className="mt-5 border-b-2 border-fourth sm:border-none">
       <td className="block sm:flex sm:items-center pt-4 pb-4">
         <span className="text-red-500 font-vazirBold text-lg pl-4 sm:pl-0 cursor-pointer">
           x
         </span>
-        <Link to="/courses">
+        <Link to={`/courseDetails/${title}`}>
           <img
             className="w-20 object-cover mr-8 hidden sm:block"
-            src="../assets/images/products/product-1.png"
-            alt=""
+            src={img}
+            alt="product image"
           />
         </Link>
       </td>
       <td className="flex justify-between items-center w-full border-b border-fourth sm:border-none sm:w-auto sm:table-cell pt-4 pb-4">
         <span className="font-vazirBold sm:hidden">محصول</span>
         <div>
-          <Link to="/courses" className="transition-all hover:text-primary">
-            آموزش امنیت در وردپرس
+          <Link
+            to={`/courseDetails/${title}`}
+            className="transition-all hover:text-primary"
+          >
+            {title}
           </Link>
         </div>
       </td>
       <td className="flex justify-between items-center w-full border-b border-fourth sm:border-none sm:w-auto sm:table-cell pt-4 pb-4">
         <span className="font-vazirBold sm:hidden">قیمت :</span>
         <div className="">
-          <h6 className="text-xs inline">119,000 </h6>
+          <h6 className="text-xs inline">{price} </h6>
           <span className="pr-1">تومان</span>
         </div>
       </td>

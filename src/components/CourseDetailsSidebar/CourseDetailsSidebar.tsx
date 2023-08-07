@@ -16,8 +16,10 @@ interface CourseDetailsSidebarType {
 
 const CourseDetailsSidebar = ({
   mainCourse,
+  addProductToCart,
 }: {
   mainCourse: CoursesType;
+  addProductToCart: () => {} | void;
 }): JSX.Element => {
   const courseInformation: CourseDetailsSidebarType[] = [
     {
@@ -65,7 +67,10 @@ const CourseDetailsSidebar = ({
           </h5>
           <h6 className="p-4">{mainCourse.price} تومان</h6>
         </div>
-        <button className="bg-[#00baa9] mt-6 font-vazirMedium text-white flex items-center justify-between p-4 text-lg rounded-lg w-full after:block">
+        <button
+          className="bg-[#00baa9] mt-6 font-vazirMedium text-white flex items-center justify-between p-4 text-lg rounded-lg w-full after:block"
+          onClick={addProductToCart}
+        >
           <MdOutlinePayment className="w-6 h-6" />
           ثبت نام دوره
         </button>
