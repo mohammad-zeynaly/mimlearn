@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
 import { CoursesType } from "../../types/coursesInterface";
+import { useAppDispatch } from "../../Redux/store/store";
+import { removeFromCart } from "../../Redux/reducers/coursesStateSlice";
 
-const CartProductItem = ({ title, img, price }: CoursesType): JSX.Element => {
+const CartProductItem = ({
+  id,
+  title,
+  img,
+  price,
+}: CoursesType): JSX.Element => {
+  const dispatch = useAppDispatch();
+  const removeCartProduct = () => {
+    dispatch(removeFromCart(id));
+  };
+
   return (
     <tr className="mt-5 border-b-2 border-fourth sm:border-none">
       <td className="block sm:flex sm:items-center pt-4 pb-4">
-        <span className="text-red-500 font-vazirBold text-lg pl-4 sm:pl-0 cursor-pointer">
+        <span
+          className="text-red-500 font-vazirBold text-lg pl-4 sm:pl-0 cursor-pointer"
+          onClick={removeCartProduct}
+        >
           x
         </span>
         <Link to={`/courseDetails/${title}`}>

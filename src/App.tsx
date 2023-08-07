@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRoutes, useLocation } from "react-router-dom";
 import routes from "./routes/routes";
 import { useAppDispatch, useAppSelector } from "./Redux/store/store";
@@ -6,6 +7,7 @@ import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import Footer from "./components/Footer/Footer";
+import { setDataCartProductLocalStorage } from "./Redux/reducers/coursesStateSlice";
 
 const App = (): JSX.Element => {
   const overlayStatus = useAppSelector(
@@ -18,7 +20,16 @@ const App = (): JSX.Element => {
 
   const routers = useRoutes(routes);
 
-  console.log(pathname.includes("courseDetails"));
+
+  useEffect(() => {
+    const getProductInLocalStorage = JSON.parse(
+      localStorage.getItem("products")!
+    );
+
+    if (getProductInLocalStorage?.length > 0) {
+      dispatch(setDataCartProductLocalStorage());
+    }
+  }, []);
 
   return (
     <>

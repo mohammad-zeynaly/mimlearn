@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useAppSelector } from "../../Redux/store/store";
+import { useAppDispatch,useAppSelector } from "../../Redux/store/store";
 import CartProductItem from "./CartProductItem";
+import { removeFromCart } from "../../Redux/reducers/coursesStateSlice";
 
 const ShoppingCart = (): JSX.Element => {
   const shoppingCartProduct = useAppSelector(

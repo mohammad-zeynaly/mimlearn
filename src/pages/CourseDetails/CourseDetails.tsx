@@ -26,13 +26,18 @@ const CourseDetails = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const addProductToCart = (): void => {
-    const itIsAProduct = getAllCourses?.some(
+    const itIsAProductInStore = getAllCourses?.some(
       (course) => course.title === mainCourse.title
     );
 
-    console.log("isInProduct.=> ", itIsAProduct);
+    const itIsAProductInLocalStorage = JSON.stringify(
+      localStorage.getItem("products")!
+    );
 
-    if (!itIsAProduct) dispatch(addToCart(mainCourse));
+    console.log("isInProduct.=> ", itIsAProductInStore);
+
+    if (!itIsAProductInStore && itIsAProductInLocalStorage)
+      dispatch(addToCart(mainCourse));
   };
 
   return (
@@ -54,8 +59,10 @@ const CourseDetails = (): JSX.Element => {
                 : "hidden lg:block lg:w-[29%] mr-5 sticky top-0 max-h-[700px] overflow-y-hidden"
             } `}
           >
-            {/* h-screen lg:mt-32 xl:mt-10 2xl:mt-0*/}
-            <CourseDetailsSidebar mainCourse={mainCourse} addProductToCart={addProductToCart} />
+            <CourseDetailsSidebar
+              mainCourse={mainCourse}
+              addProductToCart={addProductToCart}
+            />
           </aside>
         </div>
         <CourseComments />

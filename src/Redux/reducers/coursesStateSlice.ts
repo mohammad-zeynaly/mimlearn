@@ -2,36 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { BasketProducts } from "../../types/coursesInterface";
 
 const initialState: BasketProducts = {
-  basketProduct: [
-    // {
-    //   id: 9,
-    //   title: "آموزش جاوا اسکریپت ",
-    //   img: "./assets/images/products/product-3.png",
-    //   prerequisite: "Html & Css",
-    //   stars: 5,
-    //   teacher: " محمد امین سعیدی",
-    //   students: 1200,
-    //   price: 880_000,
-    //   caption:
-    //     "آموزش جاوا اسکریپت برای تمامی افرادی ک قصد ورود به زبان برنامه نویسی دارند مناسب می باشد . خصوصا برای علاقه مندان به حوزه فرانت همان طور که می دانید جاوا اسکریپت یکی از زبان های برنامه نویسی محبوب و پر طرفدار است که بازار کار فوق العاده ای دارد",
-    //   time: "91 ساعت و 20 دقیقه",
-    //   type: "programmingCourses",
-    // },
-    // {
-    //   id: 10,
-    //   title: "آموزش جاوا اسکریپت ",
-    //   img: "./assets/images/products/product-5.png",
-    //   prerequisite: "JS",
-    //   stars: 5,
-    //   teacher: "صاحب محمدی",
-    //   students: 1200,
-    //   price: 880_000,
-    //   caption:
-    //     "آموزش جاوا اسکریپت برای تمامی افرادی ک قصد ورود به زبان برنامه نویسی دارند مناسب می باشد . خصوصا برای علاقه مندان به حوزه فرانت همان طور که می دانید جاوا اسکریپت یکی از زبان های برنامه نویسی محبوب و پر طرفدار است که بازار کار فوق العاده ای دارد",
-    //   time: "91 ساعت و 20 دقیقه",
-    //   type: "programmingCourses",
-    // },
-  ],
+  basketProduct: [],
 };
 
 const coursesStateSlice = createSlice({
@@ -39,10 +10,26 @@ const coursesStateSlice = createSlice({
   initialState,
 
   reducers: {
-    addToCart: (state, action) => {
-      console.log("action addToCart", action);
+    setDataCartProductLocalStorage: (state) => {
+      let getProductInLocalStorage = JSON.parse(
+        localStorage.getItem("products")!
+      );
 
+      state.basketProduct = getProductInLocalStorage;
+    },
+    addToCart: (state, action) => {
       state.basketProduct.push(action.payload);
+      localStorage.setItem("products", JSON.stringify(state.basketProduct));
+    },
+
+    removeFromCart: (state, action) => {
+      console.log("inside reducer removeFromCart", action);
+      const filteredDeleteProduct = state.basketProduct.filter(
+        (course) => course.id !== action.payload
+      );
+      localStorage.setItem("products", JSON.stringify(filteredDeleteProduct));
+
+      state.basketProduct = filteredDeleteProduct;
     },
   },
   extraReducers: (builder) => {
@@ -51,4 +38,5 @@ const coursesStateSlice = createSlice({
 });
 
 export default coursesStateSlice.reducer;
-export const { addToCart } = coursesStateSlice.actions;
+export const { addToCart, removeFromCart, setDataCartProductLocalStorage } =
+  coursesStateSlice.actions;
