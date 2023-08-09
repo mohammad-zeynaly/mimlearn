@@ -1220,16 +1220,8 @@ input:focus {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .max-h-72 {
   max-height: 18rem;
-}
-
-.max-h-\[\] {
-  max-height: ;
 }
 
 .max-h-\[700px\] {
@@ -2991,10 +2983,6 @@ input:focus {
     margin-top: 2.5rem;
   }
 
-  .lg\:mt-32 {
-    margin-top: 8rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -3109,10 +3097,6 @@ input:focus {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .xl\:w-\[350px\] {
     width: 350px;
   }

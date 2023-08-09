@@ -8,7 +8,7 @@ import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDe
 import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDetailsContent";
 import CourseComments from "../../components/CourseComments/CourseComments";
 import Button from "../../components/Button/Button";
-import { addToCart } from "../../Redux/reducers/coursesStateSlice";
+import { addToCart, totalPrice } from "../../Redux/reducers/coursesStateSlice";
 
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
@@ -38,6 +38,7 @@ const CourseDetails = (): JSX.Element => {
 
     if (!itIsAProductInStore && itIsAProductInLocalStorage)
       dispatch(addToCart(mainCourse));
+    dispatch(totalPrice());
   };
 
   return (

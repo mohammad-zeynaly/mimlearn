@@ -6,6 +6,7 @@ import { TbTrafficLights } from "react-icons/tb";
 import { MdLanguage } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { CoursesType } from "../../types/coursesInterface";
+import useNumberPersian from "../../hooks/useNumberPersian";
 
 interface CourseDetailsSidebarType {
   id: string;
@@ -65,7 +66,7 @@ const CourseDetailsSidebar = ({
           <h5 className="text-[#777] border-l border-fourth border-dashed p-4 pl-8">
             قیمت:
           </h5>
-          <h6 className="p-4">{mainCourse.price} تومان</h6>
+          <h6 className="p-4">{useNumberPersian(mainCourse.price)} تومان</h6>
         </div>
         <button
           className="bg-[#00baa9] mt-6 font-vazirMedium text-white flex items-center justify-between p-4 text-lg rounded-lg w-full after:block"

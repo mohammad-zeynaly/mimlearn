@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useAppDispatch,useAppSelector } from "../../Redux/store/store";
+import { useAppSelector } from "../../Redux/store/store";
 import CartProductItem from "./CartProductItem";
-import { removeFromCart } from "../../Redux/reducers/coursesStateSlice";
+import useNumberPersian from "../../hooks/useNumberPersian";
 
 const ShoppingCart = (): JSX.Element => {
   const shoppingCartProduct = useAppSelector(
@@ -11,6 +11,11 @@ const ShoppingCart = (): JSX.Element => {
   const isInShowShoppingCart = useAppSelector(
     (state) => state.globalStates.isShowShoppingCart
   );
+
+  const getTotalPriceValue = useAppSelector(
+    (state) => state.courses.totalPriceValue
+  );
+
   return (
     <>
       {isInShowShoppingCart && (
@@ -39,7 +44,9 @@ const ShoppingCart = (): JSX.Element => {
                 <div className="pt-12">
                   <p className="flex justify-between items-center border-t pt-4 p-4">
                     <strong className="text-base text-[#9ca4ac] ">جمع:</strong>
-                    <span className="text-secondary">2,179,000 تومان</span>
+                    <span className="text-secondary">
+                      {useNumberPersian(getTotalPriceValue)} تومان
+                    </span>
                   </p>
                 </div>
                 <div className="p-4">

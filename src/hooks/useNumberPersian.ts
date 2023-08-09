@@ -1,7 +1,7 @@
-function useNumberPersian(numberData: number) {
+function useNumberPersian(numberData: number | undefined) {
   const persianNumber = new Intl.NumberFormat("fa");
 
-  const convertPersianNumber = persianNumber.format(numberData);
+  const convertPersianNumber = persianNumber.format(numberData!);
 
   return [convertPersianNumber];
 }

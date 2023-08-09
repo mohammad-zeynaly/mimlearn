@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { CoursesType } from "../../types/coursesInterface";
 import { useAppDispatch } from "../../Redux/store/store";
-import { removeFromCart } from "../../Redux/reducers/coursesStateSlice";
+import {
+  removeFromCart,
+  totalPrice,
+} from "../../Redux/reducers/coursesStateSlice";
+import useNumberPersian from "../../hooks/useNumberPersian";
 
 const CartProductItem = ({ id, title, img, price, count }: CoursesType) => {
   const dispatch = useAppDispatch();
   const removeCartProduct = () => {
     dispatch(removeFromCart(id));
+    dispatch(totalPrice());
   };
 
   return (
@@ -31,7 +36,7 @@ const CartProductItem = ({ id, title, img, price, count }: CoursesType) => {
             {title}
           </Link>
           <span className="block text-secondary mt-2 text-[13px]">
-            {count} × {price} تومان
+            {count} × {useNumberPersian(price)} تومان
           </span>
         </h6>
       </div>

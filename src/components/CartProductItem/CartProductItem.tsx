@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { CoursesType } from "../../types/coursesInterface";
-import { useAppDispatch } from "../../Redux/store/store";
-import { removeFromCart } from "../../Redux/reducers/coursesStateSlice";
+import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
+import {
+  removeFromCart,
+  totalPrice,
+} from "../../Redux/reducers/coursesStateSlice";
+import useNumberPersian from "../../hooks/useNumberPersian";
 
 const CartProductItem = ({
   id,
@@ -12,7 +16,12 @@ const CartProductItem = ({
   const dispatch = useAppDispatch();
   const removeCartProduct = () => {
     dispatch(removeFromCart(id));
+    dispatch(totalPrice());
   };
+
+  const getTotalPriceValue = useAppSelector(
+    (state) => state.courses.totalPriceValue
+  );
 
   return (
     <tr className="mt-5 border-b-2 border-fourth sm:border-none">
@@ -45,7 +54,7 @@ const CartProductItem = ({
       <td className="flex justify-between items-center w-full border-b border-fourth sm:border-none sm:w-auto sm:table-cell pt-4 pb-4">
         <span className="font-vazirBold sm:hidden">قیمت :</span>
         <div className="">
-          <h6 className="text-xs inline">{price} </h6>
+          <h6 className="text-xs inline">{useNumberPersian(price)} </h6>
           <span className="pr-1">تومان</span>
         </div>
       </td>
@@ -65,7 +74,9 @@ const CartProductItem = ({
       <td className="flex justify-between items-center w-full border-b border-fourth sm:border-none sm:w-auto sm:table-cell pt-4 pb-4">
         <span className="font-vazirBold sm:hidden">جمع:</span>
         <div className="">
-          <h6 className="text-xs inline">119,000 </h6>
+          <h6 className="text-xs inline">
+            {useNumberPersian(getTotalPriceValue)}
+          </h6>
           <span className="pr-1">تومان</span>
         </div>
       </td>

@@ -7,7 +7,10 @@ import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import Footer from "./components/Footer/Footer";
-import { setDataCartProductLocalStorage } from "./Redux/reducers/coursesStateSlice";
+import {
+  setDataCartProductLocalStorage,
+  totalPrice,
+} from "./Redux/reducers/coursesStateSlice";
 
 const App = (): JSX.Element => {
   const overlayStatus = useAppSelector(
@@ -20,7 +23,6 @@ const App = (): JSX.Element => {
 
   const routers = useRoutes(routes);
 
-
   useEffect(() => {
     const getProductInLocalStorage = JSON.parse(
       localStorage.getItem("products")!
@@ -28,6 +30,7 @@ const App = (): JSX.Element => {
 
     if (getProductInLocalStorage?.length > 0) {
       dispatch(setDataCartProductLocalStorage());
+      dispatch(totalPrice());
     }
   }, []);
 

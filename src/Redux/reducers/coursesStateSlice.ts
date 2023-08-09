@@ -1,8 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 import { BasketProducts } from "../../types/coursesInterface";
 
 const initialState: BasketProducts = {
-  basketProduct: [],
+  basketProduct: [
+   
+  ],
+  totalPriceValue: 0,
 };
 
 const coursesStateSlice = createSlice({
@@ -31,12 +34,27 @@ const coursesStateSlice = createSlice({
 
       state.basketProduct = filteredDeleteProduct;
     },
+
+    totalPrice: (state) => {
+      console.log("total price state.basketProduct", state.basketProduct);
+      const totalValue = state.basketProduct.reduce((total, product) => {
+        if (product.count !== undefined && product.price !== undefined) {
+          total += product.count * product.price;
+        }
+        return total;
+      }, 0);
+      state.totalPriceValue = totalValue;
+    },
   },
-  extraReducers: (builder) => {
-    builder.addCase("fetch/get-courses", (state, action) => {});
-  },
+  // extraReducers: (builder) => {
+  //   builder.addCase("fetch/get-courses", (state, action) => {});
+  // },
 });
 
 export default coursesStateSlice.reducer;
-export const { addToCart, removeFromCart, setDataCartProductLocalStorage } =
-  coursesStateSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  setDataCartProductLocalStorage,
+  totalPrice,
+} = coursesStateSlice.actions;

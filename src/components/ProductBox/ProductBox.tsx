@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
-
+import useNumberPersian from "../../hooks/useNumberPersian";
 interface ProductBoxType {
   id: number;
   title?: string;
@@ -77,9 +77,9 @@ const ProductBox = ({
         <div className="flex justify-between items-center mt-3 pt-4 border-t border-fourth text-[#6c757d] p-3">
           <div className="flex items-center">
             <FaUsers className="w-6 h-6" />
-            <span className="pr-2">{students}</span>
+            <span className="pr-2">{useNumberPersian(students)}</span>
           </div>
-          <h6>{price}</h6>
+          <h6>{useNumberPersian(price)}</h6>
         </div>
       </div>
     </div>
