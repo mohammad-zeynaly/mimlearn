@@ -78,23 +78,15 @@ const CoursesTopbar = ({
               <path d="M14.4 9H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h5.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm2 5H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1zM8.6 6h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1zM5.4 9H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm0 5H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm0-10H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1z"></path>
             </svg>
           </button>
-          <select className="w-full sm:w-auto p-3 pl-6 text-sm sm:mr-4 focus:outline-none border border-fourth appearance-none">
-            {listItems.map((item) => (
-              <option key={item.id} value={item.value}>
-                {item.title}
-              </option>
-            ))}
-          </select>
         </div>
-        <div className="w-full sm:w-auto justify-end flex items-center relative">
-          <Input
-            id="courseSearch"
-            type="text"
-            className="w-full p-3 focus:outline-none border border-solid border-[#dcdcdc] rounded-[4px] text-sm"
-            placeholder="جستجوی دوره..."
-          />
-          <BiSearch className="text-[#6c757d] absolute left-2 bg-white" />
-        </div>
+
+        <select className="w-full sm:w-auto p-3 pl-6 text-sm sm:mr-4 focus:outline-none border border-fourth appearance-none">
+          {listItems.map((item) => (
+            <option key={item.id} value={item.value}>
+              {item.title}
+            </option>
+          ))}
+        </select>
       </div>
     </section>
   );

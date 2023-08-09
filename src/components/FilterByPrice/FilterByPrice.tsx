@@ -2,9 +2,17 @@ import { useState } from "react";
 import useNumberPersian from "../../hooks/useNumberPersian";
 import Button from "../Button/Button";
 
-const FilterByPrice = (): JSX.Element => {
-  const [filteredPricePercent, setFilteredPricePercent] = useState<number>(0);
+interface FilterByPriceType {
+  filteredProductByPrice: () => {} | void;
+  filteredPricePercent: number;
+  setFilteredPricePercent: React.Dispatch<React.SetStateAction<number>>;
+}
 
+const FilterByPrice = ({
+  filteredProductByPrice,
+  filteredPricePercent,
+  setFilteredPricePercent,
+}: FilterByPriceType): JSX.Element => {
   return (
     <section className="p-4 border border-fourth relative mt-8">
       <h6 className="text-sm border-b pb-3 after:block after:w-[2px] after:h-6 after:bg-primary after:absolute after:top-3 after:right-0">
@@ -38,7 +46,10 @@ const FilterByPrice = (): JSX.Element => {
         </div>
       </div>
 
-      <Button className="text-white bg-primary py-3 px-4 rounded-md text-sm mt-5">
+      <Button
+        className="text-white bg-primary py-3 px-4 rounded-md text-sm mt-5"
+        onClick={filteredProductByPrice}
+      >
         فیلتر کن!
       </Button>
     </section>

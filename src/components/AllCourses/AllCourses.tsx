@@ -1,9 +1,14 @@
 import allData from "../../data/allData";
+import { CoursesType } from "../../types/coursesInterface";
 import ProductBox from "../ProductBox/ProductBox";
 
-const AllCourses = ({ displayMode }: { displayMode: string }): JSX.Element => {
-  const filteredProduct = allData.filter((product) => product.price! > 200_000);
-  console.log("displayMode in allCourses=> ", displayMode);
+const AllCourses = ({
+  displayMode,
+  filteredProduct,
+}: {
+  displayMode: string;
+  filteredProduct: CoursesType[];
+}): JSX.Element => {
   return (
     <section className="mt-8">
       <div
