@@ -1,4 +1,3 @@
-import allData from "../../data/allData";
 import { CoursesType } from "../../types/coursesInterface";
 import ProductBox from "../ProductBox/ProductBox";
 

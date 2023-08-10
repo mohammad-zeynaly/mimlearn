@@ -1,25 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CoursesTopbar from "../../components/CoursesTopbar/CoursesTopbar";
 import FilterByPrice from "../../components/FilterByPrice/FilterByPrice";
 import AllCourses from "../../components/AllCourses/AllCourses";
 import allData from "../../data/allData";
+import { CoursesType } from "../../types/coursesInterface";
+import CoursePagination from "../../components/CoursePagination/CoursePagination";
 
 const Courses = (): JSX.Element => {
   const [displayMode, setDisplayMode] = useState<string>("row");
   const [filteredPricePercent, setFilteredPricePercent] = useState<number>(0);
   const [priceRange, setPriceRange] = useState<number>();
+  const [paginatedProduct, setPaginatedProduct] = useState<CoursesType[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageNumbers, setPageNumbers] = useState<number[]>();
+  const pageSize = 6;
+
   const filteredProductByPrice = () => {
     setPriceRange(filteredPricePercent * 40_000);
   };
 
-  let filteredProduct = allData;
+  const allProducts = allData.filter((product) => product.price! > 0);
+
+  let filteredProduct = allProducts;
 
   if (priceRange && priceRange > 0) {
     filteredProduct = allData.filter((product) => product.price! < priceRange);
   } else {
-    filteredProduct = allData.filter((product) => product.price! > 400_000);
+    filteredProduct = allData.filter((product) => product.price! > 0);
   }
+
+  function shownProductPaginated() {
+    const endProductIndex = currentPage * pageSize;
+    const startProductIndex = endProductIndex - pageSize;
+    setPaginatedProduct(
+      filteredProduct.slice(startProductIndex, endProductIndex)
+    );
+
+    if (filteredProduct) {
+      setPageNumbers(
+        Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
+      );
+    }
+  }
+
+  useEffect(() => {
+    shownProductPaginated();
+  }, [currentPage, filteredProduct]);
+
+  useEffect(() => {
+    setPaginatedProduct([]);
+    setCurrentPage(1);
+    shownProductPaginated();
+  }, [filteredPricePercent]);
 
   return (
     <>
@@ -47,8 +80,15 @@ const Courses = (): JSX.Element => {
             />
             <AllCourses
               displayMode={displayMode}
-              filteredProduct={filteredProduct}
+              filteredProduct={paginatedProduct}
             />
+            <div className="flex justify-center gap-4">
+              <CoursePagination
+                currentPage={currentPage}
+                pageNumbers={pageNumbers}
+                setCurrentPage={setCurrentPage}
+              />
+            </div>
           </div>
         </div>
         <div className="w-3/4"></div>
@@ -63,4 +103,5 @@ const Courses = (): JSX.Element => {
     </>
   );
 };
+
 export default Courses;
