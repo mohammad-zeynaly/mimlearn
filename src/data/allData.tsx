@@ -138,7 +138,7 @@ const allData: allDataType[] = [
     prerequisite: "Html & Css",
     stars: 5,
     teacher: "مصطفی میر هادی",
-    students: 1200,
+    students: 2300,
     price: 880_000,
     count: 1,
     caption:
@@ -183,7 +183,7 @@ const allData: allDataType[] = [
     prerequisite: "JavaScript",
     stars: 5,
     teacher: "محمد زینالی",
-    students: 45,
+    students: 358,
     price: 2_100_000,
     count: 1,
     caption:

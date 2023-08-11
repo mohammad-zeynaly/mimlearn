@@ -30,29 +30,17 @@ const Courses = (): JSX.Element => {
     filteredProduct = allData.filter((product) => product.price! > 0);
   }
 
-  function shownProductPaginated() {
+  useEffect(() => {
     const endProductIndex = currentPage * pageSize;
     const startProductIndex = endProductIndex - pageSize;
     setPaginatedProduct(
       filteredProduct.slice(startProductIndex, endProductIndex)
     );
 
-    if (filteredProduct) {
-      setPageNumbers(
-        Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
-      );
-    }
-  }
-
-  useEffect(() => {
-    shownProductPaginated();
-  }, [currentPage, filteredProduct]);
-
-  useEffect(() => {
-    setPaginatedProduct([]);
-    setCurrentPage(1);
-    shownProductPaginated();
-  }, [filteredPricePercent]);
+    setPageNumbers(
+      Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
+    );
+  }, [currentPage, priceRange]);
 
   return (
     <>

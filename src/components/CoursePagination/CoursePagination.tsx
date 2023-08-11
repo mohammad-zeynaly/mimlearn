@@ -16,6 +16,7 @@ const CoursePagination = ({
       {pageNumbers &&
         pageNumbers.map((pageNum) => (
           <button
+            key={pageNum}
             className={` bg-[rgba(0,0,0,.08)]  py-1 px-4 rounded-lg ${
               pageNum + 1 === currentPage ? "bg-primary text-white" : ""
             }`}
