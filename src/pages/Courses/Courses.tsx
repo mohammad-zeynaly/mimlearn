@@ -14,10 +14,12 @@ const Courses = (): JSX.Element => {
   const [paginatedProduct, setPaginatedProduct] = useState<CoursesType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageNumbers, setPageNumbers] = useState<number[]>();
+  const [isSortedData, setIsSortedData] = useState<boolean>(false);
   const pageSize = 6;
 
   const filteredProductByPrice = () => {
     setPriceRange(filteredPricePercent * 40_000);
+    setIsSortedData(false);
   };
 
   const allProducts = allData.filter((product) => product.price! > 0);
@@ -31,16 +33,23 @@ const Courses = (): JSX.Element => {
   }
 
   useEffect(() => {
-    const endProductIndex = currentPage * pageSize;
-    const startProductIndex = endProductIndex - pageSize;
-    setPaginatedProduct(
-      filteredProduct.slice(startProductIndex, endProductIndex)
-    );
+    if (isSortedData === false) {
+      const endProductIndex = currentPage * pageSize;
+      const startProductIndex = endProductIndex - pageSize;
+      setPaginatedProduct(
+        filteredProduct.slice(startProductIndex, endProductIndex)
+      );
 
-    setPageNumbers(
-      Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
-    );
-  }, [currentPage, priceRange]);
+      setPageNumbers(
+        Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
+      );
+    } else {
+      setPageNumbers(
+        Array.from(Array(Math.ceil(paginatedProduct.length / pageSize)).keys())
+      );
+      setPaginatedProduct(paginatedProduct);
+    }
+  }, [currentPage, priceRange, isSortedData]);
 
   return (
     <>
@@ -65,6 +74,8 @@ const Courses = (): JSX.Element => {
             <CoursesTopbar
               displayMode={displayMode}
               setDisplayMode={setDisplayMode}
+              setPaginatedProduct={setPaginatedProduct}
+              setIsSortedData={setIsSortedData}
             />
             <AllCourses
               displayMode={displayMode}

@@ -10,6 +10,7 @@ export interface allDataType {
   count?: number;
   students?: number;
   type: string;
+  sortType?: string;
   time?: string;
   audio?: string;
   avatar?: React.JSX.Element;
@@ -37,6 +38,7 @@ export interface CoursesType {
   caption?: string;
   time?: string;
   type: string;
+  sortType?: string;
 }
 
 export interface radioItemsType {
