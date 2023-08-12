@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CoursesType } from "../../types/coursesInterface";
 import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
 import {
   removeFromCart,
   totalPrice,
+  selectedProductCountUpdate,
 } from "../../Redux/reducers/coursesStateSlice";
 import useNumberPersian from "../../hooks/useNumberPersian";
 import tostBox from "../../functions/tostBox";
@@ -13,7 +15,9 @@ const CartProductItem = ({
   title,
   img,
   price,
+  count,
 }: CoursesType): JSX.Element => {
+  const [productCount, setProductCount] = useState<number>(1);
   const dispatch = useAppDispatch();
   const removeCartProduct = () => {
     dispatch(removeFromCart(id));
@@ -24,6 +28,13 @@ const CartProductItem = ({
   const getTotalPriceValue = useAppSelector(
     (state) => state.courses.totalPriceValue
   );
+
+  const updateProductCount = (productCountInput: number, productId: number) => {
+    dispatch(
+      selectedProductCountUpdate({ id: productId, count: productCountInput })
+    );
+    dispatch(totalPrice());
+  };
 
   return (
     <tr className="mt-5 border-b-2 border-fourth sm:border-none">
@@ -67,7 +78,13 @@ const CartProductItem = ({
             id="productCount"
             type="number"
             className="shadow-[0px_6px_6px_2px_rgba(0,0,0,.06)] focus:outline-none w-14 h-12 rounded-lg p-2"
-            value={1}
+            onChange={(event) => {
+              const productCountInput = +(event.target as HTMLInputElement)
+                .value;
+              setProductCount(productCountInput);
+              updateProductCount(productCountInput, id);
+            }}
+            value={count}
             min={0}
             max={10}
           />

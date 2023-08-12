@@ -1,10 +1,24 @@
-import { createSlice,PayloadAction } from "@reduxjs/toolkit";
-import { BasketProducts } from "../../types/coursesInterface";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { BasketProductsType, CoursesType } from "../../types/coursesInterface";
 
-const initialState: BasketProducts = {
-  basketProduct: [
-   
-  ],
+const initialState: BasketProductsType = {
+  basketProduct: [],
+  selectedUpdateProduct: {
+    id: 6,
+    title: "آموزش این دیزاین ",
+    img: "./assets/images/products/product-6.png",
+    prerequisite: "پیش نیاز ندارد",
+    stars: 5,
+    teacher: "مصطفی میر هادی",
+    students: 45,
+    price: 460_000,
+    count: 1,
+    caption:
+      "در پکیج آموزش  این دیزاین بعد از آموزش کامل تمام ابزارهای مورد نیاز برای ساخت انواع جلد کتاب ، در اختیار شما قرار گرفته است.",
+    time: "8 ساعت و 35 دقیقه",
+    type: "graphicCourse",
+    sortType: "date",
+  } as CoursesType,
   totalPriceValue: 0,
 };
 
@@ -19,6 +33,34 @@ const coursesStateSlice = createSlice({
       );
 
       state.basketProduct = getProductInLocalStorage;
+    },
+
+    selectedProductCountUpdate: (state, action) => {
+      const { id, count } = action.payload;
+      let mainProduct = state.basketProduct.find(
+        (product) => product.id === id
+      );
+
+      state.selectedUpdateProduct = mainProduct;
+
+      if (state.selectedUpdateProduct?.id === id) {
+        state.selectedUpdateProduct = {
+          ...mainProduct,
+          count: count,
+        } as CoursesType;
+
+        const mainProductIndexInBasketProduct = state.basketProduct.findIndex(
+          (product) => product.id === state.selectedUpdateProduct?.id
+        );
+        console.log(
+          "mainProductIndexInBasketProduct",
+          mainProductIndexInBasketProduct
+        );
+        state.basketProduct[mainProductIndexInBasketProduct] =
+          state.selectedUpdateProduct;
+
+        localStorage.setItem("products", JSON.stringify(state.basketProduct));
+      }
     },
     addToCart: (state, action) => {
       state.basketProduct.push(action.payload);
@@ -46,9 +88,6 @@ const coursesStateSlice = createSlice({
       state.totalPriceValue = totalValue;
     },
   },
-  // extraReducers: (builder) => {
-  //   builder.addCase("fetch/get-courses", (state, action) => {});
-  // },
 });
 
 export default coursesStateSlice.reducer;
@@ -57,4 +96,5 @@ export const {
   removeFromCart,
   setDataCartProductLocalStorage,
   totalPrice,
+  selectedProductCountUpdate,
 } = coursesStateSlice.actions;

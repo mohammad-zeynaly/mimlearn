@@ -13,6 +13,8 @@ const CartPage = (): JSX.Element => {
   const totalPriceValue = useAppSelector(
     (state) => state.courses.totalPriceValue
   );
+
+  console.log("allCourses", allCourses);
   return (
     <section className="">
       <div className="container text-sm sm:mb-12">

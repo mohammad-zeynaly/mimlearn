@@ -93,7 +93,8 @@ export interface AccordionMenuSItemType {
   title: string;
 }
 
-export interface BasketProducts {
+export interface BasketProductsType {
   basketProduct: CoursesType[];
+  selectedUpdateProduct: CoursesType | undefined;
   totalPriceValue: number;
 }
