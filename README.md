@@ -24,6 +24,31 @@
 
 ---
 
+## pages
+
+- page Home
+- page allCourses
+- page courseDetails
+- page teachers
+- page teacherDetail
+- page cartPage(shoppingCart)
+- page articles
+- page articles details
+- page aboutUs
+- page contactUs
+
+## Features
+
+- feature add product to shoppingCart
+- feature remove product to shoppingCart
+- feature increment and decrement count product
+- feature save all products shoppingCart in localStorage
+- Course sorting feature
+- Course search feature
+- feature to change the way courses are displayed in desktop mode
+- pagination feature for courses
+- course filter feature based on price
+
 ## contact me
 
 - _[email](mailto:051.mhmdzynaly977@gmail.com)_
