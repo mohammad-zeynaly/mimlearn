@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRoutes, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import routes from "./routes/routes";
 import { useAppDispatch, useAppSelector } from "./Redux/store/store";
 import { closeAllShows } from "./Redux/reducers/globalStates";
@@ -58,6 +59,9 @@ const App = (): JSX.Element => {
       >
         {routers}
       </main>
+      <div className="container px-4">
+        <ToastContainer limit={4} />
+      </div>
       <Footer />
     </>
   );

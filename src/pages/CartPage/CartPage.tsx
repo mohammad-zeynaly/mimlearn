@@ -9,7 +9,6 @@ import { useAppSelector } from "../../Redux/store/store";
 const CartPage = (): JSX.Element => {
   const [isEmptyCart, setIsEmptyCart] = useState<boolean>(false);
   const allCourses = useAppSelector((state) => state.courses.basketProduct);
-  // setIsEmptyCart(false);
   return (
     <section className="">
       <div className="container text-sm sm:mb-12">

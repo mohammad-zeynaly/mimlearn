@@ -153,6 +153,27 @@
   }
 }
 
+.Toastify__toast-body {
+  justify-content: space-between;
+  flex: auto;
+}
+
+.Toastify__toast-body > div:last-child {
+  font-size: 16px;
+  font-family: Vazir-Regular;
+  flex: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-body > div:last-child {
+    font-size: 15px;
+  }
+
+  .Toastify__toast-container {
+    width: 94%;
+  }
+}
+
 /*  =============== Loading bar style =============== */
 
 .lds-spinner {
@@ -1523,11 +1544,6 @@ input:focus {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-l {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .rounded-bl-md {

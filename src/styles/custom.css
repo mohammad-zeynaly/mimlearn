@@ -112,6 +112,26 @@
     bottom: 41% !important;
   }
 }
+
+.Toastify__toast-body {
+  justify-content: space-between;
+  flex: auto;
+}
+.Toastify__toast-body > div:last-child {
+  font-size: 16px;
+  font-family: Vazir-Regular;
+  flex: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-body > div:last-child {
+    font-size: 15px;
+  }
+  .Toastify__toast-container {
+    width: 94%;
+  }
+}
+
 /*  =============== Loading bar style =============== */
 .lds-spinner {
   color: official;

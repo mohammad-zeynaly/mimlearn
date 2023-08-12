@@ -6,12 +6,14 @@ import {
   totalPrice,
 } from "../../Redux/reducers/coursesStateSlice";
 import useNumberPersian from "../../hooks/useNumberPersian";
+import tostBox from "../../functions/tostBox";
 
 const CartProductItem = ({ id, title, img, price, count }: CoursesType) => {
   const dispatch = useAppDispatch();
   const removeCartProduct = () => {
     dispatch(removeFromCart(id));
     dispatch(totalPrice());
+    tostBox("error");
   };
 
   return (

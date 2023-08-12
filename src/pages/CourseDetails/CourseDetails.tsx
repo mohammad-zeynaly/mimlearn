@@ -9,7 +9,7 @@ import CourseDetailsContent from "../../components/CourseDetailsContent/CourseDe
 import CourseComments from "../../components/CourseComments/CourseComments";
 import Button from "../../components/Button/Button";
 import { addToCart, totalPrice } from "../../Redux/reducers/coursesStateSlice";
-
+import tostBox from "../../functions/tostBox";
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
 
@@ -30,15 +30,15 @@ const CourseDetails = (): JSX.Element => {
       (course) => course.title === mainCourse.title
     );
 
-    const itIsAProductInLocalStorage = JSON.stringify(
+    const itIsAProductInLocalStorage = JSON.parse(
       localStorage.getItem("products")!
-    );
+    )?.some((course: CoursesType) => course.title === mainCourse.title);
 
-    console.log("isInProduct.=> ", itIsAProductInStore);
-
-    if (!itIsAProductInStore && itIsAProductInLocalStorage)
+    if (!itIsAProductInStore && !itIsAProductInLocalStorage) {
       dispatch(addToCart(mainCourse));
-    dispatch(totalPrice());
+      dispatch(totalPrice());
+      tostBox("success");
+    }
   };
 
   return (
