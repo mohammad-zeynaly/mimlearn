@@ -5,10 +5,14 @@ import CartProductItem from "../../components/CartProductItem/CartProductItem";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { useAppSelector } from "../../Redux/store/store";
+import useNumberPersian from "../../hooks/useNumberPersian";
 
 const CartPage = (): JSX.Element => {
   const [isEmptyCart, setIsEmptyCart] = useState<boolean>(false);
   const allCourses = useAppSelector((state) => state.courses.basketProduct);
+  const totalPriceValue = useAppSelector(
+    (state) => state.courses.totalPriceValue
+  );
   return (
     <section className="">
       <div className="container text-sm sm:mb-12">
@@ -76,21 +80,25 @@ const CartPage = (): JSX.Element => {
                     <tr className="border-b border-fourth mt-5">
                       <th className="font-light pb-4 pt-5">جمع جزء</th>
                       <td className="pb-4 pt-5 flex items-center">
-                        <h6 className="text-xs">600000</h6>
+                        <h6 className="text-xs">
+                          {useNumberPersian(totalPriceValue)}
+                        </h6>
                         <span className="pr-1">تومان</span>
                       </td>
                     </tr>
                     <tr className="border-b border-fourth mt-5">
                       <th className="font-light pb-4 pt-5"> مجموع</th>
                       <td className="pb-4 pt-5 flex items-center">
-                        <h6 className="text-xs">600000</h6>
+                        <h6 className="text-xs">
+                          {useNumberPersian(totalPriceValue)}
+                        </h6>
                         <span className="pr-1">تومان</span>
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <Link
-                  to="/checkout"
+                  to="/shopping-cart"
                   className="block mt-8 mb-2 text-center bg-primary text-white rounded-lg p-4"
                 >
                   ادامه جهت تسویه حساب
