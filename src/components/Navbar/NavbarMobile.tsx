@@ -30,7 +30,7 @@ const NavbarMobile = (): JSX.Element => {
             <Link to="/">
               <img
                 className="w-28 "
-                src="../assets/images/logo-default.png"
+                src="../assets/images/logo-default.webp"
                 alt="لوگو سایت"
               />
             </Link>
@@ -45,8 +45,8 @@ const NavbarMobile = (): JSX.Element => {
                   {allCartProduct.length}
                 </span>
               </Button>
-              <Button
-                className="bg-[rgba(0,0,0,.08)] p-3 rounded-md ml-3 sm:ml-4 relative"
+              <span
+                className="bg-[rgba(0,0,0,.08)] p-3 rounded-md ml-3 sm:ml-4 relative cursor-pointer"
                 onClick={() => dispatch(isShowLoginFormHandler())}
               >
                 <svg
@@ -56,9 +56,9 @@ const NavbarMobile = (): JSX.Element => {
                 >
                   <path d="M224 256a128 128 0 100-256 128 128 0 100 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h362.9c-5.4-9.4-8.6-20.3-8.6-32V352c0-2.1.1-4.2.3-6.3-31-26-71-41.7-114.6-41.7h-91.4zM528 240c17.7 0 32 14.3 32 32v48h-64v-48c0-17.7 14.3-32 32-32zm-80 32v48c-17.7 0-32 14.3-32 32v128c0 17.7 14.3 32 32 32h160c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32v-48c0-44.2-35.8-80-80-80s-80 35.8-80 80z"></path>
                 </svg>
-              </Button>
-              <Button
-                className="bg-[rgba(0,0,0,.08)] w-12 h-12 rounded-md  relative flex justify-center items-center transition-transform duration-250"
+              </span>
+              <span
+                className="bg-[rgba(0,0,0,.08)] w-12 h-12 rounded-md  relative flex justify-center items-center transition-transform duration-250 cursor-pointer"
                 onClick={() => dispatch(isShowMobileMenuHandler())}
               >
                 {mobileMenuStatus ? (
@@ -73,7 +73,7 @@ const NavbarMobile = (): JSX.Element => {
                     <span className="block w-5 h-[2px] bg-black absolute bottom-4"></span>
                   </>
                 )}
-              </Button>
+              </span>
             </div>
           </div>
         </div>

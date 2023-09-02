@@ -65,7 +65,7 @@ const Courses = (): JSX.Element => {
             <div className="border border-fourth mt-5">
               <img
                 className="w-full object-cover"
-                src="./assets/images/banner.png"
+                src="./assets/images/banner.webp"
                 alt="محل تبلیغ"
               />
             </div>

@@ -42,6 +42,7 @@ const ProductBox = ({
               : "w-full"
           } overflow-hidden rounded-xl object-cover rounded-br-none rounded-bl-none`}
           src={img}
+          alt="نحوه نمایش دوره ها"
         />
       </div>
       <div
@@ -79,7 +80,7 @@ const ProductBox = ({
             <FaUsers className="w-6 h-6" />
             <span className="pr-2">{useNumberPersian(students)}</span>
           </div>
-          <h6>{useNumberPersian(price)}</h6>
+          <span>{useNumberPersian(price)}</span>
         </div>
       </div>
     </div>

@@ -30,12 +30,12 @@ const CourseComments = (): JSX.Element => {
           </div>
           <div className="flex justify-between items-center mt-5">
             <div className="w-[49%]">
-              <label className="block text-sm" htmlFor="userName">
+              <label className="block text-sm" htmlFor="name">
                 نام *
               </label>
               <Input
                 type="text"
-                id="userName"
+                id="name"
                 className="transition-all text-sm mt-2 border border-fourth focus:outline-none w-full p-2 focus:shadow-[0_0_10px_0_rgba(0,0,0,.07)]"
               />
             </div>

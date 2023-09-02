@@ -41,10 +41,10 @@ const LoginModal = () => {
               />
             </div>
             <div className="flex flex-col mt-4">
-              <label htmlFor="userName" className="text-[15px] mb-2 ">
+              <label htmlFor="password" className="text-[15px] mb-2 ">
                 رمز عبور:
               </label>
-              <Input id="userName" type="text" />
+              <Input id="password" type="text" />
             </div>
             <div className="flex items-center justify-between text-sm mt-4">
               <h6 className="flex items-center justify-between">

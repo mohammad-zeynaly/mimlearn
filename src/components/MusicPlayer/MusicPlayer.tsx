@@ -65,13 +65,13 @@ const MusicPlayer = ({
         onTimeUpdate={audioTimeProgress}
       />
       {isPlayAudio ? (
-        <button className="cursor-pointer" onClick={audioPauseHandler}>
+        <span className="cursor-pointer" onClick={audioPauseHandler}>
           <BsPause className="w-6 h-6" />
-        </button>
+        </span>
       ) : (
-        <button className="cursor-pointer" onClick={audioPlayHandler}>
+        <span className="cursor-pointer" onClick={audioPlayHandler}>
           <BsPlay className="w-6 h-6" />
-        </button>
+        </span>
       )}
       <span id="current-time" className="text-[#7d7d7d] text-xs pl-2">
         {audioCurrentTime}
@@ -86,7 +86,7 @@ const MusicPlayer = ({
         {audioDuration}
       </span>
       {itHasVoice ? (
-        <button
+        <span
           className="cursor-pointer"
           onClick={() => {
             setItHasVoice(false);
@@ -94,9 +94,9 @@ const MusicPlayer = ({
           }}
         >
           <BsVolumeUp className="w-6 h-6" />
-        </button>
+        </span>
       ) : (
-        <button
+        <span
           className="cursor-pointer"
           onClick={() => {
             setItHasVoice(true);
@@ -104,7 +104,7 @@ const MusicPlayer = ({
           }}
         >
           <BsVolumeMute className="w-6 h-6" />
-        </button>
+        </span>
       )}
     </div>
   );

@@ -64,12 +64,12 @@ const Header = (): JSX.Element => {
                 ref={searchInputRef}
                 onInput={debounceSearchUserQuery}
               />
-              <Button
-                className="bg-primary rounded-lg w-16 h-14 flex items-center justify-center absolute left-2"
+              <span
+                className="bg-primary rounded-lg w-16 h-14 flex items-center justify-center absolute left-2 cursor-pointer"
                 onClick={debounceSearchUserQuery}
               >
                 <BiSearch className="w-8 h-8" />
-              </Button>
+              </span>
             </div>
             <div
               id="searchResult"

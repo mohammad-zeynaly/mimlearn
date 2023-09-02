@@ -18,7 +18,7 @@ const SessionsBoxTemplate = ({
     >
       <div className="flex items-center pb-2 border-b">
         {typeof img === "string" ? (
-          <img className="w-14 h-14" src={img} />
+          <img className="w-14 h-14" src={img} alt="عکس جلسه" />
         ) : (
           img
         )}

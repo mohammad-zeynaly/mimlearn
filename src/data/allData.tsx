@@ -13,7 +13,7 @@ const allData: allDataType[] = [
   {
     id: 1,
     title: "آموزش فتوشاپ ",
-    img: "./assets/images/products/product-1.png",
+    img: "./assets/images/products/product-1.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -29,7 +29,7 @@ const allData: allDataType[] = [
   {
     id: 2,
     title: "آموزش ایلوستریتور ",
-    img: "./assets/images/products/product-2.png",
+    img: "./assets/images/products/product-2.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -45,7 +45,7 @@ const allData: allDataType[] = [
   {
     id: 3,
     title: "آموزش پریمیر ",
-    img: "./assets/images/products/product-3.png",
+    img: "./assets/images/products/product-3.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "حسین رحیمی",
@@ -61,7 +61,7 @@ const allData: allDataType[] = [
   {
     id: 4,
     title: "آموزش  افتر افکت",
-    img: "./assets/images/products/product-4.png",
+    img: "./assets/images/products/product-4.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "حسین رحیمی",
@@ -77,7 +77,7 @@ const allData: allDataType[] = [
   {
     id: 5,
     title: " آموزش ادوبی ایکس دی ",
-    img: "./assets/images/products/product-5.png",
+    img: "./assets/images/products/product-5.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -93,7 +93,7 @@ const allData: allDataType[] = [
   {
     id: 6,
     title: "آموزش این دیزاین ",
-    img: "./assets/images/products/product-6.png",
+    img: "./assets/images/products/product-6.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -110,7 +110,7 @@ const allData: allDataType[] = [
   {
     id: 7,
     title: "آموزش Html ",
-    img: "./assets/images/products/product-1.png",
+    img: "./assets/images/products/product-1.webp",
     prerequisite: "پیش نیاز ندارد",
     stars: 5,
     teacher: " محمد زینالی",
@@ -126,7 +126,7 @@ const allData: allDataType[] = [
   {
     id: 8,
     title: "آموزش Css ",
-    img: "./assets/images/products/product-2.png",
+    img: "./assets/images/products/product-2.webp",
     prerequisite: "Html",
     stars: 5,
     teacher: " محمد زینالی",
@@ -142,7 +142,7 @@ const allData: allDataType[] = [
   {
     id: 9,
     title: "آموزش جاوا اسکریپت ",
-    img: "./assets/images/products/product-3.png",
+    img: "./assets/images/products/product-3.webp",
     prerequisite: "Html & Css",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -158,7 +158,7 @@ const allData: allDataType[] = [
   {
     id: 10,
     title: "آموزش React.js",
-    img: "./assets/images/products/product-4.png",
+    img: "./assets/images/products/product-4.webp",
     prerequisite: "Html & Css & JavaScript",
     stars: 5,
     teacher: "محمد زینالی",
@@ -174,7 +174,7 @@ const allData: allDataType[] = [
   {
     id: 11,
     title: " آموزش Next.js ",
-    img: "./assets/images/products/product-5.png",
+    img: "./assets/images/products/product-5.webp",
     prerequisite: "React.js",
     stars: 5,
     teacher: "مصطفی میر هادی",
@@ -190,7 +190,7 @@ const allData: allDataType[] = [
   {
     id: 12,
     title: "آموزش تایپ اسکریپت ",
-    img: "./assets/images/products/product-6.png",
+    img: "./assets/images/products/product-6.webp",
     prerequisite: "TypeScript",
     stars: 5,
     teacher: "محمد زینالی",
@@ -203,11 +203,11 @@ const allData: allDataType[] = [
     type: "programmingCourses",
     sortType: "expensive",
   },
-
+  ///////////////////////////// End Courses //////////////////////////////////
   {
     id: 13,
     time: "3 اکتبر 2023",
-    img: "./assets/images/radio/radio-1.jpg",
+    img: "./assets/images/radio/radio-1.webp",
     title: "۱۰ راز مهم برای موفقیت در کسب‌و‌کار اینترنتی",
     caption:
       " موفقیت در کسب‌و‌کار اینترنتی نیازمند انجام کارهایی است که شاید برخلاف تصور سایرین باشد. سال..",
@@ -217,7 +217,7 @@ const allData: allDataType[] = [
   {
     id: 14,
     time: "3 جولای 2023",
-    img: "./assets/images/radio/radio-2.jpg",
+    img: "./assets/images/radio/radio-2.webp",
     title: "سئو کلاه سیاه و کلاه سفید چه تفاوتی دارند",
     caption:
       "  احتمالاً اگر کسب‌وکار اینترنتی داشته‌اید و با سئو سرکار داشته باشید لفظ سئو کلاه‌ سیاه..",
@@ -227,19 +227,20 @@ const allData: allDataType[] = [
   {
     id: 15,
     time: "3 می 2023",
-    img: "./assets/images/radio/radio-3.jpg",
+    img: "./assets/images/radio/radio-3.webp",
     title: "فقط روی یک کسب‌و‌کار متمرکز شوید",
     caption:
       " موفقیت در کسب‌و‌کار اینترنتی نیازمند انجام کارهایی است که شاید برخلاف تصور سایرین باشد. سال..",
     audio: "./assets/music/music-3.mp3",
     type: "radio",
   },
+  ///////////////////////////// End Radio //////////////////////////////////
 
   {
     id: 16,
     title: "افزودن دکمه تماس در سایت وردپرسی",
-    img: "./assets/images/articles/article-sm-1.jpg",
-    imgBig: "../assets/images/articles/article-lg-1.jpg",
+    img: "./assets/images/articles/article-sm-1.webp",
+    imgBig: "../assets/images/articles/article-lg-1.webp",
     caption:
       "امروز در خدمتتان هستیم با آموزش افزودن دکمه تماس در سایت وردپرسی . در این.",
     type: "articles",
@@ -247,8 +248,8 @@ const allData: allDataType[] = [
   {
     id: 17,
     title: "معرفی بهترین نرم افزارهای مدیریتی برای دورکاری",
-    img: "./assets/images/articles/article-sm-2.jpg",
-    imgBig: "../assets/images/articles/article-lg-2.jpg",
+    img: "./assets/images/articles/article-sm-2.webp",
+    imgBig: "../assets/images/articles/article-lg-2.webp",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
     type: "articles",
@@ -256,8 +257,8 @@ const allData: allDataType[] = [
   {
     id: 18,
     title: "چگونه به یک مدیر کسب و کار تبدیل شویم؟",
-    img: "./assets/images/articles/article-sm-3.jpg",
-    imgBig: "../assets/images/articles/article-lg-3.jpg",
+    img: "./assets/images/articles/article-sm-3.webp",
+    imgBig: "../assets/images/articles/article-lg-3.webp",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها..",
     type: "articles",
@@ -265,8 +266,8 @@ const allData: allDataType[] = [
   {
     id: 19,
     title: "استراتژی اقیانوس آبی چیست؟",
-    img: "./assets/images/articles/article-sm-4.jpg",
-    imgBig: "../assets/images/articles/article-lg-4.jpg",
+    img: "./assets/images/articles/article-sm-4.webp",
+    imgBig: "../assets/images/articles/article-lg-4.webp",
     caption:
       "	موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها.",
     type: "articles",
@@ -274,8 +275,8 @@ const allData: allDataType[] = [
   {
     id: 20,
     title: "۹ ویژگی پنهان در کتابخانه چند رسانه ای وردپرس",
-    img: "./assets/images/articles/article-sm-5.jpg",
-    imgBig: "../assets/images/articles/article-lg-5.jpg",
+    img: "./assets/images/articles/article-sm-5.webp",
+    imgBig: "../assets/images/articles/article-lg-5.webp",
     caption:
       "	امروز بیایید با ۹ ویژگی کتابخانه چندرسانه ای در وردپرس آشنا شوید تا بتوانید رسانه‌های را بهتر.",
     type: "articles",
@@ -283,8 +284,8 @@ const allData: allDataType[] = [
   {
     id: 21,
     title: "چگونه می توان رتبه الکسای سایت را بهبود داد؟",
-    img: "./assets/images/articles/article-sm-6.jpg",
-    imgBig: "../assets/images/articles/article-lg-6.jpg",
+    img: "./assets/images/articles/article-sm-6.webp",
+    imgBig: "../assets/images/articles/article-lg-6.webp",
     caption:
       "یکی از روشهای موثر برای افزایش بازدید کننده و بهبود سئو، ارتقای رتبه الکسا است. در این نوشته.",
     type: "articles",
@@ -292,12 +293,13 @@ const allData: allDataType[] = [
   {
     id: 22,
     title: "چگونه موفق شویم؟ | چگونه در زندگی به هر چه می‌خواهیم برسیم؟",
-    img: "./assets/images/articles/article-sm-7.jpg",
-    imgBig: "../assets/images/articles/article-lg-7.jpg",
+    img: "./assets/images/articles/article-sm-7.webp",
+    imgBig: "../assets/images/articles/article-lg-7.webp",
     caption:
       "موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم میلیون­‌ها...",
     type: "articles",
   },
+  ///////////////////////////// End Articles //////////////////////////////////
 
   {
     id: 23,
@@ -339,6 +341,7 @@ const allData: allDataType[] = [
     role: "مدیرعامل پیام‌رسان تلگرام",
     type: "comments",
   },
+  ///////////////////////////// End Comments //////////////////////////////////
 
   {
     id: 28,
@@ -349,7 +352,7 @@ const allData: allDataType[] = [
     telegramAccount: "mostafaHadi1998",
     Location: "تهران، خیابان آزادی، خیابان بهبودی، ساختمان 110",
     role: "متخصص میم لرن",
-    img: "../assets/images/teachers/teacher-1.jpg",
+    img: "../assets/images/teachers/teacher-1.webp",
     type: "teachers",
   },
   {
@@ -361,7 +364,7 @@ const allData: allDataType[] = [
     telegramAccount: "zeynali2003",
     Location: "تبریز ، منظریه",
     role: "توسعه دهنده میم لرن",
-    img: "../assets/images/teachers/teacher-2.jpg",
+    img: "../assets/images/teachers/teacher-2.webp",
     type: "teachers",
   },
   {
@@ -373,9 +376,10 @@ const allData: allDataType[] = [
     telegramAccount: "rahimi1995",
     Location: "تهران ، شهریار",
     role: "مدیر آکادمی میم لرن",
-    img: "../assets/images/teachers/teacher-3.jpg",
+    img: "../assets/images/teachers/teacher-3.webp",
     type: "teachers",
   },
+  ///////////////////////////// End Teachers //////////////////////////////////
 
   {
     id: 31,
@@ -431,6 +435,135 @@ const allData: allDataType[] = [
       </span>
     ),
     type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 33,
+    caption: `
+     <div className="leading-8 mt-5 text-sm">
+      <p>
+        موفق شدن و رسیدن به خواسته‌ ها به خود شما بستگی دارد. من می­‌توانم
+        میلیون­‌ها روش دیگر را در مورد اینکه چگونه موفق شویم؟ لیست کنم اما اگر
+        شما تمایلی به انجام کار نداشته باشید، این روش‌­ها کار نخواهند کرد. دو
+        انتخاب دارید:
+      </p>
+      <p>
+        <span className="block">
+          انتخاب اول: شروع کنید به ساخت چیزی مانند یک مغازه، یک وبلاگ، یک
+          اپلیکیشن و…
+        </span>
+        انتخاب دوم: در مقابل خودتان اعتراف کنید که واقعا نمی­‌خواهید موفق شوید،
+        بلکه تنها از این ایده خوشتان می­‌آید. بقیه روزتان را هم به دیدن یک نمایش
+        ماراتون در نتفلیکس بگذرانید
+      </p>
+      <p className="mt-5">
+        من از گذشته تا به حال و در طول 20 سال حضور در حرفه ورزشی، توسط تعدادی از
+        مربیان کره زمین آموزش دیدم. اما زمانی که می­خواستم شرکت خودم را تاسیس
+        کنم تا اطلاعات و دانشم راجع به روانشناسی و آموزش­‌هایی که دیده بودم را
+        به اشتراک بگذارم، آن قدر که فکر می­‌کردم این کار، کار ساده‌­ای نبود. پس
+        چگونه موفق شویم؟
+      </p>
+      <p>
+        ایجاد یک کسب­ و کار جدید، کار ساده‌­ای نیست. شما باید فکر این باشید که
+        پول ماهانه را کنار بگذارید تا بتوانید در ناشناخته‌­ها غرق شوید و اتفاقات
+        غیرقابل پیش‌­بینی را تجربه کنید. بسیاری از چیزها ما را از جهش و تغییر
+        دور می‌­کند. مانند ترس یا حس عدم امنیت؛ اما چیزی بیش از همه موارد ما را
+        به پیش می‌برد: انگیزه.
+      </p>
+      <h3 className="text-xl my-2">چگونه موفق شویم؟</h3>
+      <p className="mb-2">
+        وقتی به روزهایی که ورزشکار بودم برمی­‌گردم، متوجه تفاوت می­‌شوم. به یاد
+        می­‌آوردم که چه چیزی یا چه کسی مرا مجبور می­‌کرد تا به خودم فشار بیاورم،
+        حتی زمانی که خودم نمی­‌خواستم. تفاوت اینجا بود که من به عنوان یک
+        ورزشکار، روزهای ساختار یافته و مشخصی داشتم و باید برای هر روز به مربی
+        خود گزارش می‌­دادم. برنامه ساختار یافته، ما را متمرکز نگه می­‌دارد. مربی
+        نیز به ما فشار می­‌آورد و ما را به چالش می‌­کشد.
+      </p>
+      <p className="mb-2">
+        خوشبختانه من از این مرحله گذر کردم و آموزش Onbo را پیدا کردم. Onbo یک
+        سرویس مربیگری آنلاین است که به مردم کمک می‌­کند تا به اهداف خود برسند.
+        من تصمیم گرفتم تا درس­‌هایی که تاکنون یاد گرفت‌ه­ام را جمع­‌آوری کنم و
+        آنها را با دیگر افرادی مانند شما، که تلاش می­‌کنند فرد بهتری باشند و
+        برای رسیدن به خواسته ها مصمم هستند؛ به اشتراک بگذارم. برای رسیدن به
+        موفقیت حتما این نکات را مطالعه کنید.
+      </p>
+      <h4 className="text-base font-vazirMedium mt-3 mb-2">
+        1- از پیدا کردن گلوله نقره‌­ای و جادویی دست بردارید
+      </h4>
+      <p className="mb-2">
+        گلوله نقره‌­ای چیزی است که نیاز دارید تا هر روز و به مدت سال­‌ها، در کار
+        خود قرار دهید. این گلوله نه هکی در تبلیغات فیسبوک است و نه یک کنفرانس
+        2000 دلاری جادویی.
+      </p>
+      <p className="mb-2">
+        مهم نیست چندبار مردم به شما می‌گویند که باید همچنان در اطراف بگردید تا
+        پاسخ این راز مخفی را پیدا کنید. چرا مهم نیست؟ اگر مهم نیست پس چگونه موفق
+        شویم؟ چون شما نمی­‌خواهید آن را در کار خود استفاده کنید. شما تنها
+        می­‌خواهید که یک شبه به موفقیت برسید. این امکان‌­پذیر نیست. اگر من به
+        جای شما بودم، شروع می­‌کردم به ایجاد اهداف بهتر.
+      </p>
+      <h4 className="text-base font-vazirMedium mt-3 mb-2">
+        2- تلاش کنید تا اهداف بهتری ایجاد کنید
+      </h4>
+      <p className="mb-2">
+        “هدف من این است که یک تُن پول بدست بیاورم.” و شما در تعجب هستید که چرا
+        تا به حال این مقدار پول را بدست نیاورده‌­اید! هدف شما عملی نیست. اگر
+        بخواهیم واضح بگوییم، این هدف انگیزه‌­ای هم ایجاد نمی­‌کند. پول خیلی خوب
+        است اما شما را خشنود و کامل نمی­‌کند هدف اصلی شما از زندگی چیست؟ شاید
+        موفق بودن برای شما به این معنی است که کاری کنید که اقیانوس­‌های جهان
+        تمیز شوند یا به حیوانات کمک کنید و از منقرض شدن آن‌ها جلوگیری کنید. با
+        این حال، شما این کار را چگونه انجام می­‌دهید؟
+      </p>
+      <p className="mb-2">
+        بسیار خوب، شما به پول نیاز دارید و این جایی است که هدف پول معنا پیدا
+        می­‌کند. چقدر پول لازم دارید تا به حل شدن این مشکلات کمک کنید؟ یک ماشین
+        حساب بردارید. از برخی افراد بی دغدغه کمک بگیرید و شروع به محاسبه اعداد
+        کنید. سپس عدد دقیق محاسبه شده را هدف خود قرار دهید و یک تاریخ دقیق برای
+        رسیدن به آن یادداشت کنید. “من می­خواهم 103.467.37 دلار را تا 31 دسامبر
+        2018 بدست آوردم و آن را برای تمیز کردن اقیانوس‌های دنیا سرمایه­‌گذاری
+        کنم تا بدین ترتیب بتوانم از اقیانوس محافظت کنم و آب نوشیدنی تمیزی داشته
+        باشم.” حالا هم یک هدف مشخص دارید و هم یک روز برای رسیدن به آن.
+      </p>
+      <h4 className="text-base font-vazirMedium mt-3 mb-2">
+        3- به دنبال تایید نباشید
+      </h4>
+      <p className="mb-2">
+        verify- تایید کردن شما اگر می‌خواهید بدانید چگونه موفق شویم؟ لطفا هرگز
+        به دنبال تایید نباشید. قرار نیست آن راه را در افرادی که اطراف شما هستند
+        پیدا کنید. مگر اینکه هر کس که در اطراف شماست موفقیت بزرگی به دست آورده
+        باشد. نیازی نیست مادر، پدر، بهترین دوستان، شریک و سگ شما ایده­‌های کاری
+        شما را تایید کنند. زندگی را به روش خودتان و آن‌طور که می­‌خواهید زندگی
+        کنید. دنبال این نباشید که دیگران تایید کنند که شما در مسیر درست قرار
+        دارید.
+      </p>
+      <p className="mb-2">
+        می­‌خواهید بدانید آیا در مسیر درست هستید یا نه؟ از خودتان بپرسید “آیا در
+        حال حاضر آن‌طور که می‌­خواهم زندگی می­‌کنم؟” اگر جواب شما مثبت بود، در
+        مسیر درست قرار دارید. اگر جواب منفی بود، باید تغییراتی در زندگی خود
+        ایجاد کنید. نگذارید دیگر افراد ذهن شما را به هم بریزند. مردم همیشه فکر
+        می­‌کنند که می­‌دانند بهترین چیز برای شما چیست. اما این فقط شما هستید که
+        جواب را می­‌دانید. کمی بیشتر به خودتان اعتماد کنید. خواهید فهمید که
+        می­‌دانید چه کاری باید انجام دهید.
+      </p>
+      <h4 className="text-base font-vazirMedium mt-3 mb-2">
+        4- زندگی رویایی خود را داشته باشید
+      </h4>
+      <p className="mb-2">
+        موفق شدن در زندگی این نیست که در یک لحظه جادویی، همه چیز در سر جای خود
+        قرار بگیرد. موفق شدن مربوط به لحظات کوچک در طول این مدت است. لحظاتی که
+        شما خوشحال هستید و به دنبال رسیدن به خواسته‌ ها به سر می‌برید. لحظاتی که
+        واقعا در آن غرق شده­‌اید.
+      </p>
+      <p className="mb-2">
+        حقیقت آن است که شما می‌­توانید این لحظات را تجربه کنید، حتی اگر در حال
+        حاضر در کاری خسته کننده گیر کرده باشید. اگر هدف شما این است که یک کسب­ و
+        کار آنلاین راه بیاندازید، بعد از ظهرها و آخر هفته­‌هایی را خواهید داشت
+        که می­‌توانید این کار را شروع کنید. شاید بخواهید که از راه دور کار کنید.
+        در این حالت می‌­توانید با رئیس خود صحبت کرده و در مدت زمانی که در شهر
+        خود نیستید، کارهایتان را از راه دور انجام دهید.
+      </p>
+    </div>
+    `, 
+    type: "",
   },
 ];
 

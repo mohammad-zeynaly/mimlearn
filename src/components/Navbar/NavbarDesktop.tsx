@@ -23,7 +23,7 @@ const NavbarDesktop = (): JSX.Element => {
               <Link to="/">
                 <img
                   className="w-32 object-cover"
-                  src="../assets/images/logo-default.png"
+                  src="../assets/images/logo-default.webp"
                   alt="لوگو سایت"
                 />
               </Link>

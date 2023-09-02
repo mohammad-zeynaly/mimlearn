@@ -4,33 +4,35 @@ const HeaderInformation = () => {
       <div className="flex flex-col items-center w-[49%] sm:w-1/3 mb-6 sm:mb-0">
         <img
           className="w-12 sm:w-auto object-cover"
-          src="./assets/images/minutes.png"
-          alt="تصویر مشخصات"
+          src="./assets/images/minutes.webp"
+          alt=" شمارنده دقیقه"
         />
-        <h4 className="text-lg sm:text-xl mt-3">۶۶۶,۵۰۰</h4>
-        <h5 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
+        <h3 className="text-lg sm:text-xl mt-3">۶۶۶,۵۰۰</h3>
+        <h4 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
           نفر ثبت‌نام در دوره
-        </h5>
+        </h4>
       </div>
       <div className="flex flex-col items-center w-[49%] sm:w-1/3 mb-6 sm:mb-0">
         <img
           className="w-12 sm:w-auto object-cover"
-          src="./assets/images/courses.png"
+          src="./assets/images/courses.webp"
+          alt="شمارنده دوره"
         />
-        <h4 className="text-lg sm:text-xl mt-3">۳,۷۸۵</h4>
-        <h5 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
+        <h3 className="text-lg sm:text-xl mt-3">۳,۷۸۵</h3>
+        <h4 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
           عدد دروه آموزشی
-        </h5>
+        </h4>
       </div>
       <div className="flex flex-col items-center w-[49%] sm:w-1/3 mb-6 sm:mb-0">
         <img
           className="w-12 sm:w-auto object-cover"
-          src="./assets/images/minutes.png"
+          src="./assets/images/minutes.webp"
+          alt="شمارنده دقیقه"
         />
-        <h4 className="text-lg sm:text-xl mt-3">۵۲۹,۸۸۴</h4>
-        <h5 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
+        <h3 className="text-lg sm:text-xl mt-3">۵۲۹,۸۸۴</h3>
+        <h4 className="mt-[6px] text-sm sm:mt-2 sm:text-[15px]">
           دقیقه آموزش کاربردی
-        </h5>
+        </h4>
       </div>
     </div>
   );

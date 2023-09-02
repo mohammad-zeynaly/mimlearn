@@ -63,10 +63,10 @@ const CoursesTopbar = memo(
       <section className="bg-white p-4 border border-fourth mt-8 w-full">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <button
+            <span
               className={`${
                 displayMode === "row" ? "bg-primary" : "border border-fourth"
-              } p-2 rounded-md hidden sm:block`}
+              } p-2 rounded-md hidden sm:block cursor-pointer`}
               onClick={() => setDisplayMode("row")}
             >
               <svg
@@ -81,11 +81,11 @@ const CoursesTopbar = memo(
               >
                 <path d="M8 4H5a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V5a1 1 0 00-1-1zm7 0h-3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V5a1 1 0 00-1-1zm-7 7H5a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1v-3a1 1 0 00-1-1zm7 0h-3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1v-3a1 1 0 00-1-1z"></path>
               </svg>
-            </button>
-            <button
+            </span>
+            <span
               className={`${
                 displayMode === "column" ? "bg-primary" : "border border-fourth"
-              } p-2 rounded-md mr-4 hidden sm:block`}
+              } p-2 rounded-md mr-4 hidden sm:block cursor-pointer`}
               onClick={() => setDisplayMode("column")}
             >
               <svg
@@ -100,7 +100,7 @@ const CoursesTopbar = memo(
               >
                 <path d="M14.4 9H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h5.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm2 5H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1zM8.6 6h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1zM5.4 9H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm0 5H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1zm0-10H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1z"></path>
               </svg>
-            </button>
+            </span>
           </div>
 
           <select

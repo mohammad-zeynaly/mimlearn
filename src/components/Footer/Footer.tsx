@@ -65,13 +65,18 @@ const Footer = (): JSX.Element => {
       <div className="container">
         <div className="py-12 px-4 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <ul className="flex flex-col text-sm">
-            <h5 className="text-base after:block after:w-6 after:bg-primary after:h-[3px] flex items-center after:mr-2">
-              درباره میم لرن
-            </h5>
-            <p className="leading-8 mt-5">
-              ما برند میم لرن را نامگذاری کردیم، زیرا برای ما بهترین علامت های
-              تجاری ساده هستند. مارک ها رشد می کنند در توانایی آنها درک می شود.
-            </p>
+            <li>
+              <h5 className="text-base after:block after:w-6 after:bg-primary after:h-[3px] flex items-center after:mr-2">
+                درباره میم لرن
+              </h5>
+            </li>
+            <li>
+              <p className="leading-8 mt-5">
+                ما برند میم لرن را نامگذاری کردیم، زیرا برای ما بهترین علامت های
+                تجاری ساده هستند. مارک ها رشد می کنند در توانایی آنها درک می
+                شود.
+              </p>
+            </li>
             {footerAboutItems.map((item) => (
               <li key={item.id} className="flex items-center  mt-5 font-light">
                 {item.icon}
@@ -80,9 +85,11 @@ const Footer = (): JSX.Element => {
             ))}
           </ul>
           <ul className="flex flex-col text-sm ">
-            <h5 className="text-base after:block after:w-6 after:bg-primary after:h-[3px] flex items-center after:mr-2">
-              فهرست سفارشی
-            </h5>
+            <li>
+              <h5 className="text-base after:block after:w-6 after:bg-primary after:h-[3px] flex items-center after:mr-2">
+                فهرست سفارشی
+              </h5>
+            </li>
             {footerCustomListItems.map((listItem) => (
               <li
                 key={listItem.id}
@@ -116,12 +123,12 @@ const Footer = (): JSX.Element => {
             <div className="flex items-center">
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="../assets/images/enamad.png"
+                src="../assets/images/enamad.webp"
                 alt="enamad image"
               />
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="../assets/images/samandehi.png"
+                src="../assets/images/samandehi.webp"
                 alt="enamad image"
               />
             </div>

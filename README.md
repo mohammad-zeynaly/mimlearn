@@ -1,7 +1,10 @@
----
-# mimlearn /fa page front-end
+--
+
+# mimlearn / page front-end
+
 ## [review online](https://mimlearn.netlify.app/)
----
+
+--
 
 ## tips
 
@@ -21,6 +24,7 @@
 - Swiper
 - react-toastify
 - video-react
+- json-server
 
 ---
 

@@ -10,9 +10,9 @@ const AboutUs = (): JSX.Element => {
         <div className="flex flex-col lg:flex-row items-center gap-5 mt-12">
           <div className="w-full lg:w-1/2 xl:w-[40%]">
             <img
-              src="../assets/images/about-image.jpg"
+              src="../assets/images/about-image.webp"
               className="object-cover w-full rounded-lg"
-              alt="عکس درباره ما"
+              alt="درباره ما"
             />
           </div>
           <div className="w-full lg:w-1/2 xl:w-[60%]">

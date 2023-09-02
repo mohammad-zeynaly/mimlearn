@@ -16,20 +16,18 @@ const RadioSliderItem = ({
         <img
           className="object-cover max-w-full sm:h-auto w-full overflow-hidden rounded-2xl radio-slider-img"
           src={img}
+          alt="عکس پادکست"
         />
       </div>
 
       <div className="flex flex-col text-center lg:text-right mt-10 lg:mt-0 pl-4">
-        <h6 className="text-third flex justify-center items-end text-xs lg:justify-normal">
+        <span className="text-third flex justify-center items-end text-xs lg:justify-normal">
           <BiTimeFive className="ml-3 w-5 h-5" />
           <span> {time} </span>
-        </h6>
-        <Link
-          to="radio/1"
-          className="mt-2 font-vazirBold text-lg text-[#464749] hover:text-primary"
-        >
+        </span>
+        <span className="mt-2 font-vazirBold text-lg text-[#464749] hover:text-primary">
           {title}
-        </Link>
+        </span>
         <p className="text-[#555] mt-4 text-sm mb-4 sm:mb-8 lg:mb-0">
           {caption}
         </p>

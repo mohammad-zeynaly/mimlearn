@@ -49,7 +49,7 @@ const CartProductItem = ({
           <img
             className="w-20 object-cover mr-8 hidden sm:block"
             src={img}
-            alt="product image"
+            alt="عکس محصول "
           />
         </Link>
       </td>

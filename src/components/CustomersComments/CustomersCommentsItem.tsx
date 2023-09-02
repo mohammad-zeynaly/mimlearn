@@ -23,7 +23,7 @@ const CustomersCommentsItem = ({ caption, author, role }: CommentsType) => {
         <div className="flex items-center">
           <img
             className="w-16 h-16 rounded-full object-cover"
-            src="./assets/images/user-img.png"
+            src="./assets/images/user-img.webp"
             alt="عکس کاربر"
           />
           <span className="flex flex-col pr-4">
@@ -33,9 +33,9 @@ const CustomersCommentsItem = ({ caption, author, role }: CommentsType) => {
         </div>
         <div className="flex flex-col items-center">
           {isShowVideoPlayer && <VideoPlayerModal />}
-          <button className="cursor-pointer" onClick={videoPlayer}>
+          <span className="cursor-pointer" onClick={videoPlayer}>
             <GoPlay className="w-8 h-8 text-primary" />
-          </button>
+          </span>
           <span className="text-sm block mt-2">مشاهده ویدئو</span>
         </div>
       </div>
