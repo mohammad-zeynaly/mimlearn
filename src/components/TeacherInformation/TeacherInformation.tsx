@@ -9,7 +9,7 @@ import allData from "../../data/allData";
 
 const TeacherInformation = (): JSX.Element => {
   const communicationWithTheTeacherItems: communicationWithTheTeacherItemsType[] =
-    useFilteredData("communicationWithTheTeacherItems");
+    useFilteredData([],"communicationWithTheTeacherItems");
   const { teachersName } = useParams();
 
   const mainRole: TeacherItemType | undefined = allData.find(

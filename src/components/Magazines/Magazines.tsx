@@ -6,7 +6,7 @@ import useFilteredData from "../../hooks/useFilteredData";
 import { MagazineBoxType } from "../../types/coursesInterface";
 
 const Magazines = (): JSX.Element => {
-  const magazineItems: MagazineBoxType[] = useFilteredData("articles");
+  const magazineItems: MagazineBoxType[] = useFilteredData([],"articles");
 
   return (
     <SectionTemplate

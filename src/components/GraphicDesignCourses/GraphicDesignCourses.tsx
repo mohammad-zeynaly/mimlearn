@@ -4,9 +4,15 @@ import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
 import { CoursesType } from "../../types/coursesInterface";
+import { useAppSelector } from "../../Redux/store/store";
 
 const GraphicDesignCourses = (): JSX.Element => {
-  const graphicCourses: CoursesType[] = useFilteredData("graphicCourse");
+  const allCourses = useAppSelector((state) => state.courses.allCourses);
+  const graphicCourses = useFilteredData(
+    allCourses,
+    "graphicCourse"
+  ) as CoursesType[];
+
   return (
     <SectionTemplate
       title="دوره‌ های آموزش طراحی گرافیک"
@@ -15,7 +21,7 @@ const GraphicDesignCourses = (): JSX.Element => {
     >
       {/*----  swiper Installation ----*/}
       <SwiperTemplate
-      between={24}
+        between={24}
         breakPoint={{
           1250: {
             slidesPerView: 4,
@@ -31,7 +37,7 @@ const GraphicDesignCourses = (): JSX.Element => {
           },
         }}
       >
-        {graphicCourses.map((course) => (
+        {graphicCourses?.map((course) => (
           <SwiperSlide key={course.id} style={{ direction: "rtl" }}>
             <ProductBox {...course} />
           </SwiperSlide>

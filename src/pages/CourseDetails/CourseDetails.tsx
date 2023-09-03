@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../Redux/store/store";
 import { CoursesType } from "../../types/coursesInterface";
-import allData from "../../data/allData";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CourseVideoPlayer from "../../components/CourseVideoPlayer/CourseVideoPlayer";
 import CourseDetailsSidebar from "../../components/CourseDetailsSidebar/CourseDetailsSidebar";
@@ -13,7 +12,8 @@ import tostBox from "../../functions/tostBox";
 const CourseDetails = (): JSX.Element => {
   const { courseName } = useParams();
 
-  const mainCourse = allData.find(
+  const allCourses = useAppSelector((state) => state.courses.allCourses);
+  const mainCourse = allCourses.find(
     (course) => course?.title?.trim() === courseName
   ) as CoursesType;
 

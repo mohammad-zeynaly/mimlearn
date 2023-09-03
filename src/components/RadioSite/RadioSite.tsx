@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const RadioSite = () => {
-  const radioSliderItemsData: radioItemsType[] = useFilteredData("radio");
+  const radioSliderItemsData: radioItemsType[] = useFilteredData([],"radio");
 
   return (
     <section className="mt-20">

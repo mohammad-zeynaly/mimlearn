@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { BasketProductsType, CoursesType } from "../../types/coursesInterface";
+import { getAllCourses } from "../../services/educationalServices";
 
 const initialState: BasketProductsType = {
   basketProduct: [],
@@ -19,8 +20,18 @@ const initialState: BasketProductsType = {
     type: "graphicCourse",
     sortType: "date",
   } as CoursesType,
+  allCourses: [],
   totalPriceValue: 0,
 };
+
+export const fetchGetTheAllCourses = createAsyncThunk(
+  "course/fetchCourses",
+  async () => {
+    const response = await getAllCourses();
+    console.log("fetchGetTheAllCourses=> ", response.data);
+    return response.data;
+  }
+);
 
 const coursesStateSlice = createSlice({
   name: "courses",
@@ -52,10 +63,7 @@ const coursesStateSlice = createSlice({
         const mainProductIndexInBasketProduct = state.basketProduct.findIndex(
           (product) => product.id === state.selectedUpdateProduct?.id
         );
-        console.log(
-          "mainProductIndexInBasketProduct",
-          mainProductIndexInBasketProduct
-        );
+       
         state.basketProduct[mainProductIndexInBasketProduct] =
           state.selectedUpdateProduct;
 
@@ -68,7 +76,6 @@ const coursesStateSlice = createSlice({
     },
 
     removeFromCart: (state, action) => {
-      console.log("inside reducer removeFromCart", action);
       const filteredDeleteProduct = state.basketProduct.filter(
         (course) => course.id !== action.payload
       );
@@ -78,7 +85,6 @@ const coursesStateSlice = createSlice({
     },
 
     totalPrice: (state) => {
-      console.log("total price state.basketProduct", state.basketProduct);
       const totalValue = state.basketProduct.reduce((total, product) => {
         if (product.count !== undefined && product.price !== undefined) {
           total += product.count * product.price;
@@ -87,6 +93,19 @@ const coursesStateSlice = createSlice({
       }, 0);
       state.totalPriceValue = totalValue;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+    .addCase(fetchGetTheAllCourses.rejected, (state, action) => {
+      console.error("Failed To Fetch AllCourses")
+    })
+    .addCase(fetchGetTheAllCourses.pending, (state, action) => {
+      console.info("pending promise")
+    })
+    .addCase(fetchGetTheAllCourses.fulfilled, (state, action) => {
+      
+      state.allCourses = action.payload;
+    });
   },
 });
 

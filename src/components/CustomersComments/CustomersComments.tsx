@@ -6,7 +6,7 @@ import useFilteredData from "../../hooks/useFilteredData";
 import { CommentsType } from "../../types/coursesInterface";
 
 const CustomersComments = (): JSX.Element => {
-  const customersCommentItems: CommentsType[] = useFilteredData("comments");
+  const customersCommentItems: CommentsType[] = useFilteredData([], "comments");
 
   return (
     <SectionTemplate

@@ -3,7 +3,7 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CoursesTopbar from "../../components/CoursesTopbar/CoursesTopbar";
 import FilterByPrice from "../../components/FilterByPrice/FilterByPrice";
 import AllCourses from "../../components/AllCourses/AllCourses";
-import allData from "../../data/allData";
+import { useAppSelector } from "../../Redux/store/store";
 import { CoursesType } from "../../types/coursesInterface";
 import CoursePagination from "../../components/CoursePagination/CoursePagination";
 
@@ -17,22 +17,25 @@ const Courses = (): JSX.Element => {
   const [isSortedData, setIsSortedData] = useState<boolean>(false);
   const pageSize = 6;
 
+  const allCourses = useAppSelector((state) => state.courses.allCourses);
+
   const filteredProductByPrice = () => {
     setPriceRange(filteredPricePercent * 40_000);
     setIsSortedData(false);
   };
 
-  const allProducts = allData.filter((product) => product.price! > 0);
-
-  let filteredProduct = allProducts;
+  let filteredProduct = allCourses;
 
   if (priceRange && priceRange > 0) {
-    filteredProduct = allData.filter((product) => product.price! < priceRange);
+    filteredProduct = allCourses.filter(
+      (product) => product.price! < priceRange
+    );
   } else {
-    filteredProduct = allData.filter((product) => product.price! > 0);
+    filteredProduct = allCourses.filter((product) => product.price! > 0);
   }
 
   useEffect(() => {
+    console.log("isSortedData=> ", isSortedData);
     if (isSortedData === false) {
       const endProductIndex = currentPage * pageSize;
       const startProductIndex = endProductIndex - pageSize;
@@ -49,7 +52,7 @@ const Courses = (): JSX.Element => {
       );
       setPaginatedProduct(paginatedProduct);
     }
-  }, [currentPage, priceRange, isSortedData]);
+  }, [currentPage, priceRange, isSortedData, allCourses]);
 
   return (
     <>

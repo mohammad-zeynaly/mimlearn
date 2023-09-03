@@ -95,6 +95,7 @@ export interface AccordionMenuSItemType {
 
 export interface BasketProductsType {
   basketProduct: CoursesType[];
+  allCourses: CoursesType[];
   selectedUpdateProduct: CoursesType | undefined;
   totalPriceValue: number;
 }

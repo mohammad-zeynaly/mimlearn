@@ -4,9 +4,14 @@ import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import ProductBox from "../ProductBox/ProductBox";
 import useFilteredData from "../../hooks/useFilteredData";
 import { CoursesType } from "../../types/coursesInterface";
+import { useAppSelector } from "../../Redux/store/store";
 
 const ProgrammingCourses = (): JSX.Element => {
-  const programmerCourse: CoursesType[] = useFilteredData("programmingCourses");
+  const allCourses = useAppSelector((state) => state.courses.allCourses);
+  const programmerCourse: CoursesType[] = useFilteredData(
+    allCourses,
+    "programmingCourses"
+  );
 
   return (
     <SectionTemplate
@@ -31,7 +36,7 @@ const ProgrammingCourses = (): JSX.Element => {
           },
         }}
       >
-        {programmerCourse.map((courses) => (
+        {programmerCourse?.map((courses) => (
           <SwiperSlide key={courses.id}>
             <ProductBox {...courses} />
           </SwiperSlide>

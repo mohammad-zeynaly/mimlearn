@@ -4,7 +4,7 @@ import useFilteredData from "../../hooks/useFilteredData";
 import { TeacherItemType } from "../../types/coursesInterface";
 
 const Teachers = (): JSX.Element => {
-  const teacherItems: TeacherItemType[] = useFilteredData("teachers");
+  const teacherItems: TeacherItemType[] = useFilteredData([], "teachers");
   return (
     <section className="mt-20">
       <Breadcrumb title="مدرسین" currentPage="مدرسین" />

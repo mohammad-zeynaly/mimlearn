@@ -4,7 +4,7 @@ import useFilteredData from "../../hooks/useFilteredData";
 import { MagazineBoxType } from "../../types/coursesInterface";
 
 const Articles = (): JSX.Element => {
-  const articleItems: MagazineBoxType[] = useFilteredData("articles");
+  const articleItems: MagazineBoxType[] = useFilteredData([],"articles");
   return (
     <>
       <Breadcrumb title="مقالات" currentPage="مقالات" />

@@ -24,6 +24,7 @@
 - Swiper
 - react-toastify
 - video-react
+- axios
 - json-server
 
 ---
