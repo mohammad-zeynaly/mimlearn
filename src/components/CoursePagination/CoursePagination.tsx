@@ -1,3 +1,5 @@
+import { CoursesActionType } from "../../types/coursesInterface";
+
 const CoursePagination = ({
   pageNumbers,
   currentPage,
@@ -5,10 +7,10 @@ const CoursePagination = ({
 }: {
   pageNumbers: number[] | undefined;
   currentPage: number;
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  setCurrentPage: React.Dispatch<CoursesActionType>;
 }) => {
   const changePaginatedProduct = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
+    setCurrentPage({ type: "SET_CURRENT_PAGE", payload: pageNumber });
   };
 
   return (

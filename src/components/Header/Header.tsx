@@ -39,7 +39,7 @@ const Header = (): JSX.Element => {
 
   return (
     <header id="header" className="mt-[5.5rem] sm:mt-28">
-      <div className="w-full h-[650px] sm:h-[625px] bg-[url('./assets/images/header-bg.jpg')] -z-10 bg-cover absolute top-0 "></div>
+      <div className="w-full h-[650px] sm:h-[625px] bg-[url('./assets/images/header-bg.webp')] -z-10 bg-cover absolute top-0 "></div>
       <div className="bg-video w-full h-[650px] absolute top-0 -z-10">
         <video
           loop
@@ -58,7 +58,7 @@ const Header = (): JSX.Element => {
           <h2 className="mt-4">آموزش‌های کاربردی از حرفه‌ای‌ها</h2>
           <div className="max-w-3xl mx-auto relative">
             <div className="flex items-center relative mt-8 w-full">
-              <Input
+              <input
                 id="search-input"
                 className="placeholder:text-sm text-[#343a40] py-5 px-6 focus:outline-none rounded-xl w-full "
                 type="text"

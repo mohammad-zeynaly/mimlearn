@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { CoursesType } from "../../types/coursesInterface";
+import { CoursesActionType, CoursesType } from "../../types/coursesInterface";
 import { useAppSelector } from "../../Redux/store/store";
 
 const CoursesTopbar = memo(
@@ -10,9 +10,9 @@ const CoursesTopbar = memo(
     setIsSortedData,
   }: {
     displayMode: string;
-    setDisplayMode: React.Dispatch<React.SetStateAction<string>>;
-    setPaginatedProduct: React.Dispatch<React.SetStateAction<CoursesType[]>>;
-    setIsSortedData: React.Dispatch<React.SetStateAction<boolean>>;
+    setDisplayMode: React.Dispatch<CoursesActionType>;
+    setPaginatedProduct: React.Dispatch<CoursesActionType>;
+    setIsSortedData: React.Dispatch<CoursesActionType>;
   }): JSX.Element => {
     const listItems = [
       {
@@ -42,7 +42,7 @@ const CoursesTopbar = memo(
       },
     ];
 
-    const allCourses = useAppSelector(state => state.courses.allCourses)
+    const allCourses = useAppSelector((state) => state.courses.allCourses);
 
     const filteredInSelectBox = (
       event: React.ChangeEvent<HTMLSelectElement>
@@ -50,15 +50,21 @@ const CoursesTopbar = memo(
       const resultSelectValue = (event.target as HTMLSelectElement).value;
 
       if (resultSelectValue === "popularity") {
-        setPaginatedProduct(
-          allCourses.filter((course) => course.type === "programmingCourses")
-        );
+        setPaginatedProduct({
+          type: "SET_PAGINATED_PRODUCT",
+          payload: allCourses.filter(
+            (course) => course.type === "programmingCourses"
+          ),
+        });
       } else {
-        setPaginatedProduct(
-          allCourses.filter((course) => course.sortType === resultSelectValue)
-        );
+        setPaginatedProduct({
+          type: "SET_PAGINATED_PRODUCT",
+          payload: allCourses.filter(
+            (course) => course.sortType === resultSelectValue
+          ),
+        });
       }
-      setIsSortedData(true);
+      setIsSortedData({ type: "SET_ISSORTED_DATA", payload: true });
     };
 
     return (
@@ -69,7 +75,9 @@ const CoursesTopbar = memo(
               className={`${
                 displayMode === "row" ? "bg-primary" : "border border-fourth"
               } p-2 rounded-md hidden sm:block cursor-pointer`}
-              onClick={() => setDisplayMode("row")}
+              onClick={() =>
+                setDisplayMode({ type: "SET_DISPLAY_MODE", payload: "row" })
+              }
             >
               <svg
                 x="0"
@@ -88,7 +96,9 @@ const CoursesTopbar = memo(
               className={`${
                 displayMode === "column" ? "bg-primary" : "border border-fourth"
               } p-2 rounded-md mr-4 hidden sm:block cursor-pointer`}
-              onClick={() => setDisplayMode("column")}
+              onClick={() =>
+                setDisplayMode({ type: "SET_DISPLAY_MODE", payload: "column" })
+              }
             >
               <svg
                 x="0"

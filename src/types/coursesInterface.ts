@@ -105,11 +105,7 @@ export interface apiDataType {
   totalPriceValue: number;
 }
 
-// export type allDataType = CoursesType &
-//   radioItemsType &
-//   MagazineBoxType &
-//   CommentsType &
-//   TeacherItemType &
-//   communicationWithTheTeacherItemsType &
-//   AccordionMenuSItemType &
-//   apiDataType;
+export interface CoursesActionType {
+  type: string;
+  payload: any;
+}

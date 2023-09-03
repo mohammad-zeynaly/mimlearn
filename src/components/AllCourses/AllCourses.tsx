@@ -15,7 +15,7 @@ const AllCourses = ({
           displayMode === "column" ? "grid-cols-1" : "sm:grid-cols-2"
         }  gap-4`}
       >
-        {filteredProduct.map((product) => (
+        {filteredProduct?.map((product) => (
           <ProductBox key={product.id} displayMode={displayMode} {...product} />
         ))}
       </div>

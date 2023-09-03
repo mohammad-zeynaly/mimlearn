@@ -1,11 +1,12 @@
 import { useState } from "react";
 import useNumberPersian from "../../hooks/useNumberPersian";
 import Button from "../Button/Button";
+import { CoursesActionType } from "../../types/coursesInterface";
 
 interface FilterByPriceType {
   filteredProductByPrice: () => {} | void;
   filteredPricePercent: number;
-  setFilteredPricePercent: React.Dispatch<React.SetStateAction<number>>;
+  setFilteredPricePercent: React.Dispatch<CoursesActionType>;
 }
 
 const FilterByPrice = ({
@@ -27,9 +28,12 @@ const FilterByPrice = ({
           onInput={(e) => {
             let filterPercent: number = +(e.target as HTMLInputElement).value;
 
-            setFilteredPricePercent(filterPercent);
+            setFilteredPricePercent({
+              type: "SET_FILTERED_PRICE_PERCENT",
+              payload: filterPercent,
+            });
           }}
-          defaultValue={0}
+          // defaultValue={0}
         />
 
         <span className="block bg-[#d4d4d4] h-[7px] rounded-3xl  absolute top-2 right-[-1px] w-full overflow-hidden z-10">

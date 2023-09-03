@@ -1,58 +1,70 @@
-import { useState, useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CoursesTopbar from "../../components/CoursesTopbar/CoursesTopbar";
 import FilterByPrice from "../../components/FilterByPrice/FilterByPrice";
 import AllCourses from "../../components/AllCourses/AllCourses";
 import { useAppSelector } from "../../Redux/store/store";
-import { CoursesType } from "../../types/coursesInterface";
 import CoursePagination from "../../components/CoursePagination/CoursePagination";
+import { reducer, initialState } from "./coursesReducer";
 
 const Courses = (): JSX.Element => {
-  const [displayMode, setDisplayMode] = useState<string>("row");
-  const [filteredPricePercent, setFilteredPricePercent] = useState<number>(0);
-  const [priceRange, setPriceRange] = useState<number>();
-  const [paginatedProduct, setPaginatedProduct] = useState<CoursesType[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [pageNumbers, setPageNumbers] = useState<number[]>();
-  const [isSortedData, setIsSortedData] = useState<boolean>(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
   const pageSize = 6;
 
   const allCourses = useAppSelector((state) => state.courses.allCourses);
 
   const filteredProductByPrice = () => {
-    setPriceRange(filteredPricePercent * 40_000);
-    setIsSortedData(false);
+    dispatch({
+      type: "SET_PRISE_RANGE",
+      payload: state.filteredPricePercent * 40_000,
+    });
+    dispatch({ type: "SET_ISSORTED_DATA", payload: false });
   };
 
   let filteredProduct = allCourses;
 
-  if (priceRange && priceRange > 0) {
+  if (state.priceRange && state.priceRange > 0) {
     filteredProduct = allCourses.filter(
-      (product) => product.price! < priceRange
+      (product) => product.price! < state.priceRange
     );
   } else {
     filteredProduct = allCourses.filter((product) => product.price! > 0);
   }
 
   useEffect(() => {
-    console.log("isSortedData=> ", isSortedData);
-    if (isSortedData === false) {
-      const endProductIndex = currentPage * pageSize;
+    console.log("isSortedData=> ", state.isSortedData);
+    if (state.isSortedData === false) {
+      const endProductIndex = state.currentPage * pageSize;
       const startProductIndex = endProductIndex - pageSize;
-      setPaginatedProduct(
-        filteredProduct.slice(startProductIndex, endProductIndex)
-      );
 
-      setPageNumbers(
-        Array.from(Array(Math.ceil(filteredProduct.length / pageSize)).keys())
-      );
+      dispatch({
+        type: "SET_PAGINATED_PRODUCT",
+        payload: filteredProduct.slice(startProductIndex, endProductIndex),
+      });
+
+      dispatch({
+        type: "SET_PAGE_NUMBERS",
+        payload: Array.from(
+          Array(Math.ceil(filteredProduct.length / pageSize)).keys()
+        ),
+      });
     } else {
-      setPageNumbers(
-        Array.from(Array(Math.ceil(paginatedProduct.length / pageSize)).keys())
-      );
-      setPaginatedProduct(paginatedProduct);
+      console.log("state.paginatedProduct?.length=> ", state.paginatedProduct);
+      dispatch({
+        type: "SET_PAGE_NUMBERS",
+        payload: Array.from(
+          Array.from(
+            Array(Math.ceil(state.paginatedProduct?.length / pageSize)).keys()
+          )
+        ),
+      });
+
+      dispatch({
+        type: "SET_PAGINATED_PRODUCT",
+        payload: state.paginatedProduct,
+      });
     }
-  }, [currentPage, priceRange, isSortedData, allCourses]);
+  }, [state.currentPage, state.priceRange, state.isSortedData, allCourses]);
 
   return (
     <>
@@ -62,8 +74,8 @@ const Courses = (): JSX.Element => {
           <div className="w-full lg:w-1/4 hidden lg:block sticky top-0 overflow-y-hidden">
             <FilterByPrice
               filteredProductByPrice={filteredProductByPrice}
-              filteredPricePercent={filteredPricePercent}
-              setFilteredPricePercent={setFilteredPricePercent}
+              filteredPricePercent={state.filteredPricePercent}
+              setFilteredPricePercent={dispatch}
             />
             <div className="border border-fourth mt-5">
               <img
@@ -75,20 +87,25 @@ const Courses = (): JSX.Element => {
           </div>
           <div className="w-full lg:w-3/4">
             <CoursesTopbar
-              displayMode={displayMode}
-              setDisplayMode={setDisplayMode}
-              setPaginatedProduct={setPaginatedProduct}
-              setIsSortedData={setIsSortedData}
+              displayMode={state.displayMode}
+              setDisplayMode={dispatch}
+              setPaginatedProduct={dispatch}
+              setIsSortedData={dispatch}
             />
             <AllCourses
-              displayMode={displayMode}
-              filteredProduct={paginatedProduct}
+              displayMode={state.displayMode}
+              filteredProduct={state.paginatedProduct}
             />
+            {state.paginatedProduct.length < 1 && (
+              <p className="text-center text-primary text-lg">
+                محصولی با این قیمت وجود ندارد
+              </p>
+            )}
             <div className="flex justify-center gap-4">
               <CoursePagination
-                currentPage={currentPage}
-                pageNumbers={pageNumbers}
-                setCurrentPage={setCurrentPage}
+                currentPage={state.currentPage}
+                pageNumbers={state.pageNumbers}
+                setCurrentPage={dispatch}
               />
             </div>
           </div>
@@ -97,8 +114,8 @@ const Courses = (): JSX.Element => {
         <div className="lg:hidden">
           <FilterByPrice
             filteredProductByPrice={filteredProductByPrice}
-            filteredPricePercent={filteredPricePercent}
-            setFilteredPricePercent={setFilteredPricePercent}
+            filteredPricePercent={state.filteredPricePercent}
+            setFilteredPricePercent={dispatch}
           />
         </div>
       </div>
