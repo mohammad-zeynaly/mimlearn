@@ -1,15 +1,25 @@
+import { useState, useEffect } from "react";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectFade } from "swiper/modules";
 import RadioSliderItem from "./RadioSliderItem";
-import useFilteredData from "../../hooks/useFilteredData";
 import { radioItemsType } from "../../types/coursesInterface";
+import { getPodcasts } from "../../services/educationalServices";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const RadioSite = () => {
-  const radioSliderItemsData: radioItemsType[] = useFilteredData([],"radio");
+  const [radioSliderItems, setRadioSliderItems] = useState<radioItemsType[]>([]);
+
+  const fetchGetTheAllPodcast = async () => {
+    const response = await getPodcasts();
+    setRadioSliderItems(response.data);
+  };
+
+  useEffect(() => {
+    fetchGetTheAllPodcast();
+  }, []);
 
   return (
     <section className="mt-20">
@@ -42,7 +52,7 @@ const RadioSite = () => {
             }}
             className="lg:overflow-visible"
           >
-            {radioSliderItemsData.map((radioItem) => (
+            {radioSliderItems.map((radioItem) => (
               <SwiperSlide key={radioItem.id}>
                 <RadioSliderItem {...radioItem} />
               </SwiperSlide>

@@ -8,7 +8,7 @@ import { useAppSelector } from "../../Redux/store/store";
 
 const ProgrammingCourses = (): JSX.Element => {
   const allCourses = useAppSelector((state) => state.courses.allCourses);
-  const programmerCourse: CoursesType[] = useFilteredData(
+  const programmerCourse = useFilteredData(
     allCourses,
     "programmingCourses"
   );

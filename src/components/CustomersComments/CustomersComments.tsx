@@ -1,12 +1,20 @@
+import { useEffect } from "react";
 import SectionTemplate from "../SectionTemplate/SectionTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import { SwiperSlide } from "swiper/react";
 import CustomersCommentsItem from "./CustomersCommentsItem";
-import useFilteredData from "../../hooks/useFilteredData";
-import { CommentsType } from "../../types/coursesInterface";
+import { fetchGetTheComments } from "../../Redux/reducers/coursesStateSlice";
+import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
 
 const CustomersComments = (): JSX.Element => {
-  const customersCommentItems: CommentsType[] = useFilteredData([], "comments");
+  const customersCommentItems = useAppSelector(
+    (state) => state.courses.allComments
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGetTheComments());
+  }, []);
 
   return (
     <SectionTemplate

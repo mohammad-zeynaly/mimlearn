@@ -1,17 +1,24 @@
+import { useEffect } from "react";
+import { fetchGetTheTeachers } from "../../Redux/reducers/coursesStateSlice";
+import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import TeacherBox from "../../components/TeacherBox/TeacherBox";
-import useFilteredData from "../../hooks/useFilteredData";
-import { TeacherItemType } from "../../types/coursesInterface";
 
 const Teachers = (): JSX.Element => {
-  const teacherItems: TeacherItemType[] = useFilteredData([], "teachers");
+  const dispatch = useAppDispatch();
+  const allTeachers = useAppSelector((state) => state.courses.allTeachers);
+
+  useEffect(() => {
+    dispatch(fetchGetTheTeachers());
+  }, []);
+
   return (
     <section className="mt-20">
       <Breadcrumb title="مدرسین" currentPage="مدرسین" />
 
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {teacherItems.map((teacher) => (
+          {allTeachers.map((teacher) => (
             <TeacherBox {...teacher} />
           ))}
         </div>

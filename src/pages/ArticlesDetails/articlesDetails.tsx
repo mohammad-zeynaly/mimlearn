@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import PostsDetails from "../../components/PostsDetails/PostsDetails";
-import allData from "../../data/allData";
+import { useAppSelector } from "../../Redux/store/store";
 import ArticlesDetailsContent from "../../components/ArticlesDetailsContent/ArticlesDetailsContent";
 import ArticlesLabel from "../../components/ArticlesLabel/ArticlesLabel";
 import CourseComments from "../../components/CourseComments/CourseComments";
@@ -9,7 +9,9 @@ import CourseComments from "../../components/CourseComments/CourseComments";
 const ArticlesDetails = (): JSX.Element => {
   const { articleName } = useParams();
 
-  const mainArticle = allData.find((article) => article.title === articleName);
+  const articles = useAppSelector((state) => state.courses.allArticles);
+
+  const mainArticle = articles.find((article) => article.title === articleName);
   return (
     <section className="">
       <Breadcrumb

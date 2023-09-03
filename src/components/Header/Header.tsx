@@ -5,17 +5,19 @@ import Input from "../Input/Input";
 import LoadingBar from "../LoadingBar/LoadingBar";
 import HeaderInformation from "../HeaderInformation/HeaderInformation";
 import debounce from "../../functions/debounce";
-import { allDataType } from "../../types/coursesInterface";
-import allData from "../../data/allData";
+import { CoursesType } from "../../types/coursesInterface";
 import { Link } from "react-router-dom";
+import {useAppSelector} from "../../Redux/store/store"
 
 const Header = (): JSX.Element => {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [searchFilteredCourse, setSearchFilteredCourse] = useState<
-    allDataType[]
+    CoursesType[]
   >([]);
   const [searchInputCharacter, setSearchInputCharacter] = useState<string>("");
   const [responseQuery, setResponseQuery] = useState<boolean>();
+
+  const allCourses = useAppSelector(state => state.courses.allCourses)
 
   const searchUserQuery = (): void => {
     let searchInputValue = (searchInputRef.current as HTMLInputElement).value;
@@ -23,7 +25,7 @@ const Header = (): JSX.Element => {
 
     // login codes
     setSearchFilteredCourse(
-      allData.filter((course) =>
+      allCourses.filter((course) =>
         course.title?.toLowerCase()?.includes(searchInputValue.toLowerCase())
       )
     );

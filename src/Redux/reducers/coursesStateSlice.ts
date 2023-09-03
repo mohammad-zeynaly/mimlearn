@@ -1,8 +1,13 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
-import { BasketProductsType, CoursesType } from "../../types/coursesInterface";
-import { getAllCourses } from "../../services/educationalServices";
+import { apiDataType, CoursesType } from "../../types/coursesInterface";
+import {
+  getAllCourses,
+  getArticles,
+  getComments,
+  getTeachers,
+} from "../../services/educationalServices";
 
-const initialState: BasketProductsType = {
+const initialState: apiDataType = {
   basketProduct: [],
   selectedUpdateProduct: {
     id: 6,
@@ -20,7 +25,10 @@ const initialState: BasketProductsType = {
     type: "graphicCourse",
     sortType: "date",
   } as CoursesType,
+  allComments: [],
   allCourses: [],
+  allArticles: [],
+  allTeachers: [],
   totalPriceValue: 0,
 };
 
@@ -28,7 +36,30 @@ export const fetchGetTheAllCourses = createAsyncThunk(
   "course/fetchCourses",
   async () => {
     const response = await getAllCourses();
-    console.log("fetchGetTheAllCourses=> ", response.data);
+    return response.data;
+  }
+);
+
+export const fetchGetTheArticles = createAsyncThunk(
+  "articles/fetchArticles",
+  async () => {
+    const response = await getArticles();
+    return response.data;
+  }
+);
+
+export const fetchGetTheTeachers = createAsyncThunk(
+  "teachers/allTeachers",
+  async () => {
+    const response = await getTeachers();
+    return response.data;
+  }
+);
+
+export const fetchGetTheComments = createAsyncThunk(
+  "customers/customersComments",
+  async () => {
+    const response = await getComments();
     return response.data;
   }
 );
@@ -63,7 +94,7 @@ const coursesStateSlice = createSlice({
         const mainProductIndexInBasketProduct = state.basketProduct.findIndex(
           (product) => product.id === state.selectedUpdateProduct?.id
         );
-       
+
         state.basketProduct[mainProductIndexInBasketProduct] =
           state.selectedUpdateProduct;
 
@@ -96,16 +127,24 @@ const coursesStateSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(fetchGetTheAllCourses.rejected, (state, action) => {
-      console.error("Failed To Fetch AllCourses")
-    })
-    .addCase(fetchGetTheAllCourses.pending, (state, action) => {
-      console.info("pending promise")
-    })
-    .addCase(fetchGetTheAllCourses.fulfilled, (state, action) => {
-      
-      state.allCourses = action.payload;
-    });
+      .addCase(fetchGetTheAllCourses.rejected, (state, action) => {
+        console.error("Failed To Fetch AllCourses");
+      })
+      .addCase(fetchGetTheAllCourses.pending, (state, action) => {
+        console.info("pending promise fetchGetTheAllCourses");
+      })
+      .addCase(fetchGetTheAllCourses.fulfilled, (state, action) => {
+        state.allCourses = action.payload;
+      })
+      .addCase(fetchGetTheArticles.fulfilled, (state, action) => {
+        state.allArticles = action.payload;
+      })
+      .addCase(fetchGetTheTeachers.fulfilled, (state, action) => {
+        state.allTeachers = action.payload;
+      })
+      .addCase(fetchGetTheComments.fulfilled, (state, action) => {
+        state.allComments = action.payload;
+      });
   },
 });
 

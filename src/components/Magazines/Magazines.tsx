@@ -1,12 +1,18 @@
+import { useEffect } from "react";
 import SectionTemplate from "../SectionTemplate/SectionTemplate";
 import SwiperTemplate from "../SwiperTemplate/SwiperTemplate";
 import { SwiperSlide } from "swiper/react";
 import MagazineBox from "./MagazineBox";
-import useFilteredData from "../../hooks/useFilteredData";
-import { MagazineBoxType } from "../../types/coursesInterface";
+import { useAppSelector, useAppDispatch } from "../../Redux/store/store";
+import { fetchGetTheArticles } from "../../Redux/reducers/coursesStateSlice";
 
 const Magazines = (): JSX.Element => {
-  const magazineItems: MagazineBoxType[] = useFilteredData([],"articles");
+  const magazineItems = useAppSelector((state) => state.courses.allArticles);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGetTheArticles());
+  }, []);
 
   return (
     <SectionTemplate

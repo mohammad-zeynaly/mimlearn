@@ -1,14 +1,9 @@
-// import { useState, useEffect } from "react";
-import allData from "../data/allData";
-
-import { allDataType } from "../types/coursesInterface";
-
-const useFilteredData = (allCourses: allDataType[], dataType: string) => {
-  if (allCourses?.length > 0) {
-    const filteredData = allCourses?.filter((data) => data.type === dataType);
-    return filteredData;
-  } else {
-    const filteredData = allData?.filter((data) => data.type === dataType);
+const useFilteredData = <T extends { type: string }>(
+  data: T[],
+  dataType: string
+) => {
+  if (data?.length > 0) {
+    const filteredData = data?.filter((data) => data.type === dataType);
     return filteredData;
   }
 };

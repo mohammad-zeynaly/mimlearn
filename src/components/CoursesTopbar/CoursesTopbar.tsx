@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { CoursesType, allDataType } from "../../types/coursesInterface";
-import allData from "../../data/allData";
+import { CoursesType } from "../../types/coursesInterface";
+import { useAppSelector } from "../../Redux/store/store";
 
 const CoursesTopbar = memo(
   ({
@@ -42,6 +42,8 @@ const CoursesTopbar = memo(
       },
     ];
 
+    const allCourses = useAppSelector(state => state.courses.allCourses)
+
     const filteredInSelectBox = (
       event: React.ChangeEvent<HTMLSelectElement>
     ): void => {
@@ -49,11 +51,11 @@ const CoursesTopbar = memo(
 
       if (resultSelectValue === "popularity") {
         setPaginatedProduct(
-          allData.filter((course) => course.type === "programmingCourses")
+          allCourses.filter((course) => course.type === "programmingCourses")
         );
       } else {
         setPaginatedProduct(
-          allData.filter((course) => course.sortType === resultSelectValue)
+          allCourses.filter((course) => course.sortType === resultSelectValue)
         );
       }
       setIsSortedData(true);

@@ -1,18 +1,82 @@
 import { useParams } from "react-router-dom";
 import CommunicationWithTheTeacher from "../CommunicationWithTheTeacher/CommunicationWithTheTeacher";
-import useFilteredData from "../../hooks/useFilteredData";
 import {
   communicationWithTheTeacherItemsType,
   TeacherItemType,
 } from "../../types/coursesInterface";
-import allData from "../../data/allData";
+import { useAppSelector } from "../../Redux/store/store";
+import {
+  FaEnvelopeOpenText,
+  FaMobileAlt,
+  FaInstagram,
+  FaTelegramPlane,
+} from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
+
+const communicationWithTheTeacherItems = [
+  {
+    id: 31,
+    title: "آدرس ایمیل",
+    caption: "info@haji-studiare.com",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <FaEnvelopeOpenText className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 32,
+    title: "شماره تماس",
+    caption: "09374812449",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <FaMobileAlt className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 33,
+    title: "صفحه اینستاگرام",
+    caption: "@zeynali2003",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#EA1267]">
+        <FaInstagram className="w-6 h-6 text-[#EA1267]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 34,
+    title: "تلگرام",
+    caption: "@zeynali2003",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#00BCFF]">
+        <FaTelegramPlane className="w-6 h-6 text-[#00BCFF]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+  {
+    id: 35,
+    title: "آدرس",
+    caption: "تهران، خیابان آزادی، خیابان بهبودی، ساختمان 110",
+    avatar: (
+      <span className="flex justify-center items-center w-12 h-12 rounded-full border border-[#69727d]">
+        <MdLocationPin className="w-6 h-6 text-[#69727d]" />
+      </span>
+    ),
+    type: "communicationWithTheTeacherItems",
+  },
+];
 
 const TeacherInformation = (): JSX.Element => {
-  const communicationWithTheTeacherItems: communicationWithTheTeacherItemsType[] =
-    useFilteredData([],"communicationWithTheTeacherItems");
   const { teachersName } = useParams();
 
-  const mainRole: TeacherItemType | undefined = allData.find(
+  const teacherDetail = useAppSelector((state) => state.courses.allTeachers);
+
+  const mainRole: TeacherItemType | undefined = teacherDetail.find(
     (user) => user.name === teachersName
   );
 

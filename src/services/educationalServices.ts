@@ -8,37 +8,17 @@ export const getAllCourses = () => {
 };
 
 export const getPodcasts = () => {
-  axios
-    .get(`${baseUrl}/podcasts`)
-    .then((response) => response.data)
-    .catch((error) =>
-      console.error("Failed To Get Request podcasts=> ", error)
-    );
+  return axios.get(`${baseUrl}/podcasts`);
 };
 
 export const getArticles = () => {
-  axios
-    .get(`${baseUrl}/articles`)
-    .then((response) => response.data())
-    .catch((error) =>
-      console.error("Failed To Get Request Articles=> ", error)
-    );
+  return axios.get(`${baseUrl}/articles`);
 };
 
 export const getComments = () => {
-  axios
-    .get(`${baseUrl}/comments`)
-    .then((response) => response.data)
-    .catch((error) =>
-      console.error("Failed To Get Request Comments=> ", error)
-    );
+  return axios.get(`${baseUrl}/comments`);
 };
 
 export const getTeachers = () => {
-  axios
-    .get(`${baseUrl}/teachers`)
-    .then((response) => response.data)
-    .catch((error) =>
-      console.error("Failed To Get Request Teachers=> ", error)
-    );
+  return axios.get(`${baseUrl}/teachers`);
 };
