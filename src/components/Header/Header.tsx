@@ -90,7 +90,7 @@ const Header = (): JSX.Element => {
               {responseQuery && searchFilteredCourse.length > 0 && (
                 <ul className="flex flex-col justify-start  w-full">
                   {searchFilteredCourse?.map((courseItem) => (
-                    <Link to={`/courseDetails/${courseItem.title}`}>
+                    <Link to={`/courseDetails/${courseItem.title}`} key={courseItem.id}>
                       <li className="flex items-start py-2 px-4 transition-all duration-200 hover:bg-[#fafafa] w-full">
                         <span className="">
                           <img

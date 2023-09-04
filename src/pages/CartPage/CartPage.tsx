@@ -48,7 +48,7 @@ const CartPage = (): JSX.Element => {
                   </thead>
                   <tbody>
                     {allCourses?.map((cartCourse) => (
-                      <CartProductItem {...cartCourse} />
+                      <CartProductItem key={cartCourse.id} {...cartCourse} />
                     ))}
                   </tbody>
                 </table>
