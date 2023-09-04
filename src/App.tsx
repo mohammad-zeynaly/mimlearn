@@ -8,6 +8,7 @@ import LoginModal from "./components/LoginModal/LoginModal";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import NavbarMobile from "./components/Navbar/NavbarMobile";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import {
   setDataCartProductLocalStorage,
   totalPrice,
@@ -64,6 +65,7 @@ const App = (): JSX.Element => {
         <ToastContainer limit={4} />
       </div>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };
