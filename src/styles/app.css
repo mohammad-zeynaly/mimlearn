@@ -701,6 +701,10 @@ input:focus {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -887,6 +891,10 @@ input:focus {
   right: -5px;
 }
 
+.-top-12 {
+  top: -3rem;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -907,12 +915,20 @@ input:focus {
   left: 0.5rem;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
 .right-0 {
   right: 0px;
 }
 
 .right-1 {
   right: 0.25rem;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .right-\[-1px\] {
@@ -935,12 +951,36 @@ input:focus {
   top: 1rem;
 }
 
+.top-\[22\%\] {
+  top: 22%;
+}
+
 .top-\[30\%\] {
   top: 30%;
 }
 
 .top-\[40\%\] {
   top: 40%;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-top-0 {
+  top: -0px;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-6 {
+  top: 1.5rem;
 }
 
 .-z-10 {
@@ -999,6 +1039,11 @@ input:focus {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .\!mr-4 {
@@ -1101,6 +1146,10 @@ input:focus {
   margin-top: 0.75rem;
 }
 
+.mt-32 {
+  margin-top: 8rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1127,6 +1176,14 @@ input:focus {
 
 .mt-\[6px\] {
   margin-top: 6px;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
 }
 
 .block {
@@ -1193,6 +1250,10 @@ input:focus {
   height: 1rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -1227,6 +1288,10 @@ input:focus {
 
 .h-\[650px\] {
   height: 650px;
+}
+
+.h-\[70\%\] {
+  height: 70%;
 }
 
 .h-\[7px\] {
@@ -1297,6 +1362,10 @@ input:focus {
   width: 1rem;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -1327,6 +1396,10 @@ input:focus {
 
 .w-\[49\%\] {
   width: 49%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
 }
 
 .w-\[96\%\] {
@@ -1723,6 +1796,11 @@ input:focus {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f5f8fb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 248 251 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#f6f6f6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(246 246 246 / var(--tw-bg-opacity));
@@ -1780,8 +1858,8 @@ input:focus {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\/assets\/images\/header-bg\.jpg\'\)\] {
-  background-image: url('./assets/images/header-bg.jpg');
+.bg-\[url\(\'\.\/assets\/images\/header-bg\.webp\'\)\] {
+  background-image: url('./assets/images/header-bg.webp');
 }
 
 .bg-teacherDetailGradient {
@@ -1975,6 +2053,10 @@ input:focus {
   padding-top: 3.5rem;
 }
 
+.pt-16 {
+  padding-top: 4rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1993,6 +2075,14 @@ input:focus {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-left {
@@ -2180,6 +2270,11 @@ input:focus {
   color: rgb(199 199 199 / var(--tw-text-opacity));
 }
 
+.text-\[\#ccc\] {
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
 .text-\[\#e2e5e8\] {
   --tw-text-opacity: 1;
   color: rgb(226 229 232 / var(--tw-text-opacity));
@@ -2266,6 +2361,12 @@ input:focus {
 .shadow-\[0_5px_30px_rgb\(70\2c 72\2c 77\2c 0\.08\)\] {
   --tw-shadow: 0 5px 30px rgb(70,72,77,0.08);
   --tw-shadow-colored: 0 5px 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_6px_20px_rgba\(168\2c 172\2c 185\2c 0\.3\)\] {
+  --tw-shadow: 0 6px 20px rgba(168,172,185,0.3);
+  --tw-shadow-colored: 0 6px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2873,6 +2974,14 @@ input:focus {
     border-radius: 1.5rem;
   }
 
+  .sm\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .sm\:rounded-none {
+    border-radius: 0px;
+  }
+
   .sm\:rounded-br-xl {
     border-bottom-right-radius: 0.75rem;
   }
@@ -2894,12 +3003,21 @@ input:focus {
     border-color: rgb(229 229 229 / var(--tw-border-opacity));
   }
 
+  .sm\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .sm\:p-3 {
     padding: 0.75rem;
   }
 
   .sm\:p-4 {
     padding: 1rem;
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
   }
 
   .sm\:px-2 {
@@ -2937,6 +3055,14 @@ input:focus {
     padding-top: 6rem;
   }
 
+  .sm\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 4rem;
+  }
+
   .sm\:text-right {
     text-align: right;
   }
@@ -2962,6 +3088,16 @@ input:focus {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:placeholder\:bg-white::-moz-placeholder {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .sm\:placeholder\:bg-white::placeholder {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 }
 

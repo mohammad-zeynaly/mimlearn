@@ -8,12 +8,13 @@ import Teachers from "../pages/Teachers/Teachers";
 import TeachersDetails from "../pages/TeachersDetails/TeachersDetails";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import SignUp from "../pages/SignUp/SignUp";
 
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/courses", element: <Courses /> },
   { path: "/courseDetails/:courseName", element: <CourseDetails /> },
-  { path: "/create-account", element: <h1> ساخت حساب کاربری </h1> },
+  { path: "/create-account", element: <SignUp /> },
   { path: "/shopping-cart", element: <CartPage /> },
   { path: "/articles", element: <Articles /> },
   { path: "/articlesDetails/:articleName", element: <ArticlesDetails /> },
@@ -21,5 +22,13 @@ const routes = [
   { path: "/teachersDetails/:teachersName", element: <TeachersDetails /> },
   { path: "/about-us", element: <AboutUs /> },
   { path: "/contact-us", element: <ContactUs /> },
+  {
+    path: "*",
+    element: (
+      <h1 className="text-center text-primary text-xl mt-32 my-8">
+        صفحه مورد نظر پیدا نشد 😌😌
+      </h1>
+    ),
+  },
 ];
 export default routes;
