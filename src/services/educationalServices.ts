@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // main api project
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://mimlearn.iran.liara.run";
 
 export const getAllCourses = () => {
   return axios.get(`${baseUrl}/allCourses`);
