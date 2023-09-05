@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useState, useEffect, useReducer } from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import CoursesTopbar from "../../components/CoursesTopbar/CoursesTopbar";
 import FilterByPrice from "../../components/FilterByPrice/FilterByPrice";
@@ -6,30 +6,53 @@ import AllCourses from "../../components/AllCourses/AllCourses";
 import { useAppSelector } from "../../Redux/store/store";
 import CoursePagination from "../../components/CoursePagination/CoursePagination";
 import { reducer, initialState } from "./coursesReducer";
+import { getAllCourses } from "../../services/educationalServices";
+import { CoursesType } from "../../types/coursesInterface";
 
 const Courses = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [filteredProduct, setFilteredProduct] = useState<CoursesType[]>([]);
+  const [allCourses, setAllCourses] = useState<CoursesType[]>([]);
   const pageSize = 6;
 
-  const allCourses = useAppSelector((state) => state.courses.allCourses);
+  let courses = useAppSelector((state) => state.courses.allCourses);
+  useEffect(() => {
+    setAllCourses(courses);
+    const fetchData = async () => {
+      if (allCourses.length > 0) {
+        setFilteredProduct(allCourses);
+        console.log("allCourses.length > 0=> ", allCourses.length);
+      } else {
+        const response = await getAllCourses();
+        setFilteredProduct(response.data);
+        setAllCourses(response.data);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const filterProducts = () => {
+      if (state.priceRange && state.priceRange > 0) {
+        setFilteredProduct(
+          allCourses.filter((product) => product.price! < state.priceRange)
+        );
+      } else {
+        setFilteredProduct(allCourses.filter((product) => product.price! > 0));
+      }
+    };
+
+    filterProducts();
+  }, [state.priceRange, allCourses]);
 
   const filteredProductByPrice = () => {
     dispatch({
       type: "SET_PRISE_RANGE",
-      payload: state.filteredPricePercent * 40_000,
+      payload: state.filteredPricePercent * 40000,
     });
     dispatch({ type: "SET_ISSORTED_DATA", payload: false });
   };
-
-  let filteredProduct = allCourses;
-
-  if (state.priceRange && state.priceRange > 0) {
-    filteredProduct = allCourses.filter(
-      (product) => product.price! < state.priceRange
-    );
-  } else {
-    filteredProduct = allCourses.filter((product) => product.price! > 0);
-  }
 
   useEffect(() => {
     console.log("isSortedData=> ", state.isSortedData);
@@ -53,9 +76,7 @@ const Courses = (): JSX.Element => {
       dispatch({
         type: "SET_PAGE_NUMBERS",
         payload: Array.from(
-          Array.from(
-            Array(Math.ceil(state.paginatedProduct?.length / pageSize)).keys()
-          )
+          Array(Math.ceil(state.paginatedProduct?.length / pageSize)).keys()
         ),
       });
 
@@ -64,7 +85,12 @@ const Courses = (): JSX.Element => {
         payload: state.paginatedProduct,
       });
     }
-  }, [state.currentPage, state.priceRange, state.isSortedData, allCourses]);
+  }, [
+    state.currentPage,
+    state.priceRange,
+    state.isSortedData,
+    filteredProduct,
+  ]);
 
   return (
     <>
@@ -87,6 +113,7 @@ const Courses = (): JSX.Element => {
           </div>
           <div className="w-full lg:w-3/4">
             <CoursesTopbar
+              allCourses={allCourses}
               displayMode={state.displayMode}
               setDisplayMode={dispatch}
               setPaginatedProduct={dispatch}
@@ -96,11 +123,11 @@ const Courses = (): JSX.Element => {
               displayMode={state.displayMode}
               filteredProduct={state.paginatedProduct}
             />
-            {state.paginatedProduct.length < 1 && (
+            {state.paginatedProduct.length < 1 || filteredProduct.length < 1 ? (
               <p className="text-center text-primary text-lg">
                 محصولی با این قیمت وجود ندارد
               </p>
-            )}
+            ) : null}
             <div className="flex justify-center gap-4">
               <CoursePagination
                 currentPage={state.currentPage}

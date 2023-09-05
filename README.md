@@ -2,7 +2,7 @@
 
 # mimlearn / page front-end
 
-## [review online](https://mimlearn.netlify.app/)
++## [review online](https://mohammad-zeynali.github.io/mimlearn/)
 
 --
 

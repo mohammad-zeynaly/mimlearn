@@ -8,12 +8,16 @@ const CoursesTopbar = memo(
     setDisplayMode,
     setPaginatedProduct,
     setIsSortedData,
+    allCourses,
   }: {
     displayMode: string;
     setDisplayMode: React.Dispatch<CoursesActionType>;
     setPaginatedProduct: React.Dispatch<CoursesActionType>;
     setIsSortedData: React.Dispatch<CoursesActionType>;
+    allCourses: CoursesType[];
   }): JSX.Element => {
+
+    
     const listItems = [
       {
         id: crypto.randomUUID(),
@@ -42,7 +46,7 @@ const CoursesTopbar = memo(
       },
     ];
 
-    const allCourses = useAppSelector((state) => state.courses.allCourses);
+    // const allCourses = useAppSelector((state) => state.courses.allCourses);
 
     const filteredInSelectBox = (
       event: React.ChangeEvent<HTMLSelectElement>
