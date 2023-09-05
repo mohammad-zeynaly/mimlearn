@@ -1,6 +1,6 @@
 import { CoursesActionType, CoursesType } from "../../types/coursesInterface";
 
-interface InitialStateType  {
+interface InitialStateType {
   displayMode: string;
   filteredPricePercent: number;
   priceRange: number;
@@ -8,7 +8,7 @@ interface InitialStateType  {
   currentPage: number;
   pageNumbers: number[];
   isSortedData: boolean;
-};
+}
 export const reducer = (
   state: InitialStateType,
   action: CoursesActionType

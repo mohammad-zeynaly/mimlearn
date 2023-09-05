@@ -1,8 +1,8 @@
 --
 
-# mimlearn / page front-end
+# mimlearn / web page mimlearn
 
-+## [review online](https://mohammad-zeynali.github.io/mimlearn/)
+## [review online](https://mohammad-zeynali.github.io/mimlearn/)
 
 --
 

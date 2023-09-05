@@ -92,7 +92,7 @@ const TeacherInformation = (): JSX.Element => {
     <div className="flex flex-col lg:flex-row items-start mt-8">
       <div className="w-full lg:w-[35%]">
         <img
-          src={mainRole?.img}
+          src={`.${mainRole?.img}`}
           className="w-full object-cover border border-dashed rounded-lg"
           alt="تصویر مدرس"
         />

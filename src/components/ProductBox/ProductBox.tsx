@@ -34,7 +34,7 @@ const ProductBox = ({
           : "flex-col border border-fourth"
       } rounded-xl bg-white mt-8 w-full mb-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(168,172,185,0.3)]`}
     >
-      <div className="">
+      <Link to={`/courseDetails/${title?.trim()}`}>
         <img
           className={`${
             displayMode === "column"
@@ -44,7 +44,7 @@ const ProductBox = ({
           src={img}
           alt="نحوه نمایش دوره ها"
         />
-      </div>
+      </Link>
       <div
         className={`${
           displayMode === "row" ? "sm:border sm:border-fourth" : ""

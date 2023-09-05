@@ -16,8 +16,6 @@ const CoursesTopbar = memo(
     setIsSortedData: React.Dispatch<CoursesActionType>;
     allCourses: CoursesType[];
   }): JSX.Element => {
-
-    
     const listItems = [
       {
         id: crypto.randomUUID(),
