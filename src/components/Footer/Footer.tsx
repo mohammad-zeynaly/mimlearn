@@ -36,13 +36,17 @@ const Footer = (): JSX.Element => {
     { id: crypto.randomUUID(), title: "صفحه اصلی", link: "/" },
     { id: crypto.randomUUID(), title: " تماس با ما", link: "/contact-us" },
     { id: crypto.randomUUID(), title: "درباره ما", link: "/about-us" },
-    { id: crypto.randomUUID(), title: "فروشگاه", link: "/store" },
+    { id: crypto.randomUUID(), title: "فروشگاه", link: "/courses" },
   ];
 
   const footerLists: FooterItemsType[] = [
-    { id: crypto.randomUUID(), title: "بلاگ", link: "/blog" },
-    { id: crypto.randomUUID(), title: "حساب کاربری من", link: "/login" },
-    { id: crypto.randomUUID(), title: "بلاگ", link: "/shopping-cart" },
+    { id: crypto.randomUUID(), title: "بلاگ", link: "/articles" },
+    {
+      id: crypto.randomUUID(),
+      title: "حساب کاربری من",
+      link: "/create-account",
+    },
+    { id: crypto.randomUUID(), title: "بلاگ", link: "/articles" },
   ];
 
   return (
@@ -123,12 +127,12 @@ const Footer = (): JSX.Element => {
             <div className="flex items-center">
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="../assets/images/enamad.webp"
+                src="./assets/images/enamad.webp"
                 alt="enamad image"
               />
               <img
                 className=" w-28 h-28 object-cover sm:w-36 sm:h-36"
-                src="../assets/images/samandehi.webp"
+                src="./assets/images/samandehi.webp"
                 alt="enamad image"
               />
             </div>

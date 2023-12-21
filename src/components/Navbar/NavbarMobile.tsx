@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../Redux/store/store";
 import {
   isShowShoppingCartHandler,
@@ -30,7 +30,7 @@ const NavbarMobile = (): JSX.Element => {
             <Link to="/">
               <img
                 className="w-28 "
-                src="../assets/images/logo-default.webp"
+                src="./assets/images/logo-default.webp"
                 alt="لوگو سایت"
               />
             </Link>
@@ -85,22 +85,34 @@ const NavbarMobile = (): JSX.Element => {
       >
         <ul className="flex flex-col p-4 my-4">
           <li className="mb-4">
-            <Link to="/">صفحه نخست</Link>
+            <NavLink className="menu__link" to="/">
+              صفحه نخست
+            </NavLink>
           </li>
           <li className="mb-4">
-            <Link to="/courses"> دوره ها </Link>
+            <NavLink className="menu__link" to="/courses">
+              دوره ها
+            </NavLink>
           </li>
           <li className="mb-4">
-            <Link to="/articles"> مقالات </Link>
+            <NavLink className="menu__link" to="/articles">
+              مقالات
+            </NavLink>
           </li>
           <li className="mb-4">
-            <Link to="/teachers"> مدرسین </Link>
+            <NavLink className="menu__link" to="/teachers">
+              مدرسین
+            </NavLink>
           </li>
           <li className="mb-4">
-            <Link to="/contact-us"> تماس با ما</Link>
+            <NavLink className="menu__link" to="/contact-us">
+              تماس با ما
+            </NavLink>
           </li>
           <li className="">
-            <Link to="/about-us"> درباره ما </Link>
+            <NavLink className="menu__link" to="/about-us">
+              درباره ما
+            </NavLink>
           </li>
         </ul>
         <div className="border-t border-solid border-[#2c3237] p-4 flex items-center justify-evenly pt-8">
