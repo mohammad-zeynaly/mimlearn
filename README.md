@@ -2,7 +2,7 @@
 
 # mimlearn / web page mimlearn
 
-## [review online](https://mohammad-zeynali.github.io/mimlearn/)
+## [review online](https://mohammad-zeynaly.github.io/mimlearn/)
 
 --
 
